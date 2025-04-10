@@ -1,0 +1,280 @@
+/* ===== HEADER SECTION ===== */
+header {
+    background-color: #ffffff;  /* White background for the header */
+    box-shadow: 0 2px 5px rgb(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+    padding: 1rem 2rem;  /* Inner spacing: 1rem top/bottom, 2rem left/right */
+    position: fixed;  /* Keeps header fixed while scrolling */
+    width: 100%;  /* Full width of viewport */
+    top: 0;  /* Aligned to top of viewport */
+    left: 0;  /* Aligned to left of viewport */
+    z-index: 1000;  /* Ensures header stays above other content */
+}
+
+/* ===== NAVIGATION SECTION ===== */
+nav {
+    max-width: 1200px;  /* Maximum width of navigation */
+    margin: 0 auto;  /* Centers the navigation horizontally */
+}
+
+/* Navigation links container styling */
+.nav-links {
+    list-style: none;  /* Removes default list bullets */
+    display: flex;  /* Creates horizontal layout */
+    align-items: center;  /* Vertically centers items */
+    justify-content: space-between;  /* Evenly spaces items */
+    padding: 0;  /* Removes default padding */
+    margin: 0;  /* Removes default margin */
+}
+
+/* Individual navigation link styling */
+.nav-links li a {
+    text-decoration: none;  /* Removes underline from links */
+    color: #333333;  /* Dark gray text color */
+    font-weight: 500;  /* Medium font weight */
+    padding: 0.5rem 1rem;  /* Spacing around link text */
+}
+
+/* Hover effect for navigation links */
+.nav-links li a:hover {
+    color: #007bff;  /* Blue color on hover */
+}
+
+/* Styling for active/current page link */
+.nav-links li a.active {
+    color: #007bff;  /* Blue color for active link */
+    font-weight: 600;  /* Slightly bolder than regular links */
+}
+
+/* Language switch button styling */
+.language-switch a {
+    background-color: #f8f9fa;  /* Light gray background */
+    border-radius: 4px;  /* Rounded corners */
+    padding: 0.5rem 1rem;  /* Spacing around text */
+}
+
+/* Body adjustment to prevent content from hiding under fixed header */
+
+
+/* ===== HERO SECTION ===== */
+.hero {
+    background-color: #F0F7FF;  /* Light, calming blue background */
+    padding: 100px 20px;
+    text-align: center;
+    /* min-height: 80vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    color: #2B4C7E;  /* Deep calming blue */
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.hero p {
+    color: #506B8B;  /* Softer blue for better readability */
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn.primary {
+    background-color: #567EBB;  /* Trustworthy blue */
+    color: white;
+    box-shadow: 0 4px 15px rgb(86, 126, 187);
+}
+
+.btn.primary:hover {
+    background-color: #4A6DA1;
+}
+
+.btn.secondary {
+    background-color: #F2B5A7;  /* Soft coral - warm and inviting */
+    color: #333;
+    box-shadow: 0 4px 15px rgb(242, 181, 167);
+}
+
+.btn.secondary:hover {
+    background-color: #E9A192;
+  
+}
+
+/* ===== INTRODUCTION SECTIONS ===== */
+.intro-sections {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.intro-container {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.intro-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-text h2 {
+    color: #2B4C7E;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    color: #506B8B;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+.intro-image {
+    flex: 1;
+}
+
+.intro-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgb(0, 0, 0);
+}
+
+/* ===== MENTAL HEALTH AWARENESS SECTION ===== */
+.mental-health-awareness {
+    padding: 80px 20px;
+    background-color: #F8FAFF;
+}
+
+.mental-health-awareness h2 {
+    text-align: center;
+    color: #2B4C7E;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.awareness-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+/* ===== AWARENESS CARDS ===== */
+.awareness-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgb(0, 0, 0);
+    text-align: center;
+}
+
+.card-image {
+    width: 200px;  /* Increased width for better visibility */
+    height: 150px; /* Aspect ratio suitable for most images */
+    margin: 0 auto 20px;
+    background-color: #F0F7FF;
+    border-radius: 10px; /* Slight rounded corners instead of circle */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures image stays within bounds */
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Changed to cover to fill the space properly */
+}
+
+/* Optional: Add a subtle rotation on hover */
+
+
+
+
+.awareness-card h3 {
+    color: #2B4C7E;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.awareness-card p {
+    color: #506B8B;
+    line-height: 1.6;
+}
+
+/* ===== QUICK HELP SECTION ===== */
+.quick-help {
+    max-width: 800px;
+    margin: 60px auto 0;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgb(0, 0, 0);
+}
+
+.quick-help h3 {
+    color: #2B4C7E;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ===== WARNING SIGNS LIST ===== */
+.warning-signs {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.warning-signs li {
+    color: #506B8B;
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.warning-signs li::before {
+    content: "•";
+    color: #567EBB;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.help-message {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.help-message p {
+    color: #506B8B;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+
+
