@@ -197,7 +197,7 @@ nav {
     margin: 0 auto 20px;
     background-color: #F0F7FF;
     border-radius: 10px; /* Slight rounded corners instead of circle */
-    padding: 10px;
+    /* padding: 10px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -274,6 +274,65 @@ nav {
     color: #506B8B;
     margin-bottom: 20px;
     font-size: 1.1rem;
+}
+
+
+/* ===== FOOTER SECTION ===== */
+footer {
+    background-color: #2B4C7E;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.footer-section h4 {
+    color: #F2B5A7;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #F2B5A7;
+}
+
+/* Responsive design for footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 30px;
+    }
 }
 
 
