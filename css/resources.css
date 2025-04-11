@@ -1,0 +1,244 @@
+/* Resources Page Styles - Main container styling */
+
+.resources-intro {
+    padding: 60px 20px;  /* Add space around the intro section (top/bottom 60px, left/right 20px) */
+    background-color: #fff;  /* White background for the intro section */
+}
+
+.container {
+    max-width: 1200px;  /* Limit the width of content to 1200px */
+    margin: 0 auto;  /* Center the container horizontally */
+}
+
+.resources-intro p {
+    color: #506B8B;  /* Set text color to a soft blue */
+    font-size: 1.2rem;  /* Increase font size for better readability */
+    line-height: 1.8;  /* Add space between lines for better readability */
+    margin-bottom: 40px;  /* Add space below the paragraph */
+    text-align: center;  /* Center the text horizontally */
+    max-width: 900px;  /* Limit paragraph width for better readability */
+    margin-left: auto;  /* Center the paragraph horizontally */
+    margin-right: auto;  /* Center the paragraph horizontally */
+}
+
+.resource-navigation {
+    margin: 40px 0;  /* Add vertical space above and below navigation */
+    text-align: center;  /* Center the navigation section */
+}
+
+.resource-navigation h2 {
+    color: #2B4C7E;  /* Set heading color to dark blue */
+    font-size: 1.8rem;  /* Set heading size */
+    margin-bottom: 30px;  /* Add space below the heading */
+}
+
+.resource-buttons {
+    display: flex;  /* Use flexbox for button layout */
+    flex-wrap: wrap;  /* Allow buttons to wrap to next line on small screens */
+    justify-content: center;  /* Center buttons horizontally */
+    gap: 20px;  /* Add space between buttons */
+}
+
+.resource-btn {
+    display: flex;  /* Use flexbox for internal button layout */
+    flex-direction: column;  /* Stack icon and text vertically */
+    align-items: center;  /* Center items horizontally */
+    justify-content: center;  /* Center items vertically */
+    padding: 20px;  /* Add space inside the button */
+    background-color: white;  /* White background for buttons */
+    border-radius: 15px;  /* Round the corners */
+    box-shadow: 0 2px 8px rgb(43, 76, 126, 0.1);  /* Add subtle shadow for depth */
+    text-decoration: none;  /* Remove underline from link */
+    /* transition: all 0.3s ease; */  /* (Commented out) Animation for hover effects */
+    width: 180px;  /* Set fixed width for consistent button size */
+    height: 120px;  /* Set fixed height for consistent button size */
+    text-align: center;  /* Center text horizontally */
+    color: #2B4C7E;  /* Set text color to dark blue */
+    font-weight: 600;  /* Make text semi-bold */
+    position: relative;  /* Enable positioning for the icon */
+    padding-top: 60px;  /* Extra padding at top to make room for icon */
+}
+
+.resource-btn:hover {
+    /* transform: translateY(-5px); */  /* (Commented out) Lift effect on hover */
+    box-shadow: 0 5px 15px rgb(43, 76, 126, 0.2);  /* Enhance shadow on hover */
+}
+
+/* Icons using pseudo-elements - Adds icons without extra HTML */
+.resource-btn::before {
+    position: absolute;  /* Position icon independently of text */
+    top: 20px;  /* Place icon 20px from top of button */
+    font-size: 2.5rem;  /* Set icon size */
+}
+
+.books-btn::before {
+    content: "📚";  /* Add book emoji icon */
+}
+
+.videos-btn::before {
+    content: "🎬";  /* Add video/film emoji icon */
+}
+
+.podcasts-btn::before {
+    content: "🎧";  /* Add headphones emoji icon */
+}
+
+.apps-btn::before {
+    content: "📱";  /* Add mobile phone emoji icon */
+}
+
+.community-btn::before {
+    content: "👥";  /* Add people/community emoji icon */
+}
+
+/* Resource Sections - Styling for each resource category */
+.resource-section {
+    padding: 60px 20px;  /* Add space around each section */
+    background-color: white;  /* Default background color */
+}
+
+/* Give specific sections a different background color */
+#books, #podcasts, #community {
+    background-color: #F8FAFF;  /* Light blue background for these specific sections */
+}
+
+/* Custom background color for the videos section */
+#videos {
+    background-color: #F0F7FF;  /* Different shade of blue for videos section */
+}
+/* Custom background color for the apps section */
+#apps {
+    background-color: #EFF8FF;  /* Another shade of blue for apps section */
+}
+
+.resource-section h2 {
+    color: #2B4C7E;  /* Set heading color to dark blue */
+    font-size: 2.2rem;  /* Set heading size */
+    margin-bottom: 30px;  /* Add space below heading */
+    text-align: center;  /* Center heading */
+}
+
+.resource-items {
+    padding: 20px;  /* Add space inside the resource items container */
+    background-color: white;  /* White background for content */
+    border-radius: 15px;  /* Round the corners */
+    box-shadow: 0 2px 8px rgb(43, 76, 126, 0.1);  /* Add subtle shadow */
+}
+
+.resource-items p {
+    color: #506B8B;  /* Set text color to soft blue */
+    text-align: center;  /* Center text */
+    padding: 40px 0;  /* Add vertical padding */
+}
+
+/* Smooth scrolling for anchor links - Makes page navigation smoother */
+html {
+    scroll-behavior: smooth;  /* Enable smooth scrolling when clicking navigation links */
+}
+
+
+/* Resource Cards Styling */
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.resource-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(43, 76, 126, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(43, 76, 126, 0.2);
+}
+
+/* Resource Cards Image Styling */
+.resource-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.resource-card h3 {
+    color: #2B4C7E;
+    font-size: 1.3rem;
+    margin: 15px 15px 5px;
+}
+
+.resource-card .author {
+    color: #506B8B;
+    font-style: italic;
+    margin: 5px 15px 10px;
+}
+
+.resource-card .description {
+    color: #506B8B;
+    margin: 0 15px 15px;
+    line-height: 1.5;
+}
+
+.resource-link {
+    display: inline-block;
+    margin: 0 15px 15px;
+    padding: 8px 15px;
+    background-color: #2B4C7E;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.resource-link:hover {
+    background-color: #3A6DAA;
+}
+
+/* Resource List Styling */
+.resource-list {
+    background-color: #F8FAFF;
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+
+.resource-list h3 {
+    color: #2B4C7E;
+    margin-bottom: 15px;
+}
+
+.resource-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resource-list li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.resource-list li:before {
+    content: "•";
+    color: #2B4C7E;
+    position: absolute;
+    left: 0;
+}
+
+.resource-list a {
+    color: #3A6DAA;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.resource-list a:hover {
+    color: #2B4C7E;
+    text-decoration: underline;
+}
