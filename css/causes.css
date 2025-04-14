@@ -24,6 +24,7 @@
 }
 
 .cause-card {
+    
     background: white;
     padding: 30px;
     border-radius: 15px;
@@ -53,32 +54,45 @@
 
 /* ===== CAUSES DETAILS SECTION ===== */
 .causes-details {
+    
     padding: 60px 20px;
     background-color: #F8FAFF;
 }
 
 .detail-container {
-    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
 .detail-item {
-    margin-bottom: 50px;
-    padding: 30px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    gap: 30px;
-    align-items: center;
+    flex: 0 1 calc(50% - 1rem);
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
+@media (max-width: 1024px) {
+    .detail-item {
+        flex: 0 1 100%;
+    }
+}
 
+.detail-item:hover {
+    transform: translateY(-5px);
+}
 
 .detail-image {
-    flex: 0 0 300px;
-    height: 200px;
-    border-radius: 10px;
+    width: 100%;
+    height: 250px;
     overflow: hidden;
 }
 
@@ -86,25 +100,36 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-
-.detail-item h3 {
-    color: #2B4C7E;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+.detail-item:hover .detail-image img {
+    transform: scale(1.05);
 }
 
-.detail-item p {
-    color: #506B8B;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    text-align: justify;
+.detail-content {
+    padding: 1.5rem;
 }
 
-/* Add hover effect */
-.detail-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
+.detail-content h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.detail-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .detail-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .detail-image {
+        height: 200px;
+    }
 }
