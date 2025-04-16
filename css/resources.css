@@ -138,111 +138,107 @@ html {
 
 
 /* Resource Cards Styling */
-/* Resource Grid Styles */
 .resource-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
 }
 
 .resource-card {
-    background: #ffffff;
+    background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
+    box-shadow: 0 3px 10px rgba(43, 76, 126, 0.1);
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .resource-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(43, 76, 126, 0.2);
 }
 
+/* Resource Cards Image Styling */
 .resource-card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+    height: 300px;
+    object-fit: contain;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-bottom: 1px solid #eaeaea;
 }
 
 .resource-card h3 {
-    color: #333;
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+    color: #2B4C7E;
+    font-size: 1.3rem;
+    margin: 15px 15px 5px;
 }
 
 .resource-card .author {
-    color: #666;
+    color: #506B8B;
     font-style: italic;
-    margin-bottom: 0.75rem;
+    margin: 5px 15px 10px;
 }
 
 .resource-card .description {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+    color: #506B8B;
+    margin: 0 15px 15px;
+    line-height: 1.5;
 }
 
-.resource-card .resource-link {
+.resource-link {
     display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #4CAF50;
+    margin: 0 15px 15px;
+    padding: 8px 15px;
+    background-color: #2B4C7E;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: 500;
     transition: background-color 0.3s ease;
 }
 
-.resource-card .resource-link:hover {
-    background-color: #45a049;
+.resource-link:hover {
+    background-color: #3A6DAA;
 }
 
-/* Resource List Styles */
+/* Resource List Styling */
 .resource-list {
-    background: #f9f9f9;
-    padding: 2rem;
+    background-color: #F8FAFF;
     border-radius: 10px;
-    margin-top: 2rem;
+    padding: 20px 30px;
 }
 
 .resource-list h3 {
-    color: #333;
-    margin-bottom: 1rem;
+    color: #2B4C7E;
+    margin-bottom: 15px;
 }
 
 .resource-list ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
 .resource-list li {
-    margin-bottom: 1rem;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.resource-list li:before {
+    content: "•";
+    color: #2B4C7E;
+    position: absolute;
+    left: 0;
 }
 
 .resource-list a {
-    color: #2196F3;
+    color: #3A6DAA;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .resource-list a:hover {
-    color: #0d47a1;
+    color: #2B4C7E;
     text-decoration: underline;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .resource-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .resource-card {
-        padding: 1rem;
-    }
-    
-    .resource-card img {
-        height: 180px;
-    }
 }
