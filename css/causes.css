@@ -1,6 +1,7 @@
+/* ===== CAUSES SECTION CONTAINER ===== */
 .causes-section {
-    padding: 60px 20px;
-    background-color: #fff;
+    padding: 4rem 2rem;
+    background-color: #f8faff;
 }
 
 .causes-container {
@@ -8,60 +9,72 @@
     margin: 0 auto;
 }
 
+/* ===== CAUSES SECTION HEADING ===== */
 .causes-container h2 {
+    text-align: center;
     color: #2B4C7E;
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-    text-align: center;
+    margin-bottom: 3rem;
 }
 
-.causes-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    gap: 30px;
+/* ===== CAUSES TABLE LAYOUT ===== */
+.causes-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 2rem;
 }
 
-.cause-card {
+/* ===== CAUSES TABLE CELLS ===== */
+.causes-table td {
     background: white;
-    padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
     text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    vertical-align: top;
 }
 
-.cause-card:hover {
-    box-shadow: 0 5px 15px rgb(43, 76, 126, 0.2);
+.causes-table td:hover {
+    transform: translateY(-5px);
 }
 
+/* ===== CAUSE CARD CONTENT ===== */
 .cause-icon {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
-.cause-card h3 {
+.causes-table h3 {
     color: #2B4C7E;
-    font-size: 1.4rem;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
 }
 
-.cause-card p {
+.causes-table p {
     color: #506B8B;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
-/* ===== CAUSES DETAILS SECTION ===== */
+/* ===== LAST CAUSE CARD (FULL WIDTH) ===== */
+.causes-table tr:last-child td {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ===== DETAILED CAUSES SECTION ===== */
 .causes-details {
     padding: 60px 20px;
     background-color: #F8FAFF;
 }
 
+/* ===== DETAILED CAUSES CONTAINER ===== */
 .detail-container {
     max-width: 900px;
     margin: 0 auto;
 }
 
+/* ===== DETAILED CAUSE ITEM ===== */
 .detail-item {
     margin-bottom: 50px;
     padding: 30px;
@@ -73,8 +86,7 @@
     align-items: center;
 }
 
-
-
+/* ===== DETAILED CAUSE IMAGE ===== */
 .detail-image {
     flex: 0 0 300px;
     height: 200px;
@@ -88,7 +100,7 @@
     object-fit: cover;
 }
 
-
+/* ===== DETAILED CAUSE CONTENT ===== */
 .detail-item h3 {
     color: #2B4C7E;
     font-size: 1.8rem;
@@ -102,7 +114,7 @@
     text-align: justify;
 }
 
-/* Add hover effect */
+/* ===== DETAILED CAUSE HOVER EFFECT ===== */
 .detail-item:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
