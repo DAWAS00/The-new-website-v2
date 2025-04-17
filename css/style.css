@@ -1,6 +1,6 @@
 /* ===== HEADER SECTION ===== */
 header {
-    background-color: #ffffff;  /* White background for the header */
+    background-color: #ca6a6a;  /* White background for the header */
     box-shadow: 0 2px 5px rgb(0, 0, 0, 0.1);  /* Subtle shadow for depth */
     padding: 1rem 2rem;  /* Inner spacing: 1rem top/bottom, 2rem left/right */
     position: fixed;  /* Keeps header fixed while scrolling */
@@ -207,7 +207,7 @@ nav {
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Changed to cover to fill the space properly */
+    object-fit: fill; /* Changed to cover to fill the space properly */
 }
 
 /* Optional: Add a subtle rotation on hover */

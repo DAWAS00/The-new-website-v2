@@ -1,4 +1,6 @@
-/* Resources Page Styles - Main container styling */
+/* ==========================================================================
+   RESOURCES PAGE - MAIN CONTAINER STYLING
+   ========================================================================== */
 
 .resources-intro {
     padding: 60px 20px;  /* Add space around the intro section (top/bottom 60px, left/right 20px) */
@@ -20,6 +22,10 @@
     margin-left: auto;  /* Center the paragraph horizontally */
     margin-right: auto;  /* Center the paragraph horizontally */
 }
+
+/* ==========================================================================
+   RESOURCE NAVIGATION BUTTONS
+   ========================================================================== */
 
 .resource-navigation {
     margin: 40px 0;  /* Add vertical space above and below navigation */
@@ -64,6 +70,10 @@
     box-shadow: 0 5px 15px rgb(43, 76, 126, 0.2);  /* Enhance shadow on hover */
 }
 
+/* ==========================================================================
+   RESOURCE BUTTON ICONS
+   ========================================================================== */
+
 /* Icons using pseudo-elements - Adds icons without extra HTML */
 .resource-btn::before {
     position: absolute;  /* Position icon independently of text */
@@ -91,7 +101,10 @@
     content: "👥";  /* Add people/community emoji icon */
 }
 
-/* Resource Sections - Styling for each resource category */
+/* ==========================================================================
+   RESOURCE SECTIONS - GENERAL STYLING
+   ========================================================================== */
+
 .resource-section {
     padding: 60px 20px;  /* Add space around each section */
     background-color: white;  /* Default background color */
@@ -136,8 +149,10 @@ html {
     scroll-behavior: smooth;  /* Enable smooth scrolling when clicking navigation links */
 }
 
+/* ==========================================================================
+   BOOKS & ARTICLES SECTION - RESOURCE CARDS
+   ========================================================================== */
 
-/* Resource Cards Styling */
 .resource-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -202,7 +217,10 @@ html {
     background-color: #3A6DAA;
 }
 
-/* Resource List Styling */
+/* ==========================================================================
+   ADDITIONAL READING RESOURCES LIST
+   ========================================================================== */
+
 .resource-list {
     background-color: #F8FAFF;
     border-radius: 10px;
@@ -241,4 +259,184 @@ html {
 .resource-list a:hover {
     color: #2B4C7E;
     text-decoration: underline;
+}
+
+/* ==========================================================================
+   VIDEOS & COURSES SECTION
+   ========================================================================== */
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.video-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(43, 76, 126, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(43, 76, 126, 0.2);
+}
+
+.video-thumbnail {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+}
+
+.video-thumbnail iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px 8px 0 0;
+}
+
+/* ==========================================================================
+   VIDEO THUMBNAIL FALLBACK STYLES (NOT CURRENTLY USED)
+   ========================================================================== */
+
+/* Remove these styles since we're not using them with iframes */
+.play-button,
+.video-thumbnail img {
+    display: none;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.video-card:hover .video-thumbnail img {
+    transform: scale(1.05);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(43, 76, 126, 0.8);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: rgba(43, 76, 126, 1);
+}
+
+/* ==========================================================================
+   VIDEO INFORMATION STYLING
+   ========================================================================== */
+
+.video-info {
+    padding: 15px;
+}
+
+.video-info h3 {
+    color: #2B4C7E;
+    font-size: 1.2rem;
+    margin: 0 0 8px 0;
+}
+
+.video-info .presenter {
+    color: #506B8B;
+    font-style: italic;
+    margin: 0 0 10px 0;
+    font-size: 0.9rem;
+}
+
+.video-info .description {
+    color: #506B8B;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ==========================================================================
+   ONLINE COURSES SECTION
+   ========================================================================== */
+
+.course-section {
+    background-color: #F8FAFF;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.course-section h3 {
+    color: #2B4C7E;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.course-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.course-list li {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(43, 76, 126, 0.1);
+}
+
+.course-list h4 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.course-list h4 a {
+    color: #2B4C7E;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.course-list h4 a:hover {
+    color: #3A6DAA;
+    text-decoration: underline;
+}
+
+.course-list .provider {
+    color: #506B8B;
+    font-style: italic;
+    margin: 0 0 8px 0;
+    font-size: 0.9rem;
+}
+
+.course-list .duration {
+    color: #506B8B;
+    margin: 0 0 8px 0;
+    font-size: 0.9rem;
+}
+
+.course-list .description {
+    color: #506B8B;
+    margin: 0;
+    line-height: 1.5;
 }

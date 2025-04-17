@@ -1,0 +1,91 @@
+.tools-table {
+    width: 100%;
+    border-spacing: 2rem;
+    border-collapse: separate;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.tools-table td {
+    width: 33.33%;
+    padding: 0;
+    vertical-align: top;
+}
+
+/* Remove the grid display since we're using table */
+.tools-grid {
+    padding: 2rem;
+}
+
+.tool-card {
+    background: rgb(72, 55, 104);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(43, 76, 126, 0.2);
+}
+
+.tool-card h2 {
+    color: #2B4C7E;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.tool-content {
+    padding: 1rem 0;
+}
+
+.mood-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.mood-options button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    background: #f0f4f8;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.mood-options button:hover {
+    background: #e1ebf7;
+}
+
+.affirmation {
+    text-align: center;
+    font-style: italic;
+    color: #506B8B;
+}
+
+.affirmation p {
+    margin: 1rem 0;
+}
+
+.tool-content ul, .tool-content ol {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.tool-content li {
+    margin: 0.5rem 0;
+    color: #506B8B;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
