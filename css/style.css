@@ -1,6 +1,6 @@
 /* ===== HEADER SECTION ===== */
 header {
-    background-color: #ca6a6a;  /* White background for the header */
+    background-color: #2E3A59;  /* White background for the header */
     box-shadow: 0 2px 5px rgb(0, 0, 0, 0.1);  /* Subtle shadow for depth */
     padding: 1rem 2rem;  /* Inner spacing: 1rem top/bottom, 2rem left/right */
     position: fixed;  /* Keeps header fixed while scrolling */
@@ -29,7 +29,7 @@ nav {
 /* Individual navigation link styling */
 .nav-links li a {
     text-decoration: none;  /* Removes underline from links */
-    color: #333333;  /* Dark gray text color */
+    color: #E6F0F3  ;  /* Dark gray text color */
     font-weight: 500;  /* Medium font weight */
     padding: 0.5rem 1rem;  /* Spacing around link text */
 }
@@ -45,19 +45,13 @@ nav {
     font-weight: 600;  /* Slightly bolder than regular links */
 }
 
-/* Language switch button styling */
-.language-switch a {
-    background-color: #f8f9fa;  /* Light gray background */
-    border-radius: 4px;  /* Rounded corners */
-    padding: 0.5rem 1rem;  /* Spacing around text */
-}
 
-/* Body adjustment to prevent content from hiding under fixed header */
+
 
 
 /* ===== HERO SECTION ===== */
 .hero {
-    background-color: #F0F7FF;  /* Light, calming blue background */
+    background-color: #E6F0F3 ;  /* Light, calming blue background */
     padding: 100px 20px;
     text-align: center;
     /* min-height: 80vh; */
@@ -65,17 +59,18 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  
 }
 
 .hero h1 {
-    color: #2B4C7E;  /* Deep calming blue */
+    color: #2E2E2E;  /* Deep calming blue */
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
     font-weight: 700;
 }
 
 .hero p {
-    color: #506B8B;  /* Softer blue for better readability */
+    color: #2C3E50 ;  /* Softer blue for better readability */
     font-size: 1.5rem;
     margin-bottom: 2.5rem;
     max-width: 800px;
@@ -96,7 +91,7 @@ nav {
 }
 
 .btn.primary {
-    background-color: #567EBB;  /* Trustworthy blue */
+    background-color: #3B82F6   ;  /* Trustworthy blue */
     color: white;
     box-shadow: 0 4px 15px rgb(86, 126, 187);
 }
@@ -106,9 +101,9 @@ nav {
 }
 
 .btn.secondary {
-    background-color: #F2B5A7;  /* Soft coral - warm and inviting */
+    background-color: #FFBCBC   ;  /* Soft coral - warm and inviting */
     color: #333;
-    box-shadow: 0 4px 15px rgb(242, 181, 167);
+   
 }
 
 .btn.secondary:hover {
