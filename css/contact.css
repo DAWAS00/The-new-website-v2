@@ -1,4 +1,5 @@
 /* Contact Page Specific Styles */
+/* ===== TEAM SECTION STYLES ===== */
 .team-section {
     padding: 4rem 2rem;
     background: #fff;
@@ -11,6 +12,7 @@
     margin: 0 auto;
 }
 
+/* ===== CONTACT SECTION LAYOUT ===== */
 .contact-section {
     padding: 4rem 2rem;
     background: white;
@@ -21,6 +23,7 @@
     margin: 0 auto;
 }
 
+/* ===== CONTACT FORM GRID LAYOUT ===== */
 .contact-options {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -28,6 +31,7 @@
     margin-top: 2rem;
 }
 
+/* ===== FORM ELEMENTS STYLING ===== */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -43,7 +47,7 @@
     font-size: 1rem;
 }
 
-
+/* ===== CONTACT ITEM STYLING ===== */
 .contact-item {
     display: flex;
     align-items: center;
@@ -67,6 +71,7 @@
     font-weight: bold;
 }
 
+/* ===== EMERGENCY CARD STYLING ===== */
 .emergency-card {
     background: linear-gradient(to left, #2B4C7E, #567abc);
     padding: 2rem;
@@ -76,6 +81,7 @@
     margin: 2rem 0;
 }
 
+/* ===== EMERGENCY HEADER STYLING ===== */
 .emergency-header {
     display: flex;
     align-items: center;
@@ -91,9 +97,9 @@
     font-size: 1.8rem;
     margin: 0;
     color: #45B7D1;
-   
 }
 
+/* ===== WARNING SIGNS LIST STYLING ===== */
 .warning-signs-list {
     list-style: none;
     padding: 0;
@@ -112,6 +118,7 @@
     color: rgba(255, 255, 255, 0.8);
 }
 
+/* ===== EMERGENCY ACTION SECTION ===== */
 .emergency-action {
     background: rgba(255, 255, 255, 0.1);
     padding: 1.5rem;
@@ -125,6 +132,7 @@
     text-align: center;
 }
 
+/* ===== ACTION BUTTONS STYLING ===== */
 .action-buttons {
     display: flex;
     gap: 1rem;
@@ -136,9 +144,9 @@
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
-    transition: all 0.3s ease;
 }
 
+/* ===== BUTTON STATES AND VARIATIONS ===== */
 .emergency-btn {
     background: white;
     color: #567abc;
@@ -150,8 +158,8 @@
     border: 2px solid white;
 }
 
+/* ===== BUTTON HOVER EFFECTS ===== */
 .emergency-btn:hover, .support-btn:hover {
-    
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -163,6 +171,9 @@
 .support-btn:hover {
     background: white;
     color: #567abc;
+    
 }
 
-
+.help-message :hover{
+    text-decoration: underline;
+}
