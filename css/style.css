@@ -125,9 +125,6 @@ nav {
     gap: 40px;
 }
 
-.intro-container.reverse {
-    flex-direction: row-reverse;
-}
 
 .intro-text {
     flex: 1;
@@ -205,7 +202,7 @@ nav {
     object-fit: fill; /* Changed to cover to fill the space properly */
 }
 
-/* Optional: Add a subtle rotation on hover */
+
 
 
 

@@ -1,4 +1,4 @@
-/* ===== HERO SECTION ===== */
+/* ===== HERO SECTION AND VIDEO BACKGROUND ===== */
 .counseling-hero {
     position: relative;
     height: 800px;
@@ -8,6 +8,7 @@
     justify-content: center;
 }
 
+/* ===== VIDEO BACKGROUND STYLES ===== */
 .video-background {
     position: absolute;
     top: 50%;
@@ -36,6 +37,7 @@
     scale: 1.5;
 }
 
+/* ===== HERO CONTENT AND TEXT STYLES ===== */
 .hero-content {
     position: relative;
     z-index: 2;
@@ -60,6 +62,7 @@
     margin-bottom: 1.5rem;
 }
 
+/* ===== HERO IMAGE STYLES ===== */
 .hero-image {
     flex: 1;
     max-width: 500px;
@@ -71,7 +74,7 @@
     box-shadow: 0 4px 20px rgba(43, 76, 126, 0.1);
 }
 
-/* ===== WHAT IS COUNSELING SECTION ===== */
+/* ===== COUNSELING INTRODUCTION SECTION ===== */
 .what-is-counseling {
     padding: 4rem 2rem;
     text-align: center;
@@ -84,7 +87,7 @@
     margin-bottom: 1.5rem;
 }
 
-/* ===== SERVICES SECTION ===== */
+/* ===== SERVICES SECTION AND TABLE LAYOUT ===== */
 .services {
     padding: 4rem 2rem;
     background-color: #f8faff;

@@ -18,7 +18,7 @@
     line-height: 1.8;  /* Add space between lines for better readability */
     margin-bottom: 40px;  /* Add space below the paragraph */
     text-align: center;  /* Center the text horizontally */
-    max-width: 900px;  /* Limit paragraph width for better readability */
+    max-width: 1000px;  /* Limit paragraph width for better readability */
     margin-left: auto;  /* Center the paragraph horizontally */
     margin-right: auto;  /* Center the paragraph horizontally */
 }
@@ -27,25 +27,7 @@
    RESOURCE NAVIGATION BUTTONS
    ========================================================================== */
 
-.resource-navigation {
-    margin: 40px 0;  /* Add vertical space above and below navigation */
-    text-align: center;  /* Center the navigation section */
-}
-
-.resource-navigation h2 {
-    color: #2B4C7E;  /* Set heading color to dark blue */
-    font-size: 1.8rem;  /* Set heading size */
-    margin-bottom: 30px;  /* Add space below the heading */
-}
-
-.resource-buttons {
-    display: flex;  /* Use flexbox for button layout */
-    flex-wrap: wrap;  /* Allow buttons to wrap to next line on small screens */
-    justify-content: center;  /* Center buttons horizontally */
-    gap: 20px;  /* Add space between buttons */
-}
-
-.resource-btn {
+   .resource-btn {
     display: flex;  /* Use flexbox for internal button layout */
     flex-direction: column;  /* Stack icon and text vertically */
     align-items: center;  /* Center items horizontally */
@@ -69,6 +51,25 @@
     /* transform: translateY(-5px); */  /* (Commented out) Lift effect on hover */
     box-shadow: 0 5px 15px rgb(43, 76, 126, 0.2);  /* Enhance shadow on hover */
 }
+.resource-navigation {
+    margin: 40px 0;  /* Add vertical space above and below navigation */
+    text-align: center;  /* Center the navigation section */
+}
+
+.resource-navigation h2 {
+    color: #2B4C7E;  /* Set heading color to dark blue */
+    font-size: 1.8rem;  /* Set heading size */
+    margin-bottom: 30px;  /* Add space below the heading */
+}
+
+.resource-buttons {
+    display: flex;  /* Use flexbox for button layout */
+    flex-wrap: wrap;  /* Allow buttons to wrap to next line on small screens */
+    justify-content: center;  /* Center buttons horizontally */
+    gap: 20px;  /* Add space between buttons */
+}
+
+
 
 /* ==========================================================================
    RESOURCE BUTTON ICONS

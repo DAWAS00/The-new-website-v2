@@ -1,3 +1,4 @@
+/* ===== TABLE LAYOUT STYLES ===== */
 .tools-table {
     width: 100%;
     border-spacing: 2rem;
@@ -12,11 +13,12 @@
     vertical-align: top;
 }
 
-/* Remove the grid display since we're using table */
+/* ===== GRID CONTAINER ===== */
 .tools-grid {
     padding: 2rem;
 }
 
+/* ===== TOOL CARD STYLES ===== */
 .tool-card {
     background: rgb(255, 255, 255);
     border-radius: 15px;
@@ -36,10 +38,12 @@
     font-size: 1.5rem;
 }
 
+/* ===== TOOL CONTENT STYLES ===== */
 .tool-content {
     padding: 1rem 0;
 }
 
+/* ===== MOOD SELECTOR STYLES ===== */
 .mood-options {
     display: flex;
     flex-wrap: wrap;
@@ -60,6 +64,7 @@
     background: #e1ebf7;
 }
 
+/* ===== AFFIRMATION STYLES ===== */
 .affirmation {
     text-align: center;
     font-style: italic;
@@ -70,6 +75,7 @@
     margin: 1rem 0;
 }
 
+/* ===== LIST STYLES ===== */
 .tool-content ul, .tool-content ol {
     padding-left: 1.5rem;
     margin: 1rem 0;
@@ -80,6 +86,7 @@
     color: #506B8B;
 }
 
+/* ===== BUTTON STYLES ===== */
 .btn {
     display: inline-block;
     padding: 0.8rem 1.5rem;

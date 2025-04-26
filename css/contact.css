@@ -43,9 +43,6 @@
     font-size: 1rem;
 }
 
-.contact-form button {
-    width: fit-content;
-}
 
 .contact-item {
     display: flex;
@@ -71,7 +68,7 @@
 }
 
 .emergency-card {
-    background: linear-gradient(to right, #2B4C7E, #567abc);
+    background: linear-gradient(to left, #2B4C7E, #567abc);
     padding: 2rem;
     border-radius: 15px;
     color: white;
@@ -93,6 +90,8 @@
 .emergency-header h3 {
     font-size: 1.8rem;
     margin: 0;
+    color: #45B7D1;
+   
 }
 
 .warning-signs-list {
@@ -142,7 +141,7 @@
 
 .emergency-btn {
     background: white;
-    color: #ff4444;
+    color: #567abc;
 }
 
 .support-btn {
@@ -152,28 +151,18 @@
 }
 
 .emergency-btn:hover, .support-btn:hover {
-    transform: translateY(-2px);
+    
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .emergency-btn:hover {
-    background: #ff4444;
+    background: #8cadeb;
     color: white;
 }
 
 .support-btn:hover {
     background: white;
-    color: #ff4444;
+    color: #567abc;
 }
 
-@media (max-width: 768px) {
-    .action-buttons {
-        flex-direction: column;
-    }
-    
-    .emergency-btn, .support-btn {
-        width: 100%;
-        text-align: center;
-    }
-}
 
