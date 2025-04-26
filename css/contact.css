@@ -46,41 +46,6 @@
 .contact-form button {
     width: fit-content;
 }
-.emergency-banner {
-    background: linear-gradient(to right, #ff4444, #ff6b6b);
-    padding: 1.5rem;
-    color: white;
-}
-
-.emergency-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
-.emergency-alert {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.alert-icon {
-    font-size: 2rem;
-}
-
-.emergency-alert h2 {
-    margin: 0;
-    font-size: 1.5rem;
-}
-
-.emergency-contacts {
-    display: flex;
-    gap: 2rem;
-}
 
 .contact-item {
     display: flex;
@@ -105,19 +70,110 @@
     font-weight: bold;
 }
 
-.emergency-button {
-    background: white;
-    color: #ff4444;
+.emergency-card {
+    background: linear-gradient(to right, #2B4C7E, #567abc);
+    padding: 2rem;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 4px 20px rgba(255, 68, 68, 0.2);
+    margin: 2rem 0;
+}
+
+.emergency-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.emergency-icon {
+    font-size: 2rem;
+}
+
+.emergency-header h3 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.warning-signs-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.warning-signs-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.bullet {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.emergency-action {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+}
+
+.urgent-message {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.emergency-btn, .support-btn {
     padding: 0.8rem 1.5rem;
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 
-.emergency-button:hover {
-    background: #ff4444;
+.emergency-btn {
+    background: white;
+    color: #ff4444;
+}
+
+.support-btn {
+    background: rgba(255, 255, 255, 0.2);
     color: white;
+    border: 2px solid white;
+}
+
+.emergency-btn:hover, .support-btn:hover {
+    transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+.emergency-btn:hover {
+    background: #ff4444;
+    color: white;
+}
+
+.support-btn:hover {
+    background: white;
+    color: #ff4444;
+}
+
+@media (max-width: 768px) {
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .emergency-btn, .support-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
 

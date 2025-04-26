@@ -6,6 +6,7 @@
     <title>Contact Us - Eman Platform</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -41,6 +42,10 @@
                     <h3>Mohammad Dawas</h3>
                     <p class="role">Founder & Lead Developer</p>
                     <p>Computer Science student passionate about mental health and technology.</p>
+                    <div class="social-buttons" style="margin-top: 2rem; ; justify-content: center; gap: 1rem;">
+                        <a href="https://github.com/DAWAS00" target="_blank" style="color: #2B4C7E; text-decoration: none; padding: 0.5rem 1rem; border: 2px solid #2B4C7E; border-radius: 25px;"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://www.instagram.com/mo_dawas?igsh=MTYzNGpsb3h0bXRtNg==" target="_blank" style="color: #2B4C7E; text-decoration: none; padding: 0.5rem 1rem; border: 2px solid #2B4C7E; border-radius: 25px; "><i class="fab fa-instagram"></i> Instagram</a>
+                    </div>
                 </div>
 
                 <!-- Add more team members as needed  if there is anyone want to work with me after this :_(  -->
@@ -58,14 +63,14 @@
                         <p style="margin-top: 1rem;">Today, what began as a university project has grown into a dedicated platform aimed at creating a safe, supportive space for students to seek help, share their stories, and find the resources they need to thrive in their academic journey.</p>
                     </div>
                     <div style="flex: 1;">
-                        <img src="imges/My story The real one.png" alt="Our Journey" style="width: 100%; border-radius: 15px;">
+                        <img src="imges/please be the last one.png" alt="Our Journey" style="width: 100%; border-radius: 15px;">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Forms Section -->
-        <section class="contact-section">
+        <section class="contact-section" id="contact-form">
             <div class="contact-container">
                 <h2>Get in Touch</h2>
                 <div class="contact-options">
@@ -112,9 +117,9 @@
                             <li>📍 Location: Applied Science University,Jordan</li>
                         </ul>
                         <div class="social-links">
-                            <a href="#" style="color: white; margin-right: 1rem;">LinkedIn</a>
-                            <a href="#" style="color: white; margin-right: 1rem;">Twitter</a>
-                            <a href="#" style="color: white;">Instagram</a>
+                            <a href="#" style="color: white; margin-right: 1rem;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                            <a href="#" style="color: white; margin-right: 1rem;"><i class="fab fa-twitter"></i> Twitter</a>
+                            <a href="#" style="color: white;"><i class="fab fa-instagram"></i> Instagram</a>
                         </div>
                     </div>
                 </div>
@@ -134,29 +139,30 @@
                 </div>
             </div>
         </section>
-        <div class="emergency-banner">
-            <div class="emergency-content">
-                <div class="emergency-alert">
-                    <span class="alert-icon">🆘</span>
-                    <h2>Need Immediate Help?</h2>
+        <div class="quick-help">
+            <div class="emergency-card">
+                <div class="emergency-header">
+                    <span class="emergency-icon">🚨</span>
+                    <h3>Emergency Warning Signs</h3>
                 </div>
-                <div class="emergency-contacts">
-                    <div class="contact-item">
-                        <span class="contact-icon">📞</span>
-                        <div class="contact-details">
-                            <h3>24/7 Crisis Hotline</h3>
-                            <p>+962 775769447</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">🏥</span>
-                        <div class="contact-details">
-                            <h3>Emergency Services</h3>
-                            <p>911</p>
-                        </div>
+                <ul class="warning-signs-list">
+                    <li><span class="bullet">•</span> Thoughts of self-harm or suicide</li>
+                    <li><span class="bullet">•</span> Severe panic attacks or difficulty breathing</li>
+                    <li><span class="bullet">•</span> Intense feelings of hopelessness with a specific plan</li>
+                    <li><span class="bullet">•</span> Complete withdrawal from daily activities or relationships</li>
+                    <li><span class="bullet">•</span> Unable to perform basic self-care or daily functions</li>
+                </ul>
+                <div class="emergency-action">
+                    <p class="urgent-message">If you or someone you know is experiencing these symptoms, immediate help is available.</p>
+                    <div class="action-buttons">
+                        <a href="emergency.html" class="emergency-btn">Get Emergency Help</a>
+                        <a href="contact.html" class="support-btn">Contact Support</a>
                     </div>
                 </div>
-                <a href="emergency.html" class="emergency-button">Get Emergency Help</a>
+            </div>
+            <div class="help-message">
+                <p>If you or someone you know is experiencing these symptoms, don't hesitate to reach out for help.</p>
+                <a href="contact.html" class="btn primary">Get Support Now</a>
             </div>
         </div>
     </main>
