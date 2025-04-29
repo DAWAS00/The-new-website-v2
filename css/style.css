@@ -51,16 +51,16 @@ nav {
 
 /* ===== HERO SECTION ===== */
 .hero {
-    background-color: #E6F0F3 ;  /* Light, calming blue background */
-    padding: 100px 20px;
-    text-align: center;
-    /* min-height: 80vh; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://images.unsplash.com/photo-1523240795612-9a054b0db644') center/cover;
+    color: white;
+    
 }
+
+.min-vh-75 {
+    min-height: 75vh;
+}
+ 
 
 .hero h1 {
     color: #2E2E2E;  /* Deep calming blue */
@@ -358,6 +358,56 @@ footer {
 .carousel-control-next-icon {
     width: 30px;
     height: 30px;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    background: #ffffff;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    color: #2B4C7E;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.card-text {
+    color: #506B8B;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Add gradient overlay to cards */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    pointer-events: none;
 }
 
 

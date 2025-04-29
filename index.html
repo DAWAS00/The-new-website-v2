@@ -8,60 +8,161 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <style>
+        /* Enhanced Carousel Styling */
         .carousel {
             max-width: 1200px;
-            margin: 40px auto;
+            margin: 60px auto;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            border-radius: 15px;
+            overflow: hidden;
         }
+        
         .carousel-inner {
-            max-height: 600px;
+            max-height: 650px;
         }
+        
+        .carousel-item {
+            background-color: #000;
+        }
+        
         .carousel-item img {
             width: 100%;
-            height: 600px;
+            height: 650px;
             object-fit: cover;
+            opacity: 0.9;
+            transition: transform 0.3s ease;
         }
+        
         .carousel-caption {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+            bottom: 50px;
+        }
+        
+        .carousel-caption h5 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        
+        .carousel-caption p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #f8f9fa;
+        }
+        
+        .carousel-indicators {
+            bottom: 20px;
+        }
+        
+        .carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .carousel-indicators button.active {
+            background-color: #fff;
+        }
+        
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .carousel-control-prev {
+            left: 20px;
+        }
+        
+        .carousel-control-next {
+            right: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .carousel-caption {
+                padding: 20px;
+                bottom: 30px;
+            }
+            
+            .carousel-caption h5 {
+                font-size: 1.5rem;
+            }
+            
+            .carousel-caption p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
     <!-- ===== HEADER & NAVIGATION ===== -->
     <header>
-        <nav>
-            <ul class="nav-links">
-                <!-- Main pages -->
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="causes.html">Causes</a></li>
-                
-                <!-- Help & Resources -->
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="tools.html">Self-Help Tools</a></li>
-                
-                <!-- Support & Services -->
-                <li><a href="counseling.html">Counseling</a></li>
-                
-                <!-- Community & Information -->
-                <li><a href="stories.html">Success Stories</a></li>
-                
-                <!-- Contact -->
-                <li><a href="contact.html">Contact</a></li>
-                
-                
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Eman-Platform</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="causes.html">Causes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resources.html">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tools.html">Self-Help Tools</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="counseling.html">Counseling</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="stories.html">Success Stories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <!-- ===== HERO SECTION ===== -->
     <main>
-        <section class="hero">
-            <h1>Your Mental Health Matters</h1>
-            <p>Supporting students through the challenges of academic life</p>
-            <div class="cta-buttons">
-                <a href="resources.html" class="btn primary">Explore Resources</a>
-                <a href="contact.html" class="btn secondary">Get Help Now</a>
+        <section class="hero container-fluid py-5 text-center">
+            <div class="row min-vh-75 align-items-center">
+                <div class="col-12 col-md-8 mx-auto px-4">
+                    <h1 class="display-4 mb-4 text-white">Your Mental Health Matters</h1>
+                    <p class="lead mb-4 text-center mx-auto text-white" style="max-width: 800px;">Supporting students through the challenges of academic life</p>
+                    <div class="cta-buttons d-flex flex-column flex-sm-row justify-content-center gap-3">
+                        <a href="resources.html" class="btn btn-primary btn-lg">Explore Resources</a>
+                        <a href="contact.html" class="btn btn-outline-primary btn-lg">Get Help Now</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -77,25 +178,25 @@
             <!-- Who We Are Slide -->
             <div class="carousel-item active">
                 <img src="imges/mentalhealthnursing.png" class="d-block w-100" alt="Supportive team of mental health professionals">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-block"> <!-- Changed from d-none d-md-block to d-block -->
                     <h5>Who We Are</h5>
-                    <p>We are a group of passionate university students who understand firsthand the mental health challenges that come with college life. We created this platform to support our fellow students, providing a safe space where they can find help, understanding, and resources tailored to their academic journey.</p>
+                    <p class="carousel-text">We are a group of passionate university students who understand firsthand the mental health challenges that come with college life. We created this platform to support our fellow students, providing a safe space where they can find help, understanding, and resources tailored to their academic journey.</p>
                 </div>
             </div>
             <!-- Our Mission Slide -->
             <div class="carousel-item">
                 <img src="imges/img-750x375.png" class="d-block w-100" alt="Students supporting each other">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-block"> <!-- Changed from d-none d-md-block to d-block -->
                     <h5>Our Mission</h5>
-                    <p>Our mission is to break down barriers to mental health support in academic environments. We understand the unique pressures students face and aim to provide accessible, confidential, and comprehensive mental health resources tailored to student needs.</p>
+                    <p class="carousel-text">Our mission is to break down barriers to mental health support in academic environments. We understand the unique pressures students face and aim to provide accessible, confidential, and comprehensive mental health resources tailored to student needs.</p>
                 </div>
             </div>
             <!-- How We Help Slide -->
             <div class="carousel-item">
                 <img src="imges/image-7.png" class="d-block w-100" alt="Various support channels illustration">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-block"> <!-- Changed from d-none d-md-block to d-block -->
                     <h5>How We Help</h5>
-                    <p>Through our platform, we offer various support channels including online counseling, self-help resources, peer support groups, and educational materials. We believe in creating a safe space where students can find help without judgment and take steps toward better mental well-being.</p>
+                    <p class="carousel-text">Through our platform, we offer various support channels including online counseling, self-help resources, peer support groups, and educational materials. We believe in creating a safe space where students can find help without judgment and take steps toward better mental well-being.</p>
                 </div>
             </div>
         </div>
@@ -110,39 +211,48 @@
     </div>
 
     <!-- ===== MENTAL HEALTH AWARENESS SECTION ===== -->
-    <section class="mental-health-awareness">
-        <h2>Understanding Mental Health</h2>
+    <section class="container py-5">
+        <h2 class="text-center mb-5 display-4">Understanding Mental Health</h2>
         <!-- Awareness Cards Grid -->
-        <div class="awareness-grid">
-            <div class="awareness-card">
-                <div class="card-image">
-                    <img src="imges/images.jpg" alt="Anxiety and Stress Icon">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card h-100 shadow-sm hover-card">
+                    <img src="imges/images.jpg" class="card-img-top" alt="Anxiety and Stress Icon">
+                    <div class="card-body">
+                        <h5 class="card-title">Anxiety & Stress</h5>
+                        <p class="card-text">Learn to recognize signs of academic stress and anxiety, including exam pressure, deadline worries, and social anxiety in campus settings.</p>
+                    </div>
                 </div>
-                <h3>Anxiety & Stress</h3>
-                <p>Learn to recognize signs of academic stress and anxiety, including exam pressure, deadline worries, and social anxiety in campus settings.</p>
             </div>
-            <div class="awareness-card">
-                <div class="card-image">
-                    <img src="imges/GettyImages-1296114150-860x574.jpg" alt="Depression Icon">
+            <div class="col">
+                <div class="card h-100 shadow-sm hover-card">
+                    <img src="imges/GettyImages-1296114150-860x574.jpg" class="card-img-top" alt="Depression Icon">
+                    <div class="card-body">
+                        <h5 class="card-title">Depression</h5>
+                        <p class="card-text">Understand the signs of depression in student life, from loss of interest in studies to changes in sleep patterns and social withdrawal.</p>
+                    </div>
                 </div>
-                <h3>Depression</h3>
-                <p>Understand the signs of depression in student life, from loss of interest in studies to changes in sleep patterns and social withdrawal.</p>
             </div>
-            <div class="awareness-card">
-                <div class="card-image">
-                    <img src="imges/shutterstock_1782987194-scaled.png" alt="Burnout Icon">
+            <div class="col">
+                <div class="card h-100 shadow-sm hover-card">
+                    <img src="imges/shutterstock_1782987194-scaled.png" class="card-img-top" alt="Burnout Icon">
+                    <div class="card-body">
+                        <h5 class="card-title">Burnout</h5>
+                        <p class="card-text">Identify academic burnout symptoms and learn effective strategies for maintaining work-life balance during your studies.</p>
+                    </div>
                 </div>
-                <h3>Burnout</h3>
-                <p>Identify academic burnout symptoms and learn effective strategies for maintaining work-life balance during your studies.</p>
             </div>
-            <div class="awareness-card">
-                <div class="card-image">
-                    <img src="imges/ed_image.png" alt="Eating Disorders Icon">
+            <div class="col">
+                <div class="card h-100 shadow-sm hover-card">
+                    <img src="imges/ed_image.png" class="card-img-top" alt="Eating Disorders Icon">
+                    <div class="card-body">
+                        <h5 class="card-title">Eating Disorders</h5>
+                        <p class="card-text">Recognize the warning signs of eating disorders and learn about the importance of maintaining healthy eating habits during academic stress.</p>
+                    </div>
                 </div>
-                <h3>Eating Disorders</h3>
-                <p>Recognize the warning signs of eating disorders and learn about the importance of maintaining healthy eating habits during academic stress.</p>
             </div>
         </div>
+    </section>
 
         <!-- Warning Signs Section -->
         <div class="quick-help">
@@ -186,46 +296,4 @@
     <!-- Custom Carousel Script -->
     <script src="js/carousel.js"></script>
 </body>
-</html><style>
-    .carousel {
-        max-width: 1200px;
-        margin: 40px auto;
-    }
-    .carousel-inner {
-        max-height: 600px;
-    }
-    .carousel-item img {
-        width: 100%;
-        height: 600px;
-        object-fit: cover;
-    }
-    .carousel-caption {
-        background: rgba(0, 0, 0, 0.5);
-        padding: 20px;
-        border-radius: 10px;
-    }
-    
-    .carousel-control-prev,
-    .carousel-control-next {
-        background-color: rgba(0, 0, 0, 0.7);
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .carousel-control-prev {
-        left: 20px;
-    }
-
-    .carousel-control-next {
-        right: 20px;
-    }
-
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        width: 30px;
-        height: 30px;
-    }
-</style>
+</html>

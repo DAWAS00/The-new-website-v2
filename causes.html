@@ -4,127 +4,223 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Causes - Eman Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/causes.css">
 </head>
 <body>
+    <!-- ===== HEADER & NAVIGATION ===== -->
     <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="causes.html" class="active">Causes</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="tools.html">Self-Help Tools</a></li>
-                <li><a href="counseling.html">Counseling</a></li>
-                <li><a href="stories.html">Success Stories</a></li>
-                <li><a href="contact.html">Contact</a></li>
-               
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Eman-Platform</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="causes.html">Causes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resources.html">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tools.html">Self-Help Tools</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="counseling.html">Counseling</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="stories.html">Success Stories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Common Causes of Mental Health Issues</h1>
-            <p>Understanding the root causes helps in better addressing mental health challenges</p>
-        </section>
-
-        <section class="causes-section">
-            <div class="causes-container">
-                <h2>Common Causes of Student Mental Health Issues</h2>
-                <table class="causes-table">
-                    <tr>
-                        <td>
-                            <div class="cause-icon">📚</div>
-                            <h3>Academic Pressure</h3>
-                            <p>Deadlines, exams, and expectations can feel overwhelming, leading to stress and burnout.</p>
-                        </td>
-                        <td>
-                            <div class="cause-icon">👥</div>
-                            <h3>Social Pressure</h3>
-                            <p>Fitting in, making friends, and fear of judgement can increase anxiety, especially in new environments.</p>
-                        </td>
-                        <td>
-                            <div class="cause-icon">💰</div>
-                            <h3>Financial Stress</h3>
-                            <p>Tuition fees, living expenses, and part-time jobs add extra pressure on students.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="cause-icon">😴</div>
-                            <h3>Lack of Sleep</h3>
-                            <p>Poor sleep habits affect mood, concentration, and emotional resilience.</p>
-                        </td>
-                        <td>
-                            <div class="cause-icon">🏠</div>
-                            <h3>Family Issues</h3>
-                            <p>Problems at home can impact emotional stability and focus on studies.</p>
-                        </td>
-                        <td>
-                            <div class="cause-icon">🤝</div>
-                            <h3>Isolation & Loneliness</h3>
-                            <p>Being away from home or feeling disconnected from peers increases the risk of mental health struggles.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">
-                            <div class="cause-icon">🎯</div>
-                            <h3>Unrealistic Expectations</h3>
-                            <p>High personal goals or pressure from family and teachers can lead to feelings of failure.</p>
-                        </td>
-                    </tr>
-                </table>
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero container-fluid py-5 text-center" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=1920&q=80') no-repeat center 60% / cover;">
+            <div class="row min-vh-75 align-items-center"> <!-- Changed from min-vh-50 to min-vh-75 -->
+                <div class="col-12 col-md-8 mx-auto px-4">
+                    <h1 class="display-4 mb-4 text-white">Common Causes of Mental Health Issues</h1>
+                    <p class="lead mb-4 text-white">Understanding the root causes helps in better addressing mental health challenges</p>
+                    <div class="mt-4">
+                        <a href="#causes-overview" class="btn btn-primary btn-lg">Learn More</a>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="causes-details">
-            <h2 style="text-align: center; color: #2B4C7E; margin: 3rem 0 2rem; font-size: 2rem;">Understanding Mental Health Challenges in Depth</h2>
-            <table class="detailed-causes-table">
-                <tr>
-                    <td>
-                        <img src="imges/tt_p4-768x432-1.jpg" alt="Student studying under pressure">
-                        <h3>Academic Pressure: A Deeper Look</h3>
-                        <p>Academic pressure is one of the most significant stressors for students. The constant need to maintain high grades, meet assignment deadlines, and prepare for exams can create overwhelming stress. Many students feel trapped in a cycle of continuous assessment and performance evaluation. This pressure often intensifies during exam periods or when multiple deadlines coincide, leading to anxiety, sleep problems, and decreased well-being.</p>
-                    </td>
-                    <td>
-                        <img src="imges/Understanding Social Pressure.jpg" alt="Students in social situation">
-                        <h3>Understanding Social Pressure</h3>
-                        <p>Social pressure in academic environments can be particularly challenging. Students often struggle with building new relationships, maintaining existing ones, and finding their place in the academic community. The fear of social judgment, coupled with the pressure to participate in social activities while maintaining academic performance, can create significant anxiety. This is especially true for international students or those who are naturally introverted.</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="imges/The Impact of Financial Stress.jpg" alt="Student worried about finances">
-                        <h3>The Impact of Financial Stress</h3>
-                        <p>Financial concerns can significantly affect a student's mental health. The burden of tuition fees, accommodation costs, and daily expenses can create constant worry. Many students work part-time jobs to support themselves, which can lead to difficulties in balancing work and studies. This financial pressure can result in increased stress levels and may force some students to make difficult choices between their education and basic needs.</p>
-                    </td>
-                    <td>
-                        <img src="imges/Sleep Deprivation and Mental Health.jpg" alt="Tired student struggling to stay awake">
-                        <h3>Sleep Deprivation and Mental Health</h3>
-                        <p>Poor sleep habits among students often develop due to late-night studying, social activities, or anxiety about academic performance. Lack of quality sleep can significantly impact cognitive function, emotional regulation, and overall mental health. This creates a vicious cycle where stress affects sleep, and poor sleep further increases stress levels.</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="imges/Family Dynamics and Academic Life.png" alt="Family stress representation">
-                        <h3>Family Dynamics and Academic Life</h3>
-                        <p>Family-related stress can significantly impact a student's mental well-being. Whether it's pressure from family expectations, conflicts at home, or being away from family support systems, these issues can affect academic performance and emotional stability. Some students also deal with the added responsibility of caring for family members while pursuing their studies.</p>
-                    </td>
-                    <td>
-                        <img src="imges/Combating Isolation and Loneliness.png" alt="Lonely student in campus environment">
-                        <h3>Combating Isolation and Loneliness</h3>
-                        <p>The transition to academic life can often lead to feelings of isolation, especially for students who are far from home. The challenge of building new social connections while adapting to a new environment can be overwhelming. Online learning environments can further intensify these feelings of disconnection from peers and the academic community.</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <img src="imges/Managing Expectations and Self-Pressure.png" alt="Student under pressure of expectations">
-                        <h3>Managing Expectations and Self-Pressure</h3>
-                        <p>Unrealistic expectations, whether self-imposed or from external sources, can create significant mental stress. Students often struggle with perfectionism, setting impossibly high standards for themselves. This can lead to feelings of inadequacy, anxiety, and depression when these expectations aren't met, creating a negative impact on both academic performance and personal well-being.</p>
-                    </td>
-                </tr>
-            </table>
+        <section class="causes-section py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Common Causes of Student Mental Health Issues</h2>
+                <div class="row g-4">
+                    <!-- Academic Pressure -->
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm hover-card">
+                            <div class="card-body text-center">
+                                <div class="display-4 mb-3">📚</div>
+                                <h3 class="card-title h4">Academic Pressure</h3>
+                                <p class="card-text">Deadlines, exams, and expectations can feel overwhelming, leading to stress and burnout.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Social Pressure -->
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm hover-card">
+                            <div class="card-body text-center">
+                                <div class="display-4 mb-3">👥</div>
+                                <h3 class="card-title h4">Social Pressure</h3>
+                                <p class="card-text">Fitting in, making friends, and fear of judgement can increase anxiety, especially in new environments.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Financial Stress -->
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm hover-card">
+                            <div class="card-body text-center">
+                                <div class="display-4 mb-3">💰</div>
+                                <h3 class="card-title h4">Financial Stress</h3>
+                                <p class="card-text">Tuition fees, living expenses, and part-time jobs add extra pressure on students.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Lack of Sleep -->
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm hover-card">
+                            <div class="card-body text-center">
+                                <div class="display-4 mb-3">😴</div>
+                                <h3 class="card-title h4">Lack of Sleep</h3>
+                                <p class="card-text">Poor sleep habits affect mood, concentration, and emotional resilience.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Family Issues -->
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm hover-card">
+                            <div class="card-body text-center">
+                                <div class="display-4 mb-3">🏠</div>
+                                <h3 class="card-title h4">Family Issues</h3>
+                                <p class="card-text">Problems at home can impact emotional stability and focus on studies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Isolation & Loneliness -->
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm hover-card">
+                            <div class="card-body text-center">
+                                <div class="display-4 mb-3">🤝</div>
+                                <h3 class="card-title h4">Isolation & Loneliness</h3>
+                                <p class="card-text">Being away from home or feeling disconnected from peers increases the risk of mental health struggles.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Unrealistic Expectations -->
+                    <div class="col-12">
+                        <div class="card h-100 shadow-sm hover-card">
+                            <div class="card-body text-center">
+                                <div class="display-4 mb-3">🎯</div>
+                                <h3 class="card-title h4">Unrealistic Expectations</h3>
+                                <p class="card-text">High personal goals or pressure from family and teachers can lead to feelings of failure.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="causes-details py-5">
+            <div class="container">
+                <h2 class="text-center mb-5" style="color: #2B4C7E;">Understanding Mental Health Challenges in Depth</h2>
+                
+                <!-- First Row -->
+                <div class="row g-4 mb-4">
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <img src="imges/tt_p4-768x432-1.jpg" class="card-img-top" alt="Student studying under pressure">
+                            <div class="card-body">
+                                <h3 class="card-title h4 mb-3">Academic Pressure: A Deeper Look</h3>
+                                <p class="card-text">Academic pressure is one of the most significant stressors for students. The constant need to maintain high grades, meet assignment deadlines, and prepare for exams can create overwhelming stress. Many students feel trapped in a cycle of continuous assessment and performance evaluation. This pressure often intensifies during exam periods or when multiple deadlines coincide, leading to anxiety, sleep problems, and decreased well-being.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <img src="imges/Understanding Social Pressure.jpg" class="card-img-top" alt="Students in social situation">
+                            <div class="card-body">
+                                <h3 class="card-title h4 mb-3">Understanding Social Pressure</h3>
+                                <p class="card-text">Social pressure in academic environments can be particularly challenging. Students often struggle with building new relationships, maintaining existing ones, and finding their place in the academic community. The fear of social judgment, coupled with the pressure to participate in social activities while maintaining academic performance, can create significant anxiety. This is especially true for international students or those who are naturally introverted.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Row -->
+                <div class="row g-4 mb-4">
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <img src="imges/The Impact of Financial Stress.jpg" class="card-img-top" alt="Student worried about finances">
+                            <div class="card-body">
+                                <h3 class="card-title h4 mb-3">The Impact of Financial Stress</h3>
+                                <p class="card-text">Financial concerns can significantly affect a student's mental health. The burden of tuition fees, accommodation costs, and daily expenses can create constant worry. Many students work part-time jobs to support themselves, which can lead to difficulties in balancing work and studies. This financial pressure can result in increased stress levels and may force some students to make difficult choices between their education and basic needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <img src="imges/Sleep Deprivation and Mental Health.jpg" class="card-img-top" alt="Tired student struggling to stay awake">
+                            <div class="card-body">
+                                <h3 class="card-title h4 mb-3">Sleep Deprivation and Mental Health</h3>
+                                <p class="card-text">Poor sleep habits among students often develop due to late-night studying, social activities, or anxiety about academic performance. Lack of quality sleep can significantly impact cognitive function, emotional regulation, and overall mental health. This creates a vicious cycle where stress affects sleep, and poor sleep further increases stress levels.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Third Row -->
+                <div class="row g-4 mb-4">
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <img src="imges/Family Dynamics and Academic Life.png" class="card-img-top" alt="Family stress representation">
+                            <div class="card-body">
+                                <h3 class="card-title h4 mb-3">Family Dynamics and Academic Life</h3>
+                                <p class="card-text">Family-related stress can significantly impact a student's mental well-being. Whether it's pressure from family expectations, conflicts at home, or being away from family support systems, these issues can affect academic performance and emotional stability. Some students also deal with the added responsibility of caring for family members while pursuing their studies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <img src="imges/Combating Isolation and Loneliness.png" class="card-img-top" alt="Lonely student in campus environment">
+                            <div class="card-body">
+                                <h3 class="card-title h4 mb-3">Combating Isolation and Loneliness</h3>
+                                <p class="card-text">The transition to academic life can often lead to feelings of isolation, especially for students who are far from home. The challenge of building new social connections while adapting to a new environment can be overwhelming. Online learning environments can further intensify these feelings of disconnection from peers and the academic community.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fourth Row (Full Width) -->
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="card h-100">
+                            <img src="imges/Managing Expectations and Self-Pressure.png" class="card-img-top" alt="Student under pressure of expectations">
+                            <div class="card-body">
+                                <h3 class="card-title h4 mb-3">Managing Expectations and Self-Pressure</h3>
+                                <p class="card-text">Unrealistic expectations, whether self-imposed or from external sources, can create significant mental stress. Students often struggle with perfectionism, setting impossibly high standards for themselves. This can lead to feelings of inadequacy, anxiety, and depression when these expectations aren't met, creating a negative impact on both academic performance and personal well-being.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <footer>
@@ -146,5 +242,7 @@
             </div>
         </div>
     </footer>
+<!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
