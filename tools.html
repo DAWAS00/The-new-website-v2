@@ -4,29 +4,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Self-Help Tools - Eman Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/tools.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="causes.html">Causes</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="tools.html" class="active">Self-Help Tools</a></li>
-                <li><a href="counseling.html">Counseling</a></li>
-                <li><a href="stories.html">Success Stories</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Eman Platform</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="causes.html">Causes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resources.html">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="tools.html">Self-Help Tools</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="counseling.html">Counseling</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="stories.html">Success Stories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Self-Help Tools</h1>
-            <p>Practical tools and techniques to support your mental well-being</p>
+        <section class="hero-section text-center text-white position-relative">
+            <img src="https://images.unsplash.com/photo-1474418397713-7ede21d49118?auto=format&fit=crop&q=80" class="hero-image" alt="Mental Health Support">
+            <div class="hero-overlay"></div>
+            <div class="container position-relative z-2 py-5">
+                <h1 class="display-4 fw-bold mb-4">Self-Help Tools</h1>
+                <p class="lead mb-4">Practical tools and techniques to support your mental well-being</p>
+                <a href="#tools" class="btn btn-light btn-lg">Explore Tools</a>
+            </div>
+        </section>
+
+        <section id="tools" class="tools-section py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Anxiety Relief Tool -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h2 class="card-title h4">Guided Breathing</h2>
+                                <div class="breathing-circle my-4" id="breathingCircle">
+                                    <div class="circle-text">Start</div>
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn btn-primary" onclick="startBreathing()">Begin Exercise</button>
+                                    <p class="mt-3" id="breathingInstructions">Click to start a guided breathing session</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mood Journal -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h2 class="card-title h4">Mood Journal</h2>
+                                <form id="moodJournalForm" class="my-3">
+                                    <div class="mb-3">
+                                        <label class="form-label">How are you feeling today?</label>
+                                        <select class="form-select" id="moodSelect">
+                                            <option value="great">😊 Great</option>
+                                            <option value="good">🙂 Good</option>
+                                            <option value="okay">😐 Okay</option>
+                                            <option value="low">😔 Low</option>
+                                            <option value="bad">😢 Bad</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">What's on your mind?</label>
+                                        <textarea class="form-control" id="moodNote" rows="3"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Save Entry</button>
+                                </form>
+                                <div id="moodHistory" class="mt-3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Focus Timer -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h2 class="card-title h4">Focus Timer</h2>
+                                <div class="text-center my-4">
+                                    <div class="display-4" id="timerDisplay">25:00</div>
+                                    <div class="btn-group mt-3">
+                                        <button class="btn btn-primary" id="startTimer">Start</button>
+                                        <button class="btn btn-secondary" id="pauseTimer">Pause</button>
+                                        <button class="btn btn-danger" id="resetTimer">Reset</button>
+                                    </div>
+                                    <div class="mt-3">
+                                        <select class="form-select" id="timerDuration">
+                                            <option value="1500">25 minutes</option>
+                                            <option value="900">15 minutes</option>
+                                            <option value="300">5 minutes</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gratitude Journal -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h2 class="card-title h4">Gratitude Journal</h2>
+                                <form id="gratitudeForm" class="my-3">
+                                    <div class="mb-3">
+                                        <label class="form-label">What are you grateful for today?</label>
+                                        <textarea class="form-control" id="gratitudeEntry" rows="3"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Add Entry</button>
+                                </form>
+                                <div id="gratitudeList" class="mt-3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thought Reframing -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h2 class="card-title h4">Thought Reframing</h2>
+                                <div class="my-3">
+                                    <label class="form-label">Negative Thought:</label>
+                                    <textarea class="form-control mb-3" id="negativeThought" rows="2"></textarea>
+                                    <label class="form-label">Reframe it positively:</label>
+                                    <textarea class="form-control mb-3" id="positiveThought" rows="2"></textarea>
+                                    <button class="btn btn-primary" onclick="saveThoughtReframe()">Save Reframe</button>
+                                </div>
+                                <div id="reframeHistory" class="mt-3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Self-Care Checklist -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h2 class="card-title h4">Daily Self-Care</h2>
+                                <div class="form-check my-2">
+                                    <input class="form-check-input" type="checkbox" id="water">
+                                    <label class="form-check-label">Drink water</label>
+                                </div>
+                                <div class="form-check my-2">
+                                    <input class="form-check-input" type="checkbox" id="exercise">
+                                    <label class="form-check-label">Physical activity</label>
+                                </div>
+                                <div class="form-check my-2">
+                                    <input class="form-check-input" type="checkbox" id="meditation">
+                                    <label class="form-check-label">5-min meditation</label>
+                                </div>
+                                <div class="form-check my-2">
+                                    <input class="form-check-input" type="checkbox" id="sleep">
+                                    <label class="form-check-label">7+ hours sleep</label>
+                                </div>
+                                <button class="btn btn-primary mt-3" onclick="resetChecklist()">Reset Checklist</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="tools-grid">
@@ -162,5 +322,7 @@
             </div>
         </div>
     </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/tools.js"></script>
 </body>
 </html>

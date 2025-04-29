@@ -4,173 +4,245 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources - Eman Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/resources.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="causes.html">Causes</a></li>
-                <li><a href="resources.html" class="active">Resources</a></li>
-                <li><a href="tools.html">Self-Help Tools</a></li>
-                <li><a href="counseling.html">Counseling</a></li>
-                <li><a href="stories.html">Success Stories</a></li>
-                <li><a href="contact.html">Contact</a></li>
-               
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Eman-Platform</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="causes.html">Causes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="resources.html">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tools.html">Self-Help Tools</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="counseling.html">Counseling</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="stories.html">Success Stories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Mental Health Resources</h1>
-            <p>Discover a collection of carefully selected resources to support your mental well-being journey</p>
-        </section>
+        <!-- ===== HERO SECTION ===== -->
+                <section class="hero container-fluid py-5 text-center" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=1920&q=80') no-repeat center center / cover;">
+                    <div class="row min-vh-75 align-items-center">
+                        <div class="col-12 col-md-8 mx-auto px-4">
+                            <h1 class="display-4 mb-4 text-white">Mental Health Resources</h1>
+                            <p class="lead mb-4 text-white">Discover a collection of carefully selected resources to support your mental well-being journey</p>
+                            <div class="mt-4">
+                                <a href="#books" class="btn btn-primary btn-lg">Explore Resources</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
     
-        <section class="resources-intro">
+        <section class="resources-intro py-5 bg-light">
             <div class="container">
-                <p>Welcome to our comprehensive resource center. Here you'll find a variety of materials designed to help you understand, manage, and improve your mental health. From educational books and articles to videos, podcasts, and community support options, we've curated resources that address different aspects of mental well-being for students.</p>
-                
-                <div class="resource-navigation">
-                    <h2>Jump to a Resource Section:</h2>
-                    <div class="resource-buttons">
-                        <a href="#books" class="resource-btn books-btn">
-                            Books & Articles
-                        </a>
-                        <a href="#videos" class="resource-btn videos-btn">
-                            Videos & Courses
-                        </a>
-                       
-                        <a href="#apps" class="resource-btn apps-btn">
-                            Apps & Tools
-                        </a>
-                        <a href="#community" class="resource-btn community-btn">
-                            Community Support
-                        </a>
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8 text-center">
+                        <p class="lead mb-5">Welcome to our comprehensive resource center. Here you'll find a variety of materials designed to help you understand, manage, and improve your mental health. From educational books and articles to videos, podcasts, and community support options, we've curated resources that address different aspects of mental well-being for students.</p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="h3 mb-4">Jump to a Resource Section:</h2>
+                        <div class="d-grid gap-3 d-sm-flex justify-content-center flex-wrap">
+                            <a href="#books" class="btn btn-primary btn-lg px-4 py-3 m-2">
+                                <i class="fas fa-book me-2"></i>
+                                Books & Articles
+                            </a>
+                            <a href="#videos" class="btn btn-success btn-lg px-4 py-3 m-2">
+                                <i class="fas fa-video me-2"></i>
+                                Videos & Courses
+                            </a>
+                            <a href="#apps" class="btn btn-info btn-lg px-4 py-3 m-2">
+                                <i class="fas fa-mobile-alt me-2"></i>
+                                Apps & Tools
+                            </a>
+                            <a href="#community" class="btn btn-warning btn-lg px-4 py-3 m-2">
+                                <i class="fas fa-users me-2"></i>
+                                Community Support
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="books" class="resource-section">
+        <section id="books" class="resource-section py-5">
             <div class="container">
-                <h2>Books & Articles</h2>
-                <div class="resource-items">
-                    <!-- Book and article resources -->
-                    <div class="resource-grid">
-                        <div class="resource-card">
-                            <img src="imges/The Anxiety and Phobia Workbook.png" alt="The Anxiety and Phobia Workbook">
-                            <h3>The Anxiety and Phobia Workbook</h3>
-                            <p class="author">By Edmund J. Bourne</p>
-                            <p class="description">A comprehensive guide for managing anxiety with practical exercises and strategies specifically helpful for students.</p>
-                            <a href="https://www.amazon.com/Anxiety-Phobia-Workbook-Edmund-Bourne/dp/1684034833/" class="resource-link" target="_blank">Learn More</a>
-                        </div>
-                        
-                        <div class="resource-card">
-                            <img src="imges/Feeling Good The New Mood Therapy.png" alt="Feeling Good">
-                            <h3>Feeling Good: The New Mood Therapy</h3>
-                            <p class="author">By David D. Burns</p>
-                            <p class="description">A classic self-help book based on cognitive behavioral therapy principles to combat depression and anxiety.</p>
-                            <a href="https://www.amazon.com/Feeling-Good-New-Mood-Therapy/dp/0380810336/" class="resource-link" target="_blank">Learn More</a>
-                        </div>
-                        
-                        <div class="resource-card">
-                            <img src="imges/Managing Academic Stress.png" alt="Student Mental Health Article">
-                            <h3>Managing Academic Stress</h3>
-                            <p class="author">By Purna Prabhakar Nandamuri, Gowthami C H</p>
-                            <p class="description">An insightful article on coping with academic pressure and maintaining mental well-being during studies.</p>
-                            <a href="https://www.jmseleyon.com/index.php/jms/article/view/205" class="resource-link" target="_blank">Read Article</a>
+                <h2 class="text-center mb-5">Books & Articles</h2>
+                <div class="row g-4">
+                    <!-- Book Cards -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="imges/The Anxiety and Phobia Workbook.png" class="card-img-top" alt="The Anxiety and Phobia Workbook">
+                            <div class="card-body">
+                                <h3 class="card-title h5">The Anxiety and Phobia Workbook</h3>
+                                <p class="card-subtitle text-muted mb-2">By Edmund J. Bourne</p>
+                                <p class="card-text">A comprehensive guide for managing anxiety with practical exercises and strategies specifically helpful for students.</p>
+                                <a href="https://www.amazon.com/Anxiety-Phobia-Workbook-Edmund-Bourne/dp/1684034833/" class="btn btn-primary" target="_blank">Learn More</a>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="resource-list">
-                        <h3>Additional Reading Resources</h3>
-                        <ul>
-                            <li>
-                                <a href="https://www.nimh.nih.gov/health/publications/stress" target="_blank">Stress in College Students: What You Should Know</a> - National Institute of Mental Health
-                            </li>
-                            <li>
-                                <a href="https://www.apa.org/topics/resilience" target="_blank">Building Your Resilience</a> - American Psychological Association
-                            </li>
-                            <li>
-                                <a href="https://www.helpguide.org/articles/mental-health/finding-a-therapist-who-can-help-you-heal.htm" target="_blank">Finding a Therapist Who Can Help You Heal</a> - HelpGuide.org
-                            </li>
-                        </ul>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="imges/Feeling Good The New Mood Therapy.png" class="card-img-top" alt="Feeling Good">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Feeling Good: The New Mood Therapy</h3>
+                                <p class="card-subtitle text-muted mb-2">By David D. Burns</p>
+                                <p class="card-text">A classic self-help book based on cognitive behavioral therapy principles to combat depression and anxiety.</p>
+                                <a href="https://www.amazon.com/Feeling-Good-New-Mood-Therapy/dp/0380810336/" class="btn btn-primary" target="_blank">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="imges/Managing Academic Stress.png" class="card-img-top" alt="Student Mental Health Article">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Managing Academic Stress</h3>
+                                <p class="card-subtitle text-muted mb-2">By Purna Prabhakar Nandamuri, Gowthami C H</p>
+                                <p class="card-text">An insightful article on coping with academic pressure and maintaining mental well-being during studies.</p>
+                                <a href="https://www.jmseleyon.com/index.php/jms/article/view/205" class="btn btn-primary" target="_blank">Read Article</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Reading Resources -->
+                    <div class="col-12 mt-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Additional Reading Resources</h3>
+                                <div class="list-group list-group-flush">
+                                    <a href="https://www.nimh.nih.gov/health/publications/stress" class="list-group-item list-group-item-action" target="_blank">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1">Stress in College Students: What You Should Know</h6>
+                                            <small class="text-muted">NIMH</small>
+                                        </div>
+                                    </a>
+                                    <a href="https://www.apa.org/topics/resilience" class="list-group-item list-group-item-action" target="_blank">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1">Building Your Resilience</h6>
+                                            <small class="text-muted">APA</small>
+                                        </div>
+                                    </a>
+                                    <a href="https://www.helpguide.org/articles/mental-health/finding-a-therapist-who-can-help-you-heal.htm" class="list-group-item list-group-item-action" target="_blank">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1">Finding a Therapist Who Can Help You Heal</h6>
+                                            <small class="text-muted">HelpGuide.org</small>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="videos" class="resource-section">
+        <section id="videos" class="resource-section py-5 bg-light">
             <div class="container">
-                <h2>Videos & Courses</h2>
-                <div class="resource-items">
-                    <div class="video-grid">
-                        <div class="video-card">
-                            <div class="video-thumbnail">
-                                <img src="imges/Stress Management for Students.png" alt="Stress Management Course">
+                <h2 class="text-center mb-5">Videos & Courses</h2>
+                <div class="row g-4">
+                    <!-- Video Cards -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="imges/Stress Management for Students.png" class="card-img-top" alt="Stress Management Course">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Stress Management for Students</h3>
+                                <p class="card-subtitle text-muted mb-2">By Dr. Sarah Johnson</p>
+                                <p class="card-text">A comprehensive 6-part video course covering essential stress management techniques for academic life.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-primary me-1">Time Management</span>
+                                    <span class="badge bg-primary me-1">Meditation</span>
+                                    <span class="badge bg-primary">Study-Life Balance</span>
+                                </div>
+                                <a href="https://youtu.be/Bk2-dKH2Ta4?si=yh3VAjEvvnfz53LA" class="btn btn-primary" target="_blank">Watch Video</a>
                             </div>
-                            <h3>Stress Management for Students</h3>
-                            <p class="instructor">By Dr. Sarah Johnson</p>
-                            <p class="description">A comprehensive 6-part video course covering essential stress management techniques for academic life.</p>
-                            <div class="video-topics">
-                                <span>Time Management</span>
-                                <span>Meditation</span>
-                                <span>Study-Life Balance</span>
-                            </div>
-                            <a href="https://youtu.be/Bk2-dKH2Ta4?si=yh3VAjEvvnfz53LA" class="video-link">Watch Video</a>
-                        </div>
-
-                        <div class="video-card">
-                            <div class="video-thumbnail">
-                                <img src="imges/Mindfulness Basics.png" alt="Mindfulness Basics">
-                            </div>
-                            <h3>Introduction to Mindfulness</h3>
-                            <p class="instructor">By Mind & Body Institute</p>
-                            <p class="description">Learn the fundamentals of mindfulness practice with simple, daily exercises for mental clarity.</p>
-                            <div class="video-topics">
-                                <span>Breathing Techniques</span>
-                                <span>Daily Practice</span>
-                                <span>Focus Training</span>
-                            </div>
-                            <a href="https://www.mindful.org/meditation/mindfulness-getting-started/" class="video-link">Start Learning</a>
-                        </div>
-
-                        <div class="video-card">
-                            <div class="video-thumbnail">
-                                <img src="imges/Anxiety Management.png" alt="Anxiety Management Workshop">
-                            </div>
-                            <h3>Anxiety Management Workshop</h3>
-                            <p class="instructor">By Prof. Michael Chen</p>
-                            <p class="description">A practical workshop series teaching effective strategies to manage academic anxiety and test stress.</p>
-                            <div class="video-topics">
-                                <span>Coping Strategies</span>
-                                <span>Exam Preparation</span>
-                                <span>Relaxation Methods</span>
-                            </div>
-                            <a href="https://meditofoundation.org/meditation-challenge?gad_source=1&gclid=Cj0KCQjwzYLABhD4ARIsALySuCRkAE79HLhQMz4HbYT_wDDYDqz2PYSzlYd4r87K2GczLcu21wYOFwkaAvY6EALw_wcB" class="video-link">Access Workshop</a>
                         </div>
                     </div>
 
-                    <div class="featured-playlist">
-                        <h3>Quick Mental Health Tips</h3>
-                        <div class="playlist-items">
-                            <a href="https://youtu.be/nFIfv-jIgbI?si=VVVbSbC7w1S9GbbJ" class="playlist-item">
-                                <span class="video-title">5-Minute Desk Stretches for Students</span>
-                                
-                            </a>
-                            <a href="https://youtu.be/Vi0_7idqcFI?si=_d-wQWdGMcI8lrTA" class="playlist-item">
-                                <span class="video-title">Quick Breathing Exercises Between Classes</span>
-                                
-                            </a>
-                            <a href="https://www.youtube.com/watch?v=4PgEIlewf7Y" class="playlist-item">
-                                <span class="video-title">Managing Pre-Exam Anxiety</span>
-                            </a>
-                            <a href="https://youtu.be/nYLLKGkKcm8?si=BanCQYCvqQtnFu-K" class="playlist-item">
-                                <span class="video-title">Power Napping for Better Focus</span>
-                            </a>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="imges/Mindfulness Basics.png" class="card-img-top" alt="Mindfulness Basics">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Introduction to Mindfulness</h3>
+                                <p class="card-subtitle text-muted mb-2">By Mind & Body Institute</p>
+                                <p class="card-text">Learn the fundamentals of mindfulness practice with simple, daily exercises for mental clarity.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-primary me-1">Breathing Techniques</span>
+                                    <span class="badge bg-primary me-1">Daily Practice</span>
+                                    <span class="badge bg-primary">Focus Training</span>
+                                </div>
+                                <a href="https://www.mindful.org/meditation/mindfulness-getting-started/" class="btn btn-primary" target="_blank">Start Learning</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="imges/Anxiety Management.png" class="card-img-top" alt="Anxiety Management Workshop">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Anxiety Management Workshop</h3>
+                                <p class="card-subtitle text-muted mb-2">By Prof. Michael Chen</p>
+                                <p class="card-text">A practical workshop series teaching effective strategies to manage academic anxiety and test stress.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-primary me-1">Coping Strategies</span>
+                                    <span class="badge bg-primary me-1">Exam Preparation</span>
+                                    <span class="badge bg-primary">Relaxation Methods</span>
+                                </div>
+                                <a href="https://meditofoundation.org/meditation-challenge" class="btn btn-primary" target="_blank">Access Workshop</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Mental Health Tips -->
+                    <div class="col-12 mt-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h3 class="h5 card-title mb-4">Quick Mental Health Tips</h3>
+                                <div class="list-group list-group-flush">
+                                    <a href="https://youtu.be/nFIfv-jIgbI?si=VVVbSbC7w1S9GbbJ" class="list-group-item list-group-item-action" target="_blank">
+                                        <i class="fas fa-play-circle me-2"></i>5-Minute Desk Stretches for Students
+                                    </a>
+                                    <a href="https://youtu.be/Vi0_7idqcFI?si=_d-wQWdGMcI8lrTA" class="list-group-item list-group-item-action" target="_blank">
+                                        <i class="fas fa-play-circle me-2"></i>Quick Breathing Exercises Between Classes
+                                    </a>
+                                    <a href="https://www.youtube.com/watch?v=4PgEIlewf7Y" class="list-group-item list-group-item-action" target="_blank">
+                                        <i class="fas fa-play-circle me-2"></i>Managing Pre-Exam Anxiety
+                                    </a>
+                                    <a href="https://youtu.be/nYLLKGkKcm8?si=BanCQYCvqQtnFu-K" class="list-group-item list-group-item-action" target="_blank">
+                                        <i class="fas fa-play-circle me-2"></i>Power Napping for Better Focus
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -179,22 +251,139 @@
 
       
 
-        <section id="apps" class="resource-section">
+        <section id="apps" class="resource-section py-5">
             <div class="container">
-                <h2>Apps & Tools</h2>
-                <div class="resource-items">
-                    <!-- App resources will go here -->
-                    <p>Coming soon: Helpful applications and digital tools for mental health management.</p>
+                <h2 class="text-center mb-5">Apps & Tools</h2>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Headspace App - Mindfulness">                            <div class="card-body">
+                                <h3 class="card-title h5">Headspace</h3>
+                                <p class="card-subtitle text-muted mb-2">Meditation & Sleep App</p>
+                                <p class="card-text">Popular meditation app offering guided sessions, sleep sounds, and focus music. Perfect for beginners.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-info me-1">Meditation</span>
+                                    <span class="badge bg-info me-1">Sleep</span>
+                                    <span class="badge bg-info">Focus</span>
+                                </div>
+                                <a href="https://www.headspace.com/studentplan" class="btn btn-info text-white" target="_blank">Get Student Plan</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Calm App - Peaceful Beach">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Calm</h3>
+                                <p class="card-subtitle text-muted mb-2">Relaxation & Sleep Stories</p>
+                                <p class="card-text">Features calming exercises, breathing techniques, and bedtime stories to help reduce stress and anxiety.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-info me-1">Relaxation</span>
+                                    <span class="badge bg-info me-1">Sleep</span>
+                                    <span class="badge bg-info">Anxiety Relief</span>
+                                </div>
+                                <a href="https://www.calm.com/schools" class="btn btn-info text-white" target="_blank">Access Calm</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Forest App - Productive Workspace">                            <div class="card-body">
+                                <h3 class="card-title h5">Forest App</h3>
+                                <p class="card-subtitle text-muted mb-2">Focus & Productivity</p>
+                                <p class="card-text">Stay focused by planting virtual trees that grow while you study and wither if you leave the app.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-info me-1">Focus</span>
+                                    <span class="badge bg-info me-1">Time Management</span>
+                                    <span class="badge bg-info">Productivity</span>
+                                </div>
+                                <a href="https://www.forestapp.cc/" class="btn btn-info text-white" target="_blank">Download Forest</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="community" class="resource-section">
+        <section id="community" class="resource-section py-5 bg-light">
             <div class="container">
-                <h2>Community Support</h2>
-                <div class="resource-items">
-                    <!-- Community resources will go here -->
-                    <p>Coming soon: Information about support groups and community resources.</p>
+                <h2 class="text-center mb-5">Community Support</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="h5 mb-4"><i class="fas fa-users me-2 text-primary"></i>Student Support Groups</h3>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <h6 class="mb-1">Weekly Stress Management Group</h6>
+                                        <p class="mb-1">Every Tuesday at 5 PM - Student Center</p>
+                                        <small class="text-muted">Open to all students. No registration required.</small>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <h6 class="mb-1">Exam Anxiety Support Circle</h6>
+                                        <p class="mb-1">Thursdays at 4 PM - Online via Zoom</p>
+                                        <small class="text-muted">Email counseling@university.edu to join</small>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <h6 class="mb-1">International Students Meetup</h6>
+                                        <p class="mb-1">First Saturday of each month - Campus Garden</p>
+                                        <small class="text-muted">Cultural exchange and mutual support</small>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="h5 mb-4"><i class="fas fa-hands-helping me-2 text-primary"></i>Peer Support Network</h3>
+                                <div class="mb-4">
+                                    <h6 class="mb-3">Become a Peer Supporter</h6>
+                                    <p>Join our trained peer support network to help fellow students while developing valuable skills.</p>
+                                    <a href="#" class="btn btn-outline-primary mb-3">Learn More About Training</a>
+                                </div>
+                                <div class="mb-4">
+                                    <h6 class="mb-3">Connect with a Peer Supporter</h6>
+                                    <p>Get matched with a trained peer supporter who understands student life challenges.</p>
+                                    <a href="#" class="btn btn-outline-primary">Request a Peer Match</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="card shadow-sm">
+                            <div class="card-body text-center">
+                                <h3 class="h5 mb-4"><i class="fas fa-phone-alt me-2 text-primary"></i>24/7 Support Lines</h3>
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <div class="p-3 border rounded">
+                                            <h6>Crisis Helpline</h6>
+                                            <p class="mb-0">+962 775769447</p>
+                                            <small class="text-muted">Available 24/7</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="p-3 border rounded">
+                                            <h6>Student Counseling</h6>
+                                            <p class="mb-0">+962 775769447</p>
+                                            <small class="text-muted">Mon-Fri, 9AM-5PM</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="p-3 border rounded">
+                                            <h6>WhatsApp Support</h6>
+                                            <p class="mb-0">+962 775769447</p>
+                                            <small class="text-muted">Text anytime</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -218,5 +407,6 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
