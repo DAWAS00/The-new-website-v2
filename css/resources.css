@@ -71,9 +71,6 @@
 
 
 
-/* ==========================================================================
-   RESOURCE BUTTON ICONS
-   ========================================================================== */
 
 /* Icons using pseudo-elements - Adds icons without extra HTML */
 .resource-btn::before {

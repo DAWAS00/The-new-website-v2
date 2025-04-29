@@ -5,7 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eman-Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .carousel {
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        .carousel-inner {
+            max-height: 600px;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
     <!-- ===== HEADER & NAVIGATION ===== -->
@@ -47,40 +67,47 @@
     </main>
 
     <!-- ===== INTRODUCTION SECTIONS ===== -->
-    <section class="intro-sections">
-        <!-- Who We Are Section -->
-        <div class="intro-container">
-            <div class="intro-text">
-                <h2>Who We Are</h2>
-                <p>We are a group of passionate university students who understand firsthand the mental health challenges that come with college life. We created this platform to support our fellow students, providing a safe space where they can find help, understanding, and resources tailored to their academic journey.</p>
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- Who We Are Slide -->
+            <div class="carousel-item active">
+                <img src="imges/mentalhealthnursing.png" class="d-block w-100" alt="Supportive team of mental health professionals">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Who We Are</h5>
+                    <p>We are a group of passionate university students who understand firsthand the mental health challenges that come with college life. We created this platform to support our fellow students, providing a safe space where they can find help, understanding, and resources tailored to their academic journey.</p>
+                </div>
             </div>
-            <div class="intro-image">
-                <img src="imges/mentalhealthnursing.png" alt="Supportive team of mental health professionals">
+            <!-- Our Mission Slide -->
+            <div class="carousel-item">
+                <img src="imges/img-750x375.png" class="d-block w-100" alt="Students supporting each other">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Our Mission</h5>
+                    <p>Our mission is to break down barriers to mental health support in academic environments. We understand the unique pressures students face and aim to provide accessible, confidential, and comprehensive mental health resources tailored to student needs.</p>
+                </div>
+            </div>
+            <!-- How We Help Slide -->
+            <div class="carousel-item">
+                <img src="imges/image-7.png" class="d-block w-100" alt="Various support channels illustration">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>How We Help</h5>
+                    <p>Through our platform, we offer various support channels including online counseling, self-help resources, peer support groups, and educational materials. We believe in creating a safe space where students can find help without judgment and take steps toward better mental well-being.</p>
+                </div>
             </div>
         </div>
-
-        <!-- Our Mission Section -->
-        <div class="intro-container reverse">
-            <div class="intro-image">
-                <img src="imges/img-750x375.png" alt="Students supporting each other">
-            </div>
-            <div class="intro-text">
-                <h2>Our Mission</h2>
-                <p>Our mission is to break down barriers to mental health support in academic environments. We understand the unique pressures students face and aim to provide accessible, confidential, and comprehensive mental health resources tailored to student needs.</p>
-            </div>
-        </div>
-
-        <!-- How We Help Section -->
-        <div class="intro-container">
-            <div class="intro-text">
-                <h2>How We Help</h2>
-                <p>Through our platform, we offer various support channels including online counseling, self-help resources, peer support groups, and educational materials. We believe in creating a safe space where students can find help without judgment and take steps toward better mental well-being.</p>
-            </div>
-            <div class="intro-image">
-                <img src="imges/image-7.png" alt="Various support channels illustration">
-            </div>
-        </div>
-    </section>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
     <!-- ===== MENTAL HEALTH AWARENESS SECTION ===== -->
     <section class="mental-health-awareness">
@@ -153,5 +180,52 @@
             </div>
         </div>
     </footer>
+    
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Carousel Script -->
+    <script src="js/carousel.js"></script>
 </body>
-</html>
+</html><style>
+    .carousel {
+        max-width: 1200px;
+        margin: 40px auto;
+    }
+    .carousel-inner {
+        max-height: 600px;
+    }
+    .carousel-item img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+    }
+    .carousel-caption {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .carousel-control-prev {
+        left: 20px;
+    }
+
+    .carousel-control-next {
+        right: 20px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 30px;
+        height: 30px;
+    }
+</style>
