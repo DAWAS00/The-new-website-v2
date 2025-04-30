@@ -293,6 +293,25 @@
     background-color: #3d74ac;
 }
 
+.accordion-button:not(.collapsed) {
+    background-color: var(--bs-primary);
+    color: white;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+}
+
+.accordion-item {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cta-content .btn:hover {
+    background-color: #3d74ac;
+}
+
 .hero-section {
     background-color: #000;
 }
@@ -325,4 +344,37 @@
     .hero-section p {
         font-size: 1.1rem;
     }
+}
+
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.service-card img {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.1);
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.rounded-circle {
+    transition: background-color 0.3s ease;
+}
+
+.card:hover .rounded-circle {
+    background-color: #0056b3 !important;
 }

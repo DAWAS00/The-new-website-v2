@@ -7,142 +7,371 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
 </head>
 <body>
     <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="causes.html">Causes</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="tools.html">Self-Help Tools</a></li>
-                <li><a href="counseling.html">Counseling</a></li>
-                <li><a href="stories.html">Success Stories</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-                
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Eman-Platform</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="causes.html">Causes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resources.html">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tools.html">Self-Help Tools</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="counseling.html">Counseling</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="stories.html">Success Stories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-
   
 
     <main>
-        <!-- Hero Section with inline styles -->
-    <section style="background: linear-gradient(rgba(43, 76, 126, 0.8), rgba(43, 76, 126, 0.8)), 
-    url('imges/team\ work\ background\'.png') center/cover;
-     color: white;
-      padding: 6rem 2rem;
-       text-align: center;">
-            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Meet Our Team</h1>
-            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">Dedicated students working together to create a supportive mental health community</p>
-        </section>
-
-        <!-- Team Section -->
-        <section class="team-section">
-            <div class="team-grid">
-                <!-- Team Member 1 -->
-                <div class="team-member" style="text-align: center; padding: 2rem; background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    <img src="imges/Mohammad-Dawas.png" alt="Team Member 1" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
-                    <h3>Mohammad Dawas</h3>
-                    <p class="role">Founder & Lead Developer</p>
-                    <p>Computer Science student passionate about mental health and technology.</p>
-                    <div class="social-buttons" style="margin-top: 2rem; ; justify-content: center; gap: 1rem;">
-                        <a href="https://github.com/DAWAS00" target="_blank" style="color: #2B4C7E; text-decoration: none; padding: 0.5rem 1rem; border: 2px solid #2B4C7E; border-radius: 25px;"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="https://www.instagram.com/mo_dawas?igsh=MTYzNGpsb3h0bXRtNg==" target="_blank" style="color: #2B4C7E; text-decoration: none; padding: 0.5rem 1rem; border: 2px solid #2B4C7E; border-radius: 25px; "><i class="fab fa-instagram"></i> Instagram</a>
-                    </div>
-                </div>
-
-                <!-- Add more team members as needed  if there is anyone want to work with me after this :_(  -->
-            </div>
-        </section>
-
-        <!-- Our Story Section -->
-        <section style="background: #f8faff; padding: 4rem 2rem;">
-            <div style="max-width: 1200px; margin: 0 auto;">
-                <h2 style="color: #2B4C7E; text-align: center; margin-bottom: 2rem;">My Story</h2>
-                <div style="display: flex; gap: 2rem; align-items: center;">
-                    <div style="flex: 1;">
-                        <p>As a Computer Science student at Applied Science University, my journey with the Eman Platform began as a project inspired by Dr. Wareef. What started as an academic endeavor has evolved into a passionate mission to support student mental health. Through my own experiences and observations of fellow students, I recognized the critical need for accessible mental health resources in our academic community.</p>
-                        <p style="margin-top: 1rem;">The platform's name, "Eman" (meaning "faith" in Arabic), reflects our belief in the power of support and understanding. Working on this project has shown me how technology can bridge the gap between students and mental health resources, making support more accessible to those who need it most.</p>
-                        <p style="margin-top: 1rem;">Today, what began as a university project has grown into a dedicated platform aimed at creating a safe, supportive space for students to seek help, share their stories, and find the resources they need to thrive in their academic journey.</p>
-                    </div>
-                    <div style="flex: 1;">
-                        <img src="imges/please be the last one.png" alt="Our Journey" style="width: 100%; border-radius: 15px;">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Forms Section -->
-        <section class="contact-section" id="contact-form">
-            <div class="contact-container">
-                <h2>Get in Touch</h2>
-                <div class="contact-options">
-                    <!-- General Inquiry Form -->
-                    <form class="contact-form" action="#" method="POST">
-                        <h3>Send us a Message</h3>
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        
-                        <select name="contact-type" required>
-                            <option value="">What brings you here today?</option>
-                            <option value="share-story">Share Your Mental Health Journey</option>
-                            <option value="seek-help">Need Support or Guidance</option>
-                            <option value="join-team">Interest in Joining Our Team</option>
-                            <option value="suggestion">Suggest Improvements</option>
-                            <option value="volunteer">Volunteer as a Student Counselor</option>
-                            <option value="feedback">General Feedback</option>
-                            <option value="other">Other</option>
-                        </select>
-
-                        <select name="preferred-contact" required>
-                            <option value="">Preferred Contact Method</option>
-                            <option value="email">Email</option>
-                            <option value="phone">Phone</option>
-                            <option value="whatsapp">WhatsApp</option>
-                        </select>
-
-                        <textarea placeholder="Please share your thoughts, story, or how you'd like to contribute to our community. Your message will be treated with complete confidentiality." rows="5" required></textarea>
-
-                        <label style="display: block; margin-top: 1rem;">
-                            <input type="checkbox" required>
-                            I agree that my information will be handled confidentially
-                        </label>
-
-                        <button type="submit" class="btn primary">Send Message</button>
-                    </form>
-
-                    <!-- Direct Contact Info -->
-                    <div class="contact-info" style="background: #2B4C7E; color: white; padding: 2rem; border-radius: 15px;">
-                        <h3>Other Ways to Reach Us</h3>
-                        <ul style="list-style: none; padding: 0;">
-                            <li>📧 <a href="mailto:dawasmohammad888@gmail.com" style="color: white; text-decoration: none;">Email: dawasmohammad888@gmail.com</a></li>
-                            <li>📱 <a href="tel:+962775769447" style="color: white; text-decoration: none;">Phone: +962 775769447</a></li>
-                            <li>📍 Location: Applied Science University,Jordan</li>
-                        </ul>
-                        <div class="social-links">
-                            <a href="#" style="color: white; margin-right: 1rem;"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                            <a href="#" style="color: white; margin-right: 1rem;"><i class="fab fa-twitter" ></i> Twitter</a>
-                            <a href="https://www.instagram.com/eman_platform?igsh=ZnFydWRoeGwwZWFs" style="color: white;"><i class="fab fa-instagram"></i> Instagram</a>
+        <!-- Hero Section -->
+        <section class="hero-section position-relative overflow-hidden">
+            <div class="hero-bg position-absolute w-100 h-100" style="
+                background: linear-gradient(rgba(43, 76, 126, 0.9), rgba(43, 76, 126, 0.8)), 
+                url('imges/team\ work\ background\'.png') no-repeat center/cover;
+                filter: blur(2px);
+                z-index: -1;
+            "></div>
+            <div class="container py-5 py-lg-6">
+                <div class="row min-vh-50 align-items-center justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-8 text-center">
+                        <div class="hero-content p-4 rounded-3" style="background: rgba(43, 76, 126, 0.3);">
+                            <h1 class="display-3 fw-bold text-white mb-4 animate__animated animate__fadeInDown">
+                                Meet Our Team
+                            </h1>
+                            <p class="lead text-white mb-4 animate__animated animate__fadeInUp" style="font-size: 1.3rem;">
+                                Dedicated students working together to create a supportive mental health community
+                            </p>
+                            <div class="d-flex justify-content-center gap-3 animate__animated animate__fadeInUp">
+                                <a href="#contact-form" class="btn btn-primary btn-lg px-4 py-2">
+                                    Get in Touch
+                                </a>
+                                <a href="#team" class="btn btn-outline-light btn-lg px-4 py-2">
+                                    Learn More
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ Section -->
-        <section style="background: #f8faff; padding: 4rem 2rem;">
-            <div style="max-width: 800px; margin: 0 auto;">
-                <h2 style="text-align: center; color: #2B4C7E; margin-bottom: 2rem;">Frequently Asked Questions</h2>
-                <div class="faq-grid">
-                    <div class="faq-item" style="margin-bottom: 1.5rem;">
-                        <h3>How can I join the team?</h3>
-                        <p>Explain your team recruitment process and requirements.</p>
+        <style>
+            .hero-section {
+                position: relative;
+                min-height: 60vh;
+                display: flex;
+                align-items: center;
+            }
+            
+            .hero-content {
+                backdrop-filter: blur(5px);
+                transition: transform 0.3s ease;
+            }
+            
+            .hero-content:hover {
+                transform: translateY(-5px);
+            }
+            
+            .btn-primary {
+                background-color: #2B4C7E;
+                border-color: #2B4C7E;
+                transition: all 0.3s ease;
+            }
+            
+            .btn-primary:hover {
+                background-color: #1a3157;
+                border-color: #1a3157;
+                transform: translateY(-2px);
+            }
+            
+            .btn-outline-light:hover {
+                transform: translateY(-2px);
+            }
+            
+            @media (max-width: 768px) {
+                .hero-section {
+                    min-height: 50vh;
+                }
+                
+                .display-3 {
+                    font-size: 2.5rem;
+                }
+            }
+        </style>
+
+        <!-- Team Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6">
+                        <div class="card border-0 shadow-lg h-100">
+                            <div class="card-body text-center p-4">
+                                <img src="imges/Mohammad-Dawas.png" alt="Mohammad Dawas" class="rounded-circle mb-4" style="width: 200px; height: 200px; object-fit: cover;">
+                                <h3 class="card-title">Mohammad Dawas</h3>
+                                <p class="text-muted">Founder & Lead Developer</p>
+                                <p class="card-text">Computer Science student passionate about mental health and technology.</p>
+                                <div class="d-flex justify-content-center gap-3 mt-4">
+                                    <a href="https://github.com/DAWAS00" target="_blank" class="btn btn-outline-primary"><i class="fab fa-github me-2"></i>GitHub</a>
+                                    <a href="https://www.instagram.com/mo_dawas?igsh=MTYzNGpsb3h0bXRtNg==" target="_blank" class="btn btn-outline-primary"><i class="fab fa-instagram me-2"></i>Instagram</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Add more FAQ items -->
                 </div>
             </div>
         </section>
+
+        <!-- Story Section -->
+        <section class="story-section py-5 py-lg-6">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-4 fw-bold text-primary animate__animated animate__fadeInUp">My Story</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="row align-items-center g-4 g-lg-5">
+                    <div class="col-lg-6 animate__animated animate__fadeInLeft">
+                        <div class="story-content p-4">
+                            <p class="lead mb-4">As a Computer Science student at Applied Science University, my journey with the Eman Platform began as a project inspired by Dr. Wareef. What started as an academic endeavor has evolved into a passionate mission to support student mental health.</p>
+                            <p class="mb-4">The platform's name, "Eman" (meaning "faith" in Arabic), reflects our belief in the power of support and understanding. Working on this project has shown me how technology can bridge the gap between students and mental health resources.</p>
+                            <p class="mb-4">Today, what began as a university project has grown into a dedicated platform aimed at creating a safe, supportive space for students to seek help, share their stories, and find the resources they need to thrive in their academic journey.</p>
+                            <div class="mt-4">
+                                <a href="#contact-form" class="btn btn-primary btn-lg">Join Our Mission</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 animate__animated animate__fadeInRight">
+                        <div class="story-image position-relative">
+                            <img src="imges/please be the last one.png" alt="Our Journey" class="img-fluid rounded-4 shadow-lg">
+                            <div class="story-image-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .story-section {
+                background: linear-gradient(to right, #f8f9fa, #e9ecef);
+                position: relative;
+                overflow: hidden;
+            }
+
+            .title-underline {
+                width: 80px;
+                height: 4px;
+                background: #2B4C7E;
+                margin: 1rem auto;
+                border-radius: 2px;
+            }
+
+            .story-content {
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+
+            .story-content:hover {
+                transform: translateY(-5px);
+            }
+
+            .story-image {
+                position: relative;
+                transition: transform 0.3s ease;
+            }
+
+            .story-image:hover {
+                transform: scale(1.02);
+            }
+
+            .story-image-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(45deg, rgba(43, 76, 126, 0.2), transparent);
+                border-radius: 15px;
+            }
+
+            .lead {
+                font-size: 1.1rem;
+                line-height: 1.8;
+                color: #2B4C7E;
+            }
+
+            @media (max-width: 991.98px) {
+                .story-content {
+                    margin-bottom: 2rem;
+                }
+                
+                .story-image {
+                    margin-top: 1rem;
+                }
+            }
+        </style>
+
+        <!-- Contact Forms Section -->
+        <section class="contact-section py-5" id="contact-form">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-8 text-center">
+                        <h2 class="display-4 fw-bold text-primary animate__animated animate__fadeInUp">Get in Touch</h2>
+                        <div class="title-underline mx-auto"></div>
+                    </div>
+                </div>
+                <div class="row justify-content-center g-4">
+                    <div class="col-md-8 col-lg-7">
+                        <div class="card border-0 shadow-lg">
+                            <div class="card-body p-4 p-md-5">
+                                <h3 class="card-title text-center mb-4">Send us a Message</h3>
+                                <form action="#" method="POST" class="needs-validation" novalidate>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control form-control-lg" placeholder="Your Name" required>
+                                        <div class="invalid-feedback">Please enter your name</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control form-control-lg" placeholder="Your Email" required>
+                                        <div class="invalid-feedback">Please enter a valid email</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <select class="form-select form-select-lg" name="contact-type" required>
+                                            <option value="">What brings you here today?</option>
+                                            <option value="share-story">Share Your Mental Health Journey</option>
+                                            <option value="seek-help">Need Support or Guidance</option>
+                                            <option value="join-team">Interest in Joining Our Team</option>
+                                            <option value="suggestion">Suggest Improvements</option>
+                                            <option value="volunteer">Volunteer as a Student Counselor</option>
+                                            <option value="feedback">General Feedback</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <div class="invalid-feedback">Please select a reason</div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <select class="form-select form-select-lg" name="preferred-contact" required>
+                                            <option value="">Preferred Contact Method</option>
+                                            <option value="email">Email</option>
+                                            <option value="phone">Phone</option>
+                                            <option value="whatsapp">WhatsApp</option>
+                                        </select>
+                                        <div class="invalid-feedback">Please select a contact method</div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <textarea class="form-control form-control-lg" rows="5" placeholder="Please share your thoughts, story, or how you'd like to contribute to our community. Your message will be treated with complete confidentiality." required></textarea>
+                                        <div class="invalid-feedback">Please enter your message</div>
+                                    </div>
+                                    <div class="mb-4 form-check">
+                                        <input type="checkbox" class="form-check-input" id="confidentiality" required>
+                                        <label class="form-check-label" for="confidentiality">
+                                            I agree that my information will be handled confidentially
+                                        </label>
+                                        <div class="invalid-feedback">You must agree before submitting</div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .contact-section {
+                background-color: #ffffff;  /* Changed from gradient to white */
+            }
+
+            .form-control, .form-select {
+                border: 2px solid #e9ecef;
+                padding: 0.75rem 1rem;
+                transition: all 0.3s ease;
+            }
+
+            .form-control:focus, .form-select:focus {
+                border-color: #2B4C7E;
+                box-shadow: 0 0 0 0.25rem rgba(43, 76, 126, 0.25);
+            }
+
+            .form-check-input:checked {
+                background-color: #2B4C7E;
+                border-color: #2B4C7E;
+            }
+
+            .card {
+                border-radius: 15px;
+                transition: transform 0.3s ease;
+            }
+
+            .card:hover {
+                transform: translateY(-5px);
+            }
+
+            .btn-primary {
+                background-color: #2B4C7E;
+                border-color: #2B4C7E;
+                padding: 0.75rem 2rem;
+                transition: all 0.3s ease;
+            }
+
+            .btn-primary:hover {
+                background-color: #1a3157;
+                border-color: #1a3157;
+                transform: translateY(-2px);
+            }
+
+            @media (max-width: 768px) {
+                .card-body {
+                    padding: 1.5rem;
+                }
+            }
+        </style>
+
+        <script>
+            // Form validation
+            (function () {
+                'use strict'
+                var forms = document.querySelectorAll('.needs-validation')
+                Array.prototype.slice.call(forms)
+                    .forEach(function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (!form.checkValidity()) {
+                                event.preventDefault()
+                                event.stopPropagation()
+                            }
+                            form.classList.add('was-validated')
+                        }, false)
+                    })
+            })()
+        </script>
+
+        
         <div class="quick-help">
             <div class="emergency-card">
                 <div class="emergency-header">
@@ -186,5 +415,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

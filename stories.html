@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Success Stories - Eman Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stories.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         /* ===== HERO SECTION STYLES ===== */
         .stories-hero {
@@ -152,90 +156,327 @@
     </style>
 </head>
 <body>
+    <!-- ===== HEADER & NAVIGATION ===== -->
     <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="causes.html">Causes</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="tools.html">Self-Help Tools</a></li>
-                <li><a href="counseling.html">Counseling</a></li>
-                <li><a href="stories.html" class="active">Success Stories</a></li>
-                <li><a href="contact.html">Contact</a></li>
-               
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Eman-Platform</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="causes.html">Causes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resources.html">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tools.html">Self-Help Tools</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="counseling.html">Counseling</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="stories.html">Success Stories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-
     <main>
-        <section class="stories-hero">
-            <h1>Inspiring Success Stories</h1>
-            <p>Stories of resilience, determination, and triumph over mental health challenges</p>
-        </section>
-
-        <section class="stories-grid">
-            <div class="story-card">
-                <img src="imges/Zewail_obit_NEWS.original.png" alt="Ahmed Zewail">
-                <div class="story-content">
-                    <h2>Ahmed Zewail</h2>
-                    <p class="subtitle">Nobel Prize Winner in Chemistry</p>
-                    <p>During his early academic years in Egypt, Zewail faced significant pressure and challenges. Despite limited resources and periods of anxiety, he persevered through his studies, eventually becoming the first Arab scientist to win a Nobel Prize in a science field.</p>
-                    <p class="quote">"The beauty of life does not depend on how happy you are, but on how happy others can be because of you."</p>
-                </div>
-            </div>
-
-            <div class="story-card">
-                <img src="imges/Naguib Mahfouz.png" alt="Naguib Mahfouz">
-                <div class="story-content">
-                    <h2>Naguib Mahfouz</h2>
-                    <p class="subtitle">Nobel Prize Winner in Literature</p>
-                    <p>While studying at King Fuad I University (now Cairo University), Mahfouz struggled with depression and self-doubt. He transformed his emotional challenges into literary works, eventually becoming one of the most influential Arab writers.</p>
-                    <p class="quote">"Fear does not prevent death. It prevents life."</p>
-                </div>
-            </div>
-
-            <div class="story-card">
-                <img src="imges/Zaha Hadid.png" alt="Zaha Hadid">
-                <div class="story-content">
-                    <h2>Zaha Hadid</h2>
-                    <p class="subtitle">Revolutionary Architect</p>
-                    <p>During her university years in Beirut and London, Hadid faced anxiety and discrimination as a woman in architecture. She channeled her struggles into innovative designs, becoming the first woman to receive the Pritzker Architecture Prize.</p>
-                    <p class="quote">"I don't think that architecture is only about shelter, it should be able to excite you, to calm you, to make you think."</p>
-                </div>
-            </div>
-
-            <div class="story-card">
-                <img src="imges/May Ziade.png" alt="May Ziade">
-                <div class="story-content">
-                    <h2>May Ziade</h2>
-                    <p class="subtitle">Literary Pioneer and Mental Health Advocate</p>
-                    <p>Despite battling severe depression and being forcibly institutionalized, May Ziade fought back through her writing and intellectual work. She overcame her mental health struggles to become one of the most influential Arab literary figures, establishing the first literary salon in the Arab world and advocating for women's education.</p>
-                    <p class="quote">"Life is worth living when we give it meaning, and we give it meaning when we live not for ourselves, but for others."</p>
-                </div>
-            </div>
-
+        <section class="py-5 position-relative bg-dark text-white" id="stories-section" style="min-height: 80vh;">
+            <!-- Background overlay with story-related pattern -->
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="
+                background: linear-gradient(rgba(43, 76, 126, 0.9), rgba(43, 76, 126, 0.85)),
+                url('imges/first\ photo.png') center/cover;
+                z-index: 0;
+            "></div>
             
-
-        <section class="modern-stories">
-            <h2>Contemporary Success Stories</h2>
-            <div class="story-grid-modern">
-                <!-- Add more recent success stories here -->
-                <div class="modern-story-card">
-                    <img src="imges/inspiring people.png" alt="Student Success Story">
-                    <div class="story-content">
-                        <h3>From Struggle to Strength</h3>
-                        <p>Real stories from current students who overcame mental health challenges and achieved their academic goals.</p>
-                        <a href="#" class="read-more">Read More</a>
+            <!-- Content -->
+            <div class="container position-relative" style="z-index: 1;">
+                <div class="row min-vh-75 align-items-center justify-content-center text-center py-5">
+                    <div class="col-lg-8">
+                        <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeIn">
+                            Inspiring Success Stories
+                        </h1>
+                        <p class="lead fs-4 mb-5 animate__animated animate__fadeIn animate__delay-1s">
+                            Stories of resilience, determination, and triumph over mental health challenges
+                        </p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#story-grid" class="btn btn-light btn-lg px-4">
+                                Read Stories
+                            </a>
+                            <a href="#share-story" class="btn btn-outline-light btn-lg px-4">
+                                Share Your Story
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="share-story">
-            <div class="share-container">
-                <h2>Share Your Story</h2>
-                <p>Your journey could inspire others. Share your story of overcoming mental health challenges during your academic journey.</p>
-                <a href="contact.html#contact-form" class="btn primary">Submit Your Story</a>
+        <section class="container py-5" id="story-grid">
+            <div class="row g-4">
+                <!-- Ahmed Zewail -->
+                <div class="col-12 mb-5">
+                    <div class="card border-0 shadow-lg h-100 overflow-hidden">
+                        <div class="row g-0">
+                            <div class="col-lg-4">
+                                <img src="imges/Zewail_obit_NEWS.original.png" alt="Ahmed Zewail" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <h2 class="card-title h1 text-primary mb-0">Ahmed Zewail</h2>
+                                        <span class="badge bg-primary px-3 py-2">Nobel Prize Winner</span>
+                                    </div>
+                                    <p class="text-muted h5 mb-3">Nobel Prize Winner in Chemistry (1999)</p>
+                                    <p class="card-text mb-4">During his early academic years in Egypt, Zewail faced significant pressure and challenges. Despite limited resources and periods of anxiety, he persevered through his studies, eventually becoming the first Arab scientist to win a Nobel Prize in a science field.</p>
+                                    <div class="mb-4">
+                                        <h5 class="text-primary">Key Achievements:</h5>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>First Arab to win Nobel Prize in Sciences</li>
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Pioneer in Femtochemistry</li>
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Received over 100 international awards</li>
+                                        </ul>
+                                    </div>
+                                    <blockquote class="blockquote border-start border-primary border-4 ps-4 mb-4">
+                                        <p class="mb-2">"The beauty of life does not depend on how happy you are, but on how happy others can be because of you."</p>
+                                    </blockquote>
+                                    <div class="d-flex justify-content-end">
+                                        <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#zewailMore">
+                                            Read More <i class="fas fa-chevron-down ms-2"></i>
+                                        </button>
+                                    </div>
+                                    <div class="collapse mt-3" id="zewailMore">
+                                        <div class="card card-body border-0 bg-light">
+                                            <h5 class="text-primary mb-3">Mental Health Journey</h5>
+                                            <p>Throughout his academic career, Zewail encountered numerous challenges that tested his mental resilience. The pressure of being a pioneering scientist from the Arab world, coupled with the demands of groundbreaking research, created significant stress. However, he developed several coping strategies:</p>
+                                            <ul class="mb-0">
+                                                <li>Maintained a strong support system of family and colleagues</li>
+                                                <li>Practiced regular meditation and reflection</li>
+                                                <li>Focused on helping others through mentorship</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Similar structure for other stories -->
+                <!-- Naguib Mahfouz -->
+                <div class="col-12 mb-5">
+                    <div class="card border-0 shadow-lg h-100 overflow-hidden">
+                        <div class="row g-0">
+                            <div class="col-lg-4">
+                                <img src="imges/Naguib Mahfouz.png" alt="Naguib Mahfouz" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <h2 class="card-title h1 text-primary mb-0">Naguib Mahfouz</h2>
+                                        <span class="badge bg-primary px-3 py-2">Literary Icon</span>
+                                    </div>
+                                    <p class="text-muted h5 mb-3">Nobel Prize Winner in Literature (1988)</p>
+                                    <p class="card-text mb-4">While studying at King Fuad I University (now Cairo University), Mahfouz struggled with depression and self-doubt. He transformed his emotional challenges into literary works, eventually becoming one of the most influential Arab writers.</p>
+                                    <div class="mb-4">
+                                        <h5 class="text-primary">Notable Works:</h5>
+                                        <div class="list-group">
+                                            <div class="list-group-item border-0 d-flex align-items-center">
+                                                <i class="fas fa-book text-primary me-3"></i>
+                                                <div>
+                                                    <h6 class="mb-0">The Cairo Trilogy</h6>
+                                                    <small class="text-muted">A masterpiece of Arabic literature</small>
+                                                </div>
+                                            </div>
+                                            <div class="list-group-item border-0 d-flex align-items-center">
+                                                <i class="fas fa-book text-primary me-3"></i>
+                                                <div>
+                                                    <h6 class="mb-0">Children of Gebelawi</h6>
+                                                    <small class="text-muted">A controversial allegorical work</small>
+                                                </div>
+                                            </div>
+                                            <div class="list-group-item border-0 d-flex align-items-center">
+                                                <i class="fas fa-book text-primary me-3"></i>
+                                                <div>
+                                                    <h6 class="mb-0">The Harafish</h6>
+                                                    <small class="text-muted">A multi-generational epic</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="blockquote border-start border-primary border-4 ps-4 mb-4">
+                                        <p class="mb-2">"Fear does not prevent death. It prevents life."</p>
+                                    </blockquote>
+                                    <div class="d-flex justify-content-end">
+                                        <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#mahfouzMore">
+                                            Read More <i class="fas fa-chevron-down ms-2"></i>
+                                        </button>
+                                    </div>
+                                    <div class="collapse mt-3" id="mahfouzMore">
+                                        <div class="card card-body border-0 bg-light">
+                                            <h5 class="text-primary mb-3">Impact on Mental Health Awareness</h5>
+                                            <p>Mahfouz's works often explored themes of mental health and psychological struggles, helping to break stigmas in Arab society. His personal experiences with depression influenced his writing and helped readers feel less alone in their own struggles.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zaha Hadid -->
+                <div class="col-12 mb-5">
+                    <div class="card border-0 shadow-lg h-100 overflow-hidden">
+                        <div class="row g-0">
+                            <div class="col-lg-4">
+                                <img src="imges/Zaha Hadid.png" alt="Zaha Hadid" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <h2 class="card-title h1 text-primary mb-0">Zaha Hadid</h2>
+                                        <span class="badge bg-primary px-3 py-2">Revolutionary Architect</span>
+                                    </div>
+                                    <p class="text-muted h5 mb-3">First Woman to Receive the Pritzker Architecture Prize</p>
+                                    <p class="card-text mb-4">During her university years in Beirut and London, Hadid faced anxiety and discrimination as a woman in architecture. She channeled her struggles into innovative designs, becoming the first woman to receive the Pritzker Architecture Prize.</p>
+                                    <div class="mb-4">
+                                        <h5 class="text-primary">Notable Achievements:</h5>
+                                        <div class="list-group">
+                                            <div class="list-group-item border-0 d-flex align-items-center">
+                                                <i class="fas fa-award text-primary me-3"></i>
+                                                <div>
+                                                    <h6 class="mb-0">Pritzker Architecture Prize</h6>
+                                                    <small class="text-muted">First woman recipient (2004)</small>
+                                                </div>
+                                            </div>
+                                            <div class="list-group-item border-0 d-flex align-items-center">
+                                                <i class="fas fa-building text-primary me-3"></i>
+                                                <div>
+                                                    <h6 class="mb-0">MAXXI Museum, Rome</h6>
+                                                    <small class="text-muted">Stirling Prize winning design</small>
+                                                </div>
+                                            </div>
+                                            <div class="list-group-item border-0 d-flex align-items-center">
+                                                <i class="fas fa-star text-primary me-3"></i>
+                                                <div>
+                                                    <h6 class="mb-0">Dame Commander of the British Empire</h6>
+                                                    <small class="text-muted">For services to architecture</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="blockquote border-start border-primary border-4 ps-4 mb-4">
+                                        <p class="mb-2">"I don't think that architecture is only about shelter, it should be able to excite you, to calm you, to make you think."</p>
+                                    </blockquote>
+                                    <div class="d-flex justify-content-end">
+                                        <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#hadidMore">
+                                            Read More <i class="fas fa-chevron-down ms-2"></i>
+                                        </button>
+                                    </div>
+                                    <div class="collapse mt-3" id="hadidMore">
+                                        <div class="card card-body border-0 bg-light">
+                                            <h5 class="text-primary mb-3">Breaking Barriers</h5>
+                                            <p>Throughout her career, Hadid broke through gender barriers and cultural stereotypes in architecture. Her innovative approach to design and unwavering determination inspired countless women to pursue careers in architecture and design.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- May Ziade -->
+                <div class="col-12 mb-5">
+                    <div class="card border-0 shadow-lg h-100 overflow-hidden">
+                        <div class="row g-0">
+                            <div class="col-lg-4">
+                                <img src="imges/May Ziade.png" alt="May Ziade" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <h2 class="card-title h1 text-primary mb-0">May Ziade</h2>
+                                        <span class="badge bg-primary px-3 py-2">Literary Pioneer</span>
+                                    </div>
+                                    <p class="text-muted h5 mb-3">Literary Pioneer and Mental Health Advocate</p>
+                                    <p class="card-text mb-4">Despite battling severe depression and being forcibly institutionalized, May Ziade fought back through her writing and intellectual work. She overcame her mental health struggles to become one of the most influential Arab literary figures.</p>
+                                    <div class="mb-4">
+                                        <h5 class="text-primary">Pioneering Achievements:</h5>
+                                        <div class="list-group">
+                                            <div class="list-group-item border-0 d-flex align-items-center">
+                                                <i class="fas fa-pen text-primary me-3"></i>
+                                                <div>
+                                                    <h6 class="mb-0">First Literary Salon</h6>
+                                                    <small class="text-muted">Established the first literary salon in the Arab world</small>
+                                                </div>
+                                            </div>
+                                            <div class="list-group-item border-0 d-flex align-items-center">
+                                                <i class="fas fa-book text-primary me-3"></i>
+                                                <div>
+                                                    <h6 class="mb-0">Multilingual Writer</h6>
+                                                    <small class="text-muted">Published works in Arabic, French, English, Italian, and German</small>
+                                                </div>
+                                            </div>
+                                            <div class="list-group-item border-0 d-flex align-items-center">
+                                                <i class="fas fa-users text-primary me-3"></i>
+                                                <div>
+                                                    <h6 class="mb-0">Women's Rights Advocate</h6>
+                                                    <small class="text-muted">Championed women's education and empowerment</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="blockquote border-start border-primary border-4 ps-4 mb-4">
+                                        <p class="mb-2">"Life is worth living when we give it meaning, and we give it meaning when we live not for ourselves, but for others."</p>
+                                    </blockquote>
+                                    <div class="d-flex justify-content-end">
+                                        <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#ziadeMore">
+                                            Read More <i class="fas fa-chevron-down ms-2"></i>
+                                        </button>
+                                    </div>
+                                    <div class="collapse mt-3" id="ziadeMore">
+                                        <div class="card card-body border-0 bg-light">
+                                            <h5 class="text-primary mb-3">Mental Health Journey</h5>
+                                            <p>May Ziade's personal struggle with mental health and her eventual triumph became a powerful testament to resilience. After being forcibly institutionalized, she fought back through her writings and intellectual work, proving her mental competence and emerging stronger than ever.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more cards here -->
+            </div>
+        </section>
+
+        <!-- Share Story Section -->
+        <section class="bg-light py-5">
+            <div class="container px-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-md-8 col-sm-10 text-center">
+                        <div class="p-4 p-md-5">
+                            <h2 class="display-5 mb-4 fs-1 fs-md-2">Share Your Story</h2>
+                            <p class="lead mb-4 fs-5">Your journey could inspire others. Share your story of overcoming mental health challenges during your academic journey.</p>
+                            <div class="d-grid gap-2 d-sm-block">
+                                <a href="contact.html#contact-form" class="btn btn-primary btn-lg px-5 py-3">
+                                    <i class="fas fa-share me-2"></i>Submit Your Story
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -258,6 +499,8 @@
             </div>
         </div>
     </footer>
+<!-- Before closing body tag -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
