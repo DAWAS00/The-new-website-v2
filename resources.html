@@ -389,24 +389,76 @@
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Emergency Contact</h4>
-                <p>Crisis Line: +962 775769447</p>
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Emergency Contact Section -->
+                <div class="col-md-4">
+                    <div class="mb-4">
+                        <h4 class="text-primary fw-bold mb-3">Emergency Contact</h4>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-telephone-fill text-danger me-2"></i>
+                            <p class="mb-0">Crisis Line: <a href="tel:+962775769447" class="text-white text-decoration-none fw-bold">+962 775769447</a></p>
+                        </div>
+                        <div class="mt-3">
+                            <a href="contact.html" class="btn btn-outline-light btn-sm rounded-pill px-3">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Links Section -->
+                <div class="col-md-4">
+                    <h4 class="text-primary fw-bold mb-3">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="resources.html" class="text-white text-decoration-none d-flex align-items-center">
+                                <i class="bi bi-chevron-right text-primary me-2"></i> Resources
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="contact.html" class="text-white text-decoration-none d-flex align-items-center">
+                                <i class="bi bi-chevron-right text-primary me-2"></i> Get Help
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="stories.html" class="text-white text-decoration-none d-flex align-items-center">
+                                <i class="bi bi-chevron-right text-primary me-2"></i> Stories
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="tools.html" class="text-white text-decoration-none d-flex align-items-center">
+                                <i class="bi bi-chevron-right text-primary me-2"></i> Tools
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter & Social Media Section -->
+                <div class="col-md-4">
+                    <h4 class="text-primary fw-bold mb-3">Stay Connected</h4>
+                    <p class="mb-3">Join our community to receive updates and resources</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" id="subscribeEmail" placeholder="Your email" aria-label="Your email">
+                        <button class="btn btn-primary" type="button" id="subscribeBtn">Subscribe</button>
+                    </div>
+                    <div id="subscriptionFeedback" class="mt-2" style="display: none;"></div>
+                    <div class="d-flex mt-3">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="contact.html">Get Help</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <p>&copy; 2024 Eman platform. All rights reserved.</p>
+            
+            <!-- Copyright Section -->
+            <div class="border-top border-secondary mt-4 pt-4 text-center">
+                <p class="mb-0">&copy; 2024 Eman platform. All rights reserved.</p>
             </div>
         </div>
     </footer>
+    <script src="js/main.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

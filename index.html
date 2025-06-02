@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eman-Platform</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
         /* Enhanced Carousel Styling */
@@ -211,82 +212,175 @@
     </div>
 
     <!-- ===== MENTAL HEALTH AWARENESS SECTION ===== -->
-    <section class="container py-5">
-        <h2 class="text-center mb-5 display-4">Understanding Mental Health</h2>
+    <section class="container py-5 bg-light rounded-3 shadow-sm">
+        <h2 class="text-center mb-5 display-4 fw-bold text-primary">Understanding Mental Health</h2>
         <!-- Awareness Cards Grid -->
-        <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
             <div class="col">
-                <div class="card h-100 shadow-sm hover-card">
-                    <img src="imges/images.jpg" class="card-img-top" alt="Anxiety and Stress Icon">
-                    <div class="card-body">
-                        <h5 class="card-title">Anxiety & Stress</h5>
-                        <p class="card-text">Learn to recognize signs of academic stress and anxiety, including exam pressure, deadline worries, and social anxiety in campus settings.</p>
+                <div class="card h-100 shadow-sm hover-card border-0 overflow-hidden">
+                    <div class="position-relative">
+                        <img src="imges/images.jpg" class="card-img-top" alt="Anxiety and Stress Icon">
+                        <div class="position-absolute top-0 start-0 p-3 badge bg-primary bg-opacity-75 rounded-pill m-2">Common Issue</div>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Anxiety & Stress</h5>
+                        <p class="card-text flex-grow-1">Learn to recognize signs of academic stress and anxiety, including exam pressure, deadline worries, and social anxiety in campus settings.</p>
+                        <a href="#" class="btn btn-outline-primary mt-2 align-self-start">Learn More</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card h-100 shadow-sm hover-card">
-                    <img src="imges/GettyImages-1296114150-860x574.jpg" class="card-img-top" alt="Depression Icon">
-                    <div class="card-body">
-                        <h5 class="card-title">Depression</h5>
-                        <p class="card-text">Understand the signs of depression in student life, from loss of interest in studies to changes in sleep patterns and social withdrawal.</p>
+                <div class="card h-100 shadow-sm hover-card border-0 overflow-hidden">
+                    <div class="position-relative">
+                        <img src="imges/GettyImages-1296114150-860x574.jpg" class="card-img-top" alt="Depression Icon">
+                        <div class="position-absolute top-0 start-0 p-3 badge bg-warning bg-opacity-75 rounded-pill m-2">Important</div>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Depression</h5>
+                        <p class="card-text flex-grow-1">Understand the signs of depression in student life, from loss of interest in studies to changes in sleep patterns and social withdrawal.</p>
+                        <a href="#" class="btn btn-outline-primary mt-2 align-self-start">Learn More</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card h-100 shadow-sm hover-card">
-                    <img src="imges/shutterstock_1782987194-scaled.png" class="card-img-top" alt="Burnout Icon">
-                    <div class="card-body">
-                        <h5 class="card-title">Burnout</h5>
-                        <p class="card-text">Identify academic burnout symptoms and learn effective strategies for maintaining work-life balance during your studies.</p>
+                <div class="card h-100 shadow-sm hover-card border-0 overflow-hidden">
+                    <div class="position-relative">
+                        <img src="imges/shutterstock_1782987194-scaled.png" class="card-img-top" alt="Burnout Icon">
+                        <div class="position-absolute top-0 start-0 p-3 badge bg-danger bg-opacity-75 rounded-pill m-2">Critical</div>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Burnout</h5>
+                        <p class="card-text flex-grow-1">Identify academic burnout symptoms and learn effective strategies for maintaining work-life balance during your studies.</p>
+                        <a href="#" class="btn btn-outline-primary mt-2 align-self-start">Learn More</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card h-100 shadow-sm hover-card">
-                    <img src="imges/ed_image.png" class="card-img-top" alt="Eating Disorders Icon">
-                    <div class="card-body">
-                        <h5 class="card-title">Eating Disorders</h5>
-                        <p class="card-text">Recognize the warning signs of eating disorders and learn about the importance of maintaining healthy eating habits during academic stress.</p>
+                <div class="card h-100 shadow-sm hover-card border-0 overflow-hidden">
+                    <div class="position-relative">
+                        <img src="imges/ed_image.png" class="card-img-top" alt="Eating Disorders Icon">
+                        <div class="position-absolute top-0 start-0 p-3 badge bg-info bg-opacity-75 rounded-pill m-2">Know the Signs</div>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Eating Disorders</h5>
+                        <p class="card-text flex-grow-1">Recognize the warning signs of eating disorders and learn about the importance of maintaining healthy eating habits during academic stress.</p>
+                        <a href="#" class="btn btn-outline-primary mt-2 align-self-start">Learn More</a>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="text-center mt-5">
+            <a href="#" class="btn btn-primary btn-lg px-4 py-2 rounded-pill">Explore All Topics</a>
+        </div>
     </section>
 
         <!-- Warning Signs Section -->
-        <div class="quick-help">
-            <h3>Warning Signs to Watch For:</h3>
-            <ul class="warning-signs">
-                <li>Persistent feelings of sadness or hopelessness</li>
-                <li>Significant changes in sleeping or eating patterns</li>
-                <li>Difficulty concentrating or making decisions</li>
-                <li>Social isolation or withdrawal from activities</li>
-                <li>Overwhelming anxiety or panic attacks</li>
-            </ul>
-            <div class="help-message">
-                <p>If you or someone you know is experiencing these symptoms, don't hesitate to reach out for help.</p>
-                <a href="contact.html" class="btn primary">Get Support Now</a>
+        <div class="quick-help bg-white rounded-4 shadow p-4 p-md-5 mx-auto" style="max-width: 800px;">
+            <div class="text-center mb-4">
+                <h3 class="fw-bold text-primary mb-3">Warning Signs to Watch For</h3>
+                <div class="border-bottom border-primary mx-auto mb-4" style="width: 50px;"></div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="list-group mb-4">
+                        <div class="list-group-item list-group-item-action d-flex align-items-center border-0 mb-2 rounded-3 bg-light">
+                            <span class="badge bg-danger rounded-circle me-3 p-2"><i class="bi bi-exclamation-triangle-fill"></i></span>
+                            <span>Persistent feelings of sadness or hopelessness</span>
+                        </div>
+                        <div class="list-group-item list-group-item-action d-flex align-items-center border-0 mb-2 rounded-3 bg-light">
+                            <span class="badge bg-danger rounded-circle me-3 p-2"><i class="bi bi-exclamation-triangle-fill"></i></span>
+                            <span>Significant changes in sleeping or eating patterns</span>
+                        </div>
+                        <div class="list-group-item list-group-item-action d-flex align-items-center border-0 mb-2 rounded-3 bg-light">
+                            <span class="badge bg-danger rounded-circle me-3 p-2"><i class="bi bi-exclamation-triangle-fill"></i></span>
+                            <span>Difficulty concentrating or making decisions</span>
+                        </div>
+                        <div class="list-group-item list-group-item-action d-flex align-items-center border-0 mb-2 rounded-3 bg-light">
+                            <span class="badge bg-danger rounded-circle me-3 p-2"><i class="bi bi-exclamation-triangle-fill"></i></span>
+                            <span>Social isolation or withdrawal from activities</span>
+                        </div>
+                        <div class="list-group-item list-group-item-action d-flex align-items-center border-0 mb-2 rounded-3 bg-light">
+                            <span class="badge bg-danger rounded-circle me-3 p-2"><i class="bi bi-exclamation-triangle-fill"></i></span>
+                            <span>Overwhelming anxiety or panic attacks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="help-message text-center p-4 bg-light rounded-3 mt-4">
+                <p class="lead mb-4">If you or someone you know is experiencing these symptoms, don't hesitate to reach out for help.</p>
+                <a href="contact.html" class="btn btn-primary btn-lg px-4 py-2 rounded-pill shadow-sm">Get Support Now</a>
             </div>
         </div>
     </section>
 
     <!-- ===== FOOTER SECTION ===== -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Emergency Contact</h4>
-                <p>Crisis Line: +962 775769447</p>
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Emergency Contact Section -->
+                <div class="col-md-4">
+                    <div class="mb-4">
+                        <h4 class="text-primary fw-bold mb-3">Emergency Contact</h4>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-telephone-fill text-danger me-2"></i>
+                            <p class="mb-0">Crisis Line: <a href="tel:+962775769447" class="text-white text-decoration-none fw-bold">+962 775769447</a></p>
+                        </div>
+                        <div class="mt-3">
+                            <a href="contact.html" class="btn btn-outline-light btn-sm rounded-pill px-3">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Links Section -->
+                <div class="col-md-4">
+                    <h4 class="text-primary fw-bold mb-3">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="resources.html" class="text-white text-decoration-none d-flex align-items-center">
+                                <i class="bi bi-chevron-right text-primary me-2"></i> Resources
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="contact.html" class="text-white text-decoration-none d-flex align-items-center">
+                                <i class="bi bi-chevron-right text-primary me-2"></i> Get Help
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="stories.html" class="text-white text-decoration-none d-flex align-items-center">
+                                <i class="bi bi-chevron-right text-primary me-2"></i> Stories
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="tools.html" class="text-white text-decoration-none d-flex align-items-center">
+                                <i class="bi bi-chevron-right text-primary me-2"></i> Tools
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter & Social Media Section -->
+                <div class="col-md-4">
+                    <h4 class="text-primary fw-bold mb-3">Stay Connected</h4>
+                    <p class="mb-3">Join our community to receive updates and resources</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" id="subscribeEmail" placeholder="Your email" aria-label="Your email">
+                        <button class="btn btn-primary" type="button" id="subscribeBtn">Subscribe</button>
+                    </div>
+                    <div id="subscriptionFeedback" class="mt-2" style="display: none;"></div>
+                    <div class="d-flex mt-3">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="contact.html">Get Help</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <p>&copy; 2024 Eman platform. All rights reserved.</p>
+            
+            <!-- Copyright Section -->
+            <div class="border-top border-secondary mt-4 pt-4 text-center">
+                <p class="mb-0">&copy; 2024 Eman platform. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -294,6 +388,6 @@
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom Carousel Script -->
-    <script src="js/carousel.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

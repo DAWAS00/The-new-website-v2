@@ -1,7 +1,7 @@
 /* ===== CAUSES SECTION CONTAINER ===== */
 .causes-section {
     padding: 4rem 2rem;
-    background-color: #f8faff;
+    background-color: #f0f4f8; /* A softer, eye-friendly color */
 }
 
 .causes-container {
@@ -65,7 +65,7 @@
 /* ===== DETAILED CAUSES SECTION ===== */
 .causes-details {
     padding: 60px 20px;
-    background-color: #F8FAFF;
+    background-color: #f0f4f8; /* Same color as causes-section */
 }
 
 /* ===== DETAILED CAUSES CONTAINER ===== */
@@ -279,6 +279,21 @@
     .causes-details .card-img-top {
         height: 200px;
     }
+}
+
+/* Add these new styles */
+.transition-card {
+    transition: all 0.3s ease;
+}
+
+.transition-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Update the causes section background */
+.causes-section, .causes-details {
+    background-color: #f0f4f8; /* Consistent soft blue-gray background */
 }
 
 
