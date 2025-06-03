@@ -1,3 +1,12 @@
+/* Import Baloo 2 font */
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+
+/* Base styles */
+body {
+    font-family: "Baloo 2", cursive;
+    font-size: 16px;
+}
+
 /* ===== HEADER SECTION ===== */
 header {
     background-color: #2E3A59;  /* White background for the header */
@@ -9,6 +18,7 @@ header {
     left: 0;  /* Aligned to left of viewport */
     z-index: 1000;  /* Ensures header stays above other content */
 }
+
 
 /* ===== NAVIGATION SECTION ===== */
 nav {

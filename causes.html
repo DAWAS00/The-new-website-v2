@@ -61,66 +61,118 @@
             </div>
         </section>
 
-        <!-- First section - keep the bg-light class -->
-        <section class="causes-section py-5" style="background-color: #f5f5f0;"> <!-- Warm beige background -->
-            <div class="container">
-                <!-- Modern Header with Gradient -->
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-10 text-center">
-                        <div class="p-4 rounded-4 mb-4" style="background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%); color: white;">
-                            <h2 class="display-4 fw-bold mb-3">Understanding Mental Health Challenges</h2>
-                            <p class="lead mb-0">Common factors affecting student wellbeing</p>
-                        </div>
-                    </div>
-                </div>
+        
+
                 
                 <!-- Tabbed Interface -->
-                <div class="row">
-                    <div class="col-12 mb-4">
-                        <ul class="nav nav-pills nav-fill mb-4" id="causesTabs" role="tablist">
+                <div class="row justify-content-center" style="color: #4776E6;">
+                    <div class="col-12 mb-5">
+                        <!-- Enhanced Tab Navigation -->
+                        <ul class="nav nav-pills nav-fill mb-4 gap-3" id="causesTabs" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link active rounded-pill" id="academic-tab" data-bs-toggle="pill" data-bs-target="#academic" type="button" role="tab" aria-selected="true">
-                                    <i class="bi bi-book me-2"></i>Academic
+                                <button class="nav-link active rounded-pill px-4 py-3 shadow-sm" id="academic-tab" data-bs-toggle="pill" data-bs-target="#academic" type="button" role="tab" aria-controls="academic" aria-selected="true">
+                                    <i class="bi bi-book me-2 fs-5 text-warning"></i>
+                                    <span class="d-block fs-5 fw-bold">Academic</span>
+                                    <small class="d-block">Study & Performance</small>
                                 </button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link rounded-pill" id="social-tab" data-bs-toggle="pill" data-bs-target="#social" type="button" role="tab" aria-selected="false">
-                                    <i class="bi bi-people me-2"></i>Social
+                                <button class="nav-link rounded-pill px-4 py-3 shadow-sm" id="social-tab" data-bs-toggle="pill" data-bs-target="#social" type="button" role="tab" aria-controls="social" aria-selected="false">
+                                    <i class="bi bi-people me-2 fs-5 text-info"></i>
+                                    <span class="d-block fs-5 fw-bold">Social</span>
+                                    <small class="d-block">Relationships & Interaction</small>
                                 </button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link rounded-pill" id="personal-tab" data-bs-toggle="pill" data-bs-target="#personal" type="button" role="tab" aria-selected="false">
-                                    <i class="bi bi-person me-2"></i>Personal
+                                <button class="nav-link rounded-pill px-4 py-3 shadow-sm" id="personal-tab" data-bs-toggle="pill" data-bs-target="#personal" type="button" role="tab" aria-controls="personal" aria-selected="false">
+                                    <i class="bi bi-person me-2 fs-5 text-success"></i>
+                                    <span class="d-block fs-5 fw-bold">Personal</span>
+                                    <small class="d-block">Individual Well-being</small>
                                 </button>
                             </li>
                         </ul>
                         
-                        <div class="tab-content p-4 bg-white rounded-4 shadow-sm" id="causesTabContent">
+                        <!-- Enhanced Tab Content -->
+                        <div class="tab-content p-5 bg-white rounded-4 shadow" id="causesTabContent" style="border: 1px solid rgba(0,0,0,0.1);">
                             <!-- Academic Tab -->
                             <div class="tab-pane fade show active" id="academic" role="tabpanel" aria-labelledby="academic-tab">
+                                <!-- Add description section -->
+                                <div class="text-center mb-5">
+                                    <h2 class="h3 text-primary mb-3">Understanding Academic Pressure</h2>
+                                    <p class="lead text-muted px-lg-5">Academic pressure is one of the primary sources of stress among students, affecting their mental health and overall well-being. From managing coursework to meeting high expectations, these challenges can significantly impact student life.</p>
+                                    <div class="d-flex justify-content-center gap-3 mt-4">
+                                        <span class="badge bg-primary-subtle text-primary px-3 py-2">
+                                            <i class="bi bi-graph-up me-2"></i>High Impact
+                                        </span>
+                                        <span class="badge bg-warning-subtle text-warning px-3 py-2">
+                                            <i class="bi bi-exclamation-triangle me-2"></i>Common Issue
+                                        </span>
+                                        <span class="badge bg-info-subtle text-info px-3 py-2">
+                                            <i class="bi bi-people me-2"></i>Affects Many Students
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- Continue with existing content -->
                                 <div class="row align-items-center">
                                     <div class="col-md-6 mb-4 mb-md-0">
-                                        <img src="imges/Academic Pressure.png" alt="Academic Pressure" class="img-fluid rounded-4 shadow">
+                                        <div class="position-relative" style="transform: translateY(0); transition: transform 0.3s ease;">
+                                            <img src="imges/Academic Pressure.png" alt="Academic Pressure" class="img-fluid rounded-4 shadow-lg" style="border: 4px solid #fff;">
+                                            <div class="position-absolute top-0 start-0 bg-gradient text-white px-3 py-2 rounded-pill m-3" style="background: linear-gradient(45deg, #FF512F, #DD2476);">
+                                                Most Common
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="d-flex align-items-center mb-3">
-                                            <div class="display-4 text-primary me-3">📚</div>
-                                            <h3 class="h2 text-primary mb-0">Academic Pressure</h3>
+                                        <div class="d-flex align-items-center mb-4">
+                                            <div class="display-4 text-primary me-3" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">📚</div>
+                                            <div>
+                                                <h3 class="h2 text-primary mb-1">Academic Pressure</h3>
+                                                <p class="text-muted mb-0">A Primary Source of Student Stress</p>
+                                            </div>
                                         </div>
-                                        <p class="lead">Deadlines, exams, and expectations can feel overwhelming, leading to stress and burnout.</p>
-                                        <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <p class="lead mb-4">Deadlines, exams, and expectations can feel overwhelming, leading to stress and burnout.</p>
+                                        <div class="d-flex flex-wrap gap-2 mb-4">
                                             <span class="badge bg-primary rounded-pill px-3 py-2">High Impact</span>
-                                            <span class="badge bg-light text-dark rounded-pill px-3 py-2">Exams</span>
-                                            <span class="badge bg-light text-dark rounded-pill px-3 py-2">Deadlines</span>
-                                            <span class="badge bg-light text-dark rounded-pill px-3 py-2">Grades</span>
+                                            <span class="badge bg-light text-dark rounded-pill px-3 py-2">
+                                                <i class="bi bi-calendar-check me-1"></i>Exams
+                                            </span>
+                                            <span class="badge bg-light text-dark rounded-pill px-3 py-2">
+                                                <i class="bi bi-clock-history me-1"></i>Deadlines
+                                            </span>
+                                            <span class="badge bg-light text-dark rounded-pill px-3 py-2">
+                                                <i class="bi bi-graph-up me-1"></i>Grades
+                                            </span>
                                         </div>
-                                        <p>Academic pressure is one of the most significant stressors for students. The constant need to maintain high grades, meet assignment deadlines, and prepare for exams can create overwhelming stress.</p>
-                                        <a href="#" class="btn btn-outline-primary rounded-pill">Learn coping strategies <i class="bi bi-arrow-right ms-1"></i></a>
+                                        <div class="bg-light p-4 rounded-4 mb-4">
+                                            <h4 class="h5 text-primary mb-3">Key Impact Areas:</h4>
+                                            <ul class="list-unstyled mb-0">
+                                                <li class="mb-2 d-flex align-items-center">
+                                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                                    Performance anxiety and stress
+                                                </li>
+                                                <li class="mb-2 d-flex align-items-center">
+                                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                                    Time management challenges
+                                                </li>
+                                                <li class="d-flex align-items-center">
+                                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                                    Fear of failure and perfectionism
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="d-flex gap-3">
+                                            <a href="#" class="btn btn-primary rounded-pill px-4 py-2">
+                                                Learn coping strategies <i class="bi bi-arrow-right ms-2"></i>
+                                            </a>
+                                            <a href="#" class="btn btn-outline-primary rounded-pill px-4 py-2">
+                                                Get Support <i class="bi bi-heart ms-2"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             
-                            <!-- Social Tab -->
+                            <!-- Continue with Social and Personal tabs with similar enhanced structure -->
                             <div class="tab-pane fade" id="social" role="tabpanel" aria-labelledby="social-tab">
                                 <div class="row align-items-center">
                                     <div class="col-md-6 mb-4 mb-md-0">
@@ -269,167 +321,114 @@
                 </div>
                 
                 <!-- Academic Section -->
-                <div id="academic-section" class="mb-5">
-                    <div class="row mb-3">
-                        <div class="col-12">
-                            <h3 class="border-start border-4 border-primary ps-3">Academic Challenges</h3>
-                        </div>
-                    </div>
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="card h-100 border-0 shadow-sm">
-                                <div class="row g-0">
-                                    <div class="col-md-5">
-                                        <img src="imges/tt_p4-768x432-1.jpg" class="img-fluid rounded-start h-100" style="object-fit: cover;" alt="Student studying under pressure">
-                                    </div>
-                                    <div class="col-md-7">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center mb-2">
-                                                <span class="badge bg-danger me-2">High Impact</span>
-                                                <h3 class="card-title h5 mb-0">Academic Pressure</h3>
-                                            </div>
-                                            <p class="card-text">The constant need to maintain high grades, meet deadlines, and prepare for exams creates overwhelming stress, leading to anxiety and decreased well-being.</p>
-                                            <a href="#" class="btn btn-sm btn-outline-primary">Learn more</a>
-                                        </div>
-                                    </div>
+                <section class="light">
+                    <div class="container py-2">
+                        <div class="h1 text-center text-dark" id="pageHeaderTitle">Academic Challenges</div>
+
+                        <!-- Academic Pressure Card -->
+                        <article class="postcard light blue">
+                            <a class="postcard__img_link" href="#">
+                                <img class="postcard__img" src="imges/tt_p4-768x432-1.jpg" alt="Academic Pressure" />
+                            </a>
+                            <div class="postcard__text t-dark">
+                                <h1 class="postcard__title blue"><a href="#">Academic Pressure</a></h1>
+                                <div class="postcard__subtitle small">
+                                    <i class="fas fa-exclamation-circle mr-2"></i>High Impact Challenge
                                 </div>
+                                <div class="postcard__bar"></div>
+                                <div class="postcard__preview-txt">The constant need to maintain high grades, meet deadlines, and prepare for exams creates overwhelming stress, leading to anxiety and decreased well-being. Many students struggle with balancing multiple assignments and maintaining academic performance.</div>
+                                <ul class="postcard__tagbox">
+                                    <li class="tag__item"><i class="fas fa-tag mr-2"></i>High Priority</li>
+                                    <li class="tag__item"><i class="fas fa-clock mr-2"></i>Common Issue</li>
+                                    <li class="tag__item play blue">
+                                        <a href="#"><i class="fas fa-arrow-right mr-2"></i>Learn More</a>
+                                    </li>
+                                </ul>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card h-100 border-0 shadow-sm">
-                                <div class="card-body">
-                                    <h3 class="card-title h4 mb-3">Academic Pressure: A Deeper Look</h3>
-                                    <p class="card-text">Academic pressure is one of the most significant stressors for students. The constant need to maintain high grades, meet assignment deadlines, and prepare for exams can create overwhelming stress. Many students feel trapped in a cycle of continuous assessment and performance evaluation.</p>
-                                    <p class="card-text">This pressure often intensifies during exam periods or when multiple deadlines coincide, leading to anxiety, sleep problems, and decreased well-being.</p>
+                        </article>
+
+                        <!-- Study-Life Balance Card -->
+                        <article class="postcard light red">
+                            <a class="postcard__img_link" href="#">
+                                <img class="postcard__img" src="imges/Understanding Social Pressure.jpg" alt="Study-Life Balance" />
+                            </a>
+                            <div class="postcard__text t-dark">
+                                <h1 class="postcard__title red"><a href="#">Study-Life Balance</a></h1>
+                                <div class="postcard__subtitle small">
+                                    <i class="fas fa-balance-scale mr-2"></i>Critical Challenge
                                 </div>
-                                <div class="card-footer bg-transparent border-0">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <small class="text-muted"><i class="bi bi-info-circle me-1"></i> Common among 78% of students</small>
-                                        <button class="btn btn-link p-0">Read more</button>
-                                    </div>
-                                </div>
+                                <div class="postcard__bar"></div>
+                                <div class="postcard__preview-txt">Finding the right balance between academic responsibilities and personal life can be challenging. Students often struggle with time management and maintaining healthy relationships while pursuing academic excellence.</div>
+                                <ul class="postcard__tagbox">
+                                    <li class="tag__item"><i class="fas fa-tag mr-2"></i>Balance</li>
+                                    <li class="tag__item"><i class="fas fa-clock mr-2"></i>Ongoing</li>
+                                    <li class="tag__item play red">
+                                        <a href="#"><i class="fas fa-arrow-right mr-2"></i>Learn More</a>
+                                    </li>
+                                </ul>
                             </div>
-                        </div>
+                        </article>
+
+                        <!-- Exam Anxiety Card -->
+                        <article class="postcard light green">
+                            <a class="postcard__img_link" href="#">
+                                <img class="postcard__img" src="imges/Sleep Deprivation and Mental Health.jpg" alt="Exam Anxiety" />
+                            </a>
+                            <div class="postcard__text t-dark">
+                                <h1 class="postcard__title green"><a href="#">Exam Anxiety</a></h1>
+                                <div class="postcard__subtitle small">
+                                    <i class="fas fa-brain mr-2"></i>Mental Health Impact
+                                </div>
+                                <div class="postcard__bar"></div>
+                                <div class="postcard__preview-txt">Test anxiety can significantly impact academic performance and mental well-being. Many students experience stress, panic attacks, and decreased performance during exams despite adequate preparation.</div>
+                                <ul class="postcard__tagbox">
+                                    <li class="tag__item"><i class="fas fa-tag mr-2"></i>Mental Health</li>
+                                    <li class="tag__item"><i class="fas fa-clock mr-2"></i>Recurring</li>
+                                    <li class="tag__item play green">
+                                        <a href="#"><i class="fas fa-arrow-right mr-2"></i>Learn More</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- Performance Pressure Card -->
+                        <article class="postcard light yellow">
+                            <a class="postcard__img_link" href="#">
+                                <img class="postcard__img" src="imges/The Impact of Financial Stress.jpg" alt="Performance Pressure" />
+                            </a>
+                            <div class="postcard__text t-dark">
+                                <h1 class="postcard__title yellow"><a href="#">Performance Pressure</a></h1>
+                                <div class="postcard__subtitle small">
+                                    <i class="fas fa-chart-line mr-2"></i>Academic Challenge
+                                </div>
+                                <div class="postcard__bar"></div>
+                                <div class="postcard__preview-txt">The pressure to consistently perform at high levels can be overwhelming. Students often face expectations from family, teachers, and themselves, leading to stress and potential burnout.</div>
+                                <ul class="postcard__tagbox">
+                                    <li class="tag__item"><i class="fas fa-tag mr-2"></i>Performance</li>
+                                    <li class="tag__item"><i class="fas fa-clock mr-2"></i>Persistent</li>
+                                    <li class="tag__item play yellow">
+                                        <a href="#"><i class="fas fa-arrow-right mr-2"></i>Learn More</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
                     </div>
-                </div>
+                </section>
                 
-                <!-- Social Section -->
-                <div id="social-section" class="mb-5">
-                    <div class="row mb-3">
-                        <div class="col-12">
-                            <h3 class="border-start border-4 border-info ps-3">Social Challenges</h3>
-                        </div>
-                    </div>
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="card h-100 border-0 shadow-sm">
-                                <div class="row g-0">
-                                    <div class="col-md-5">
-                                        <img src="imges/Understanding Social Pressure.jpg" class="img-fluid rounded-start h-100" style="object-fit: cover;" alt="Students in social situation">
-                                    </div>
-                                    <div class="col-md-7">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center mb-2">
-                                                <span class="badge bg-warning me-2">Common</span>
-                                                <h3 class="card-title h5 mb-0">Social Pressure</h3>
-                                            </div>
-                                            <p class="card-text">Students struggle with building relationships and finding their place in the academic community, creating significant anxiety.</p>
-                                            <a href="#" class="btn btn-sm btn-outline-primary">Learn more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card h-100 border-0 shadow-sm">
-                                <div class="row g-0">
-                                    <div class="col-md-5">
-                                        <img src="imges/Combating Isolation and Loneliness.png" class="img-fluid rounded-start h-100" style="object-fit: cover;" alt="Lonely student in campus environment">
-                                    </div>
-                                    <div class="col-md-7">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center mb-2">
-                                                <span class="badge bg-info me-2">Increasing</span>
-                                                <h3 class="card-title h5 mb-0">Isolation & Loneliness</h3>
-                                            </div>
-                                            <p class="card-text">The transition to academic life can lead to feelings of isolation, especially for students far from home.</p>
-                                            <a href="#" class="btn btn-sm btn-outline-primary">Learn more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              
+               
                 
-                <!-- Personal Section -->
-                <div id="personal-section" class="mb-5">
-                    <div class="row mb-3">
-                        <div class="col-12">
-                            <h3 class="border-start border-4 border-warning ps-3">Personal Challenges</h3>
-                        </div>
-                    </div>
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="card h-100 border-0 shadow-sm">
-                                <div class="row g-0">
-                                    <div class="col-md-5">
-                                        <img src="imges/The Impact of Financial Stress.jpg" class="img-fluid rounded-start h-100" style="object-fit: cover;" alt="Student worried about finances">
-                                    </div>
-                                    <div class="col-md-7">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center mb-2">
-                                                <span class="badge bg-danger me-2">Critical</span>
-                                                <h3 class="card-title h5 mb-0">Financial Stress</h3>
-                                            </div>
-                                            <p class="card-text">The burden of tuition fees, accommodation costs, and daily expenses creates constant worry for many students.</p>
-                                            <a href="#" class="btn btn-sm btn-outline-primary">Learn more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card h-100 border-0 shadow-sm">
-                                <div class="row g-0">
-                                    <div class="col-md-5">
-                                        <img src="imges/Sleep Deprivation and Mental Health.jpg" class="img-fluid rounded-start h-100" style="object-fit: cover;" alt="Tired student struggling to stay awake">
-                                    </div>
-                                    <div class="col-md-7">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center mb-2">
-                                                <span class="badge bg-warning me-2">Widespread</span>
-                                                <h3 class="card-title h5 mb-0">Sleep Deprivation</h3>
-                                            </div>
-                                            <p class="card-text">Poor sleep habits significantly impact cognitive function, emotional regulation, and overall mental health.</p>
-                                            <a href="#" class="btn btn-sm btn-outline-primary">Learn more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               
+ 
                 
-                <!-- Call to Action -->
-                <div class="row mt-5">
-                    <div class="col-12 text-center">
-                        <div class="card border-0 shadow-sm" style="background: linear-gradient(to right, #4776E6, #8E54E9);">
-                            <div class="card-body py-4 text-white">
-                                <h3 class="mb-3">Need help with these challenges?</h3>
-                                <p class="mb-4">Our resources and counseling services are designed to help you navigate these common challenges.</p>
-                                <div class="d-flex justify-content-center gap-3">
-                                    <a href="resources.html" class="btn btn-light">Explore Resources</a>
-                                    <a href="counseling.html" class="btn btn-outline-light">Get Counseling</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                
         </section>
 
        
+         </div>
+        </section>
+
+        
             </div>
         </section>
 
@@ -506,6 +505,24 @@
             </div>
         </footer>
 <!-- Bootstrap JS Bundle -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const triggerTabList = document.querySelectorAll('#causesTabs button');
+        triggerTabList.forEach(triggerEl => {
+            triggerEl.addEventListener('click', event => {
+                event.preventDefault();
+                // Remove active class from all tabs
+                triggerTabList.forEach(el => {
+                    el.classList.remove('active');
+                    el.setAttribute('aria-selected', 'false');
+                });
+                // Add active class to clicked tab
+                triggerEl.classList.add('active');
+                triggerEl.setAttribute('aria-selected', 'true');
+            });
+        });
+    });
+</script>
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
