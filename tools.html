@@ -58,28 +58,45 @@
 
         <section id="tools" class="tools-section py-5">
             <div class="container">
+                <h2 class="text-center mb-5">Mental Health Tools for Students</h2>
+                <p class="text-center mb-5">These evidence-based tools are designed specifically to help students manage anxiety and depression while navigating academic challenges.</p>
+                
                 <div class="row g-4">
-                    <!-- Anxiety Relief Tool -->
+                    <!-- Anxiety Management Tool -->
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card h-100 tool-card">
+                        <div class="card h-100 tool-card anxiety-card">
+                            <div class="card-header bg-gradient text-white p-3" style="background: linear-gradient(45deg, #4776E6, #8E54E9);">
+                                <h2 class="card-title h4 mb-0"><i class="fas fa-wind me-2"></i>Exam Anxiety Relief</h2>
+                            </div>
                             <div class="card-body">
-                                <h2 class="card-title h4">Guided Breathing</h2>
+                                <p class="card-text">A specialized breathing technique to calm your nervous system before exams or presentations.</p>
                                 <div class="breathing-circle my-4" id="breathingCircle">
                                     <div class="circle-text">Start</div>
                                 </div>
                                 <div class="text-center">
                                     <button class="btn btn-primary" onclick="startBreathing()">Begin Exercise</button>
-                                    <p class="mt-3" id="breathingInstructions">Click to start a guided breathing session</p>
+                                    <p class="mt-3" id="breathingInstructions">This 4-7-8 breathing technique is proven to reduce test anxiety</p>
+                                </div>
+                                <div class="mt-4 p-3 bg-light rounded">
+                                    <h6 class="mb-2"><i class="fas fa-lightbulb text-warning me-2"></i>When to use:</h6>
+                                    <ul class="small">
+                                        <li>Before entering an exam hall</li>
+                                        <li>When feeling overwhelmed by assignments</li>
+                                        <li>During study breaks to reset</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Mood Journal -->
+                    <!-- Depression Management - Mood Tracker -->
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card h-100 tool-card">
+                        <div class="card h-100 tool-card depression-card">
+                            <div class="card-header bg-gradient text-white p-3" style="background: linear-gradient(45deg, #11998e, #38ef7d);">
+                                <h2 class="card-title h4 mb-0"><i class="fas fa-chart-line me-2"></i>Student Mood Tracker</h2>
+                            </div>
                             <div class="card-body">
-                                <h2 class="card-title h4">Mood Journal</h2>
+                                <p class="card-text">Track your mood patterns in relation to academic events to identify triggers and improvements.</p>
                                 <form id="moodJournalForm" class="my-3">
                                     <div class="mb-3">
                                         <label class="form-label">How are you feeling today?</label>
@@ -92,96 +109,206 @@
                                         </select>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">What's on your mind?</label>
-                                        <textarea class="form-control" id="moodNote" rows="3"></textarea>
+                                        <label class="form-label">What academic factors are affecting your mood?</label>
+                                        <div class="d-flex flex-wrap gap-2 mb-2">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="exams">
+                                                <label class="form-check-label">Exams</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="deadlines">
+                                                <label class="form-check-label">Deadlines</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="grades">
+                                                <label class="form-check-label">Grades</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="social">
+                                                <label class="form-check-label">Social</label>
+                                            </div>
+                                        </div>
+                                        <textarea class="form-control" id="moodNote" rows="2" placeholder="Additional notes..."></textarea>
                                     </div>
                                     <button type="submit" class="btn btn-primary">Save Entry</button>
                                 </form>
                                 <div id="moodHistory" class="mt-3"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Focus Timer -->
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card h-100 tool-card">
-                            <div class="card-body">
-                                <h2 class="card-title h4">Focus Timer</h2>
-                                <div class="text-center my-4">
-                                    <div class="display-4" id="timerDisplay">25:00</div>
-                                    <div class="btn-group mt-3">
-                                        <button class="btn btn-primary" id="startTimer">Start</button>
-                                        <button class="btn btn-secondary" id="pauseTimer">Pause</button>
-                                        <button class="btn btn-danger" id="resetTimer">Reset</button>
-                                    </div>
-                                    <div class="mt-3">
-                                        <select class="form-select" id="timerDuration">
-                                            <option value="1500">25 minutes</option>
-                                            <option value="900">15 minutes</option>
-                                            <option value="300">5 minutes</option>
-                                        </select>
-                                    </div>
+                                <div class="mt-3 text-center">
+                                    <button class="btn btn-sm btn-outline-secondary" id="viewMoodPatterns">View Mood Patterns</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Gratitude Journal -->
+                    <!-- CBT Thought Challenging -->
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card h-100 tool-card">
-                            <div class="card-body">
-                                <h2 class="card-title h4">Gratitude Journal</h2>
-                                <form id="gratitudeForm" class="my-3">
-                                    <div class="mb-3">
-                                        <label class="form-label">What are you grateful for today?</label>
-                                        <textarea class="form-control" id="gratitudeEntry" rows="3"></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Add Entry</button>
-                                </form>
-                                <div id="gratitudeList" class="mt-3"></div>
+                        <div class="card h-100 tool-card cbt-card">
+                            <div class="card-header bg-gradient text-white p-3" style="background: linear-gradient(45deg, #FF512F, #F09819);">
+                                <h2 class="card-title h4 mb-0"><i class="fas fa-brain me-2"></i>Academic Thought Challenger</h2>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Thought Reframing -->
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card h-100 tool-card">
                             <div class="card-body">
-                                <h2 class="card-title h4">Thought Reframing</h2>
+                                <p class="card-text">Challenge negative academic thoughts using evidence-based cognitive behavioral therapy techniques.</p>
                                 <div class="my-3">
-                                    <label class="form-label">Negative Thought:</label>
-                                    <textarea class="form-control mb-3" id="negativeThought" rows="2"></textarea>
-                                    <label class="form-label">Reframe it positively:</label>
-                                    <textarea class="form-control mb-3" id="positiveThought" rows="2"></textarea>
-                                    <button class="btn btn-primary" onclick="saveThoughtReframe()">Save Reframe</button>
+                                    <label class="form-label fw-bold">Step 1: Identify the negative thought</label>
+                                    <textarea class="form-control mb-3" id="negativeThought" rows="2" placeholder="Example: 'I'll fail this course no matter how hard I try'"></textarea>
+                                    
+                                    <label class="form-label fw-bold">Step 2: Identify the cognitive distortion</label>
+                                    <select class="form-select mb-3" id="distortionType">
+                                        <option value="">Select the type of thinking error</option>
+                                        <option value="catastrophizing">Catastrophizing (assuming the worst)</option>
+                                        <option value="blackAndWhite">All-or-nothing thinking</option>
+                                        <option value="overgeneralizing">Overgeneralizing</option>
+                                        <option value="mindReading">Mind reading (assuming others' thoughts)</option>
+                                        <option value="filtering">Mental filtering (focusing only on negatives)</option>
+                                    </select>
+                                    
+                                    <label class="form-label fw-bold">Step 3: Challenge with evidence</label>
+                                    <textarea class="form-control mb-3" id="evidence" rows="2" placeholder="What evidence contradicts this thought?"></textarea>
+                                    
+                                    <label class="form-label fw-bold">Step 4: Create a balanced thought</label>
+                                    <textarea class="form-control mb-3" id="balancedThought" rows="2" placeholder="A more realistic perspective..."></textarea>
+                                    
+                                    <button class="btn btn-primary" onclick="saveThoughtChallenge()">Save Challenge</button>
                                 </div>
-                                <div id="reframeHistory" class="mt-3"></div>
+                                <div id="challengeHistory" class="mt-3"></div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Self-Care Checklist -->
+                    <!-- Guided Meditation for Academic Stress -->
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card h-100 tool-card">
+                        <div class="card h-100 tool-card meditation-card">
+                            <div class="card-header bg-gradient text-white p-3" style="background: linear-gradient(45deg, #654ea3, #eaafc8);">
+                                <h2 class="card-title h4 mb-0"><i class="fas fa-om me-2"></i>Student Meditation Guide</h2>
+                            </div>
                             <div class="card-body">
-                                <h2 class="card-title h4">Daily Self-Care</h2>
-                                <div class="form-check my-2">
-                                    <input class="form-check-input" type="checkbox" id="water">
-                                    <label class="form-check-label">Drink water</label>
+                                <p class="card-text">Guided meditations specifically designed for academic stress and student life challenges.</p>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action" onclick="playMeditation('exam')">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1">Exam Preparation Calm</h6>
+                                            <small>5 min</small>
+                                        </div>
+                                        <small class="text-muted">Focus and calm your mind before studying</small>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action" onclick="playMeditation('sleep')">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1">Student Sleep Aid</h6>
+                                            <small>10 min</small>
+                                        </div>
+                                        <small class="text-muted">Fall asleep despite academic worries</small>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action" onclick="playMeditation('morning')">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1">Morning Motivation</h6>
+                                            <small>3 min</small>
+                                        </div>
+                                        <small class="text-muted">Start your day with positive intentions</small>
+                                    </a>
                                 </div>
-                                <div class="form-check my-2">
-                                    <input class="form-check-input" type="checkbox" id="exercise">
-                                    <label class="form-check-label">Physical activity</label>
+                                <div id="meditationPlayer" class="mt-4 d-none">
+                                    <h6 id="meditationTitle" class="mb-3">Meditation Title</h6>
+                                    <div class="progress mb-3">
+                                        <div id="meditationProgress" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-sm btn-outline-secondary" id="pauseMeditation">Pause</button>
+                                        <button class="btn btn-sm btn-outline-danger" id="stopMeditation">Stop</button>
+                                    </div>
                                 </div>
-                                <div class="form-check my-2">
-                                    <input class="form-check-input" type="checkbox" id="meditation">
-                                    <label class="form-check-label">5-min meditation</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Self-Care Checklist -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 tool-card selfcare-card">
+                            <div class="card-header bg-gradient text-white p-3" style="background: linear-gradient(45deg, #0082c8, #667db6);">
+                                <h2 class="card-title h4 mb-0"><i class="fas fa-clipboard-check me-2"></i>Student Self-Care Plan</h2>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">A daily checklist of essential self-care activities that improve academic performance and mental health.</p>
+                                <div class="form-check my-2 d-flex align-items-center">
+                                    <input class="form-check-input me-3" type="checkbox" id="water" style="transform: scale(1.2);">
+                                    <div>
+                                        <label class="form-check-label fw-bold">Hydration</label>
+                                        <p class="small text-muted mb-0">Improves concentration and cognitive function</p>
+                                    </div>
                                 </div>
-                                <div class="form-check my-2">
-                                    <input class="form-check-input" type="checkbox" id="sleep">
-                                    <label class="form-check-label">7+ hours sleep</label>
+                                <div class="form-check my-2 d-flex align-items-center">
+                                    <input class="form-check-input me-3" type="checkbox" id="exercise" style="transform: scale(1.2);">
+                                    <div>
+                                        <label class="form-check-label fw-bold">Physical activity (20+ min)</label>
+                                        <p class="small text-muted mb-0">Reduces anxiety and improves mood</p>
+                                    </div>
+                                </div>
+                                <div class="form-check my-2 d-flex align-items-center">
+                                    <input class="form-check-input me-3" type="checkbox" id="breaks" style="transform: scale(1.2);">
+                                    <div>
+                                        <label class="form-check-label fw-bold">Study breaks (5 min/hour)</label>
+                                        <p class="small text-muted mb-0">Prevents burnout and improves retention</p>
+                                    </div>
+                                </div>
+                                <div class="form-check my-2 d-flex align-items-center">
+                                    <input class="form-check-input me-3" type="checkbox" id="sleep" style="transform: scale(1.2);">
+                                    <div>
+                                        <label class="form-check-label fw-bold">7+ hours sleep</label>
+                                        <p class="small text-muted mb-0">Critical for memory consolidation</p>
+                                    </div>
+                                </div>
+                                <div class="form-check my-2 d-flex align-items-center">
+                                    <input class="form-check-input me-3" type="checkbox" id="social" style="transform: scale(1.2);">
+                                    <div>
+                                        <label class="form-check-label fw-bold">Social connection</label>
+                                        <p class="small text-muted mb-0">Reduces isolation and provides support</p>
+                                    </div>
                                 </div>
                                 <button class="btn btn-primary mt-3" onclick="resetChecklist()">Reset Checklist</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Crisis Resources -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 tool-card crisis-card">
+                            <div class="card-header bg-gradient text-white p-3" style="background: linear-gradient(45deg, #ED213A, #93291E);">
+                                <h2 class="card-title h4 mb-0"><i class="fas fa-phone-alt me-2"></i>Crisis Support</h2>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text fw-bold">If you're experiencing a mental health emergency or having thoughts of harming yourself:</p>
+                                <div class="alert alert-danger">
+                                    <h6 class="alert-heading">Immediate Help</h6>
+                                    <p class="mb-0">National Suicide Prevention Lifeline: <br><strong>988</strong> or <strong>1-800-273-8255</strong></p>
+                                </div>
+                                <div class="list-group mt-4">
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1">Campus Counseling Center</h6>
+                                        </div>
+                                        <small class="text-muted">Available 24/7 for students in crisis</small>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1">Crisis Text Line</h6>
+                                        </div>
+                                        <small class="text-muted">Text HOME to 741741</small>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1">Student Peer Support Hotline</h6>
+                                        </div>
+                                        <small class="text-muted">Call: (555) 123-4567</small>
+                                    </a>
+                                </div>
+                                <div class="mt-4">
+                                    <h6>Warning Signs to Watch For:</h6>
+                                    <ul class="small">
+                                        <li>Talking about wanting to die or suicide</li>
+                                        <li>Feeling hopeless or having no purpose</li>
+                                        <li>Withdrawing from friends and activities</li>
+                                        <li>Extreme mood swings</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -192,7 +319,7 @@
        
         </section>
     </main>
-
+    <!-- Footer -->
     <footer class="bg-dark text-white py-5">
         <div class="container">
             <div class="row g-4">
