@@ -216,3 +216,33 @@
 .z-2 {
     z-index: 2;
 }
+
+/* Emotional Intelligence Builder styles */
+.emotion-btn.active {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.emotion-btn {
+    transition: all 0.2s ease;
+}
+
+.emotion-btn:hover {
+    transform: scale(1.05);
+}
+
+#emotion-intensity {
+    height: 2rem;
+}
+
+.ei-card .card-header {
+    border-bottom: none;
+}
+
+#ei-insights {
+    font-size: 0.95rem;
+}
+
+#ei-insights .alert {
+    margin-bottom: 0;
+}
