@@ -177,3 +177,72 @@
 .help-message :hover{
     text-decoration: underline;
 }
+
+/* ===== GRATITUDE SECTION STYLING ===== */
+.gratitude-section {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+}
+
+.gratitude-card {
+    background: linear-gradient(to right, #567abc, #45B7D1);
+    padding: 2.5rem;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 4px 20px rgba(69, 183, 209, 0.3);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.gratitude-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 1rem;
+}
+
+.gratitude-icon {
+    font-size: 2.5rem;
+}
+
+.gratitude-header h3 {
+    font-size: 2rem;
+    margin: 0;
+    color: white;
+}
+
+.gratitude-content {
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.gratitude-content .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.gratitude-content strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.future-message {
+    font-style: italic;
+    margin-top: 1.5rem;
+    border-left: 3px solid rgba(255, 255, 255, 0.5);
+    padding-left: 1rem;
+}
+
+.signature {
+    margin-top: 2rem;
+    text-align: right;
+    font-style: italic;
+}
+
+.team-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
