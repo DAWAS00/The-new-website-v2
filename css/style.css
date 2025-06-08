@@ -419,30 +419,7 @@ footer {
     border-top-right-radius: 15px;
     pointer-events: none;
 }
-.clock-display {
-    color: #fff;
-    font-weight: 500;
-    padding: 0.5rem 0.75rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    margin-left: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.clock-display:before {
-    content: '\f017'; /* Clock icon from Bootstrap Icons */
-    font-family: "bootstrap-icons";
-    margin-right: 6px;
-}
-
-@media (max-width: 992px) {
-    .clock-display {
-        margin: 10px 0;
-        justify-content: flex-start;
-    }
-}
 
 
 

@@ -39,6 +39,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
+                        <li class="nav-item">
+                            <div id="clock" class="nav-link clock-display"></div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -75,6 +78,7 @@
                                 </div>
                                 <div class="text-center">
                                     <button class="btn btn-primary" onclick="startBreathing()">Begin Exercise</button>
+                                    <button class="btn btn-secondary ms-2" onclick="stopBreathing()">Stop Exercise</button>
                                     <p class="mt-3" id="breathingInstructions">This 4-7-8 breathing technique is proven to reduce test anxiety</p>
                                 </div>
                                 <div class="mt-4 p-3 bg-light rounded">
@@ -94,92 +98,51 @@
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card h-100 tool-card ei-card">
                             <div class="card-header bg-gradient text-white p-3" style="background: linear-gradient(45deg, #1A2980, #26D0CE);">
-                                <h2 class="card-title h4 mb-0"><i class="fas fa-chart-pie me-2"></i>Emotional Intelligence Builder</h2>
+                                <h2 class="card-title h4 mb-0"><i class="fas fa-heart me-2"></i>Mood Tracker</h2>
                             </div>
                             <div class="card-body">
-                                <p class="card-text">Develop your emotional awareness and regulation skills to improve academic resilience.</p>
                                 
-                                <!-- Emotion identification -->
-                                <div class="mb-3">
-                                    <label class="form-label fw-bold">What emotions are you experiencing?</label>
+                                <p class="card-text">Track your emotions and build emotional awareness.</p>
+                                
+                                <!-- Simplified emotion selection -->
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold">How are you feeling right now?</label>
                                     <div class="emotion-grid d-flex flex-wrap gap-2 mb-3">
-                                        <button class="emotion-btn btn btn-sm btn-outline-primary" data-emotion="joy">Joy</button>
-                                        <button class="emotion-btn btn btn-sm btn-outline-primary" data-emotion="sadness">Sadness</button>
-                                        <button class="emotion-btn btn btn-sm btn-outline-primary" data-emotion="fear">Fear</button>
-                                        <button class="emotion-btn btn btn-sm btn-outline-primary" data-emotion="anger">Anger</button>
-                                        <button class="emotion-btn btn btn-sm btn-outline-primary" data-emotion="disgust">Disgust</button>
-                                        <button class="emotion-btn btn btn-sm btn-outline-primary" data-emotion="surprise">Surprise</button>
-                                        <button class="emotion-btn btn btn-sm btn-outline-primary" data-emotion="anticipation">Anticipation</button>
-                                        <button class="emotion-btn btn btn-sm btn-outline-primary" data-emotion="trust">Trust</button>
-                                        <button class="emotion-btn btn btn-sm btn-outline-primary" data-emotion="anxiety">Anxiety</button>
-                                        <button class="emotion-btn btn btn-sm btn-outline-primary" data-emotion="overwhelm">Overwhelm</button>
-                                        <button class="emotion-btn btn btn-sm btn-outline-primary" data-emotion="pride">Pride</button>
-                                        <button class="emotion-btn btn btn-sm btn-outline-primary" data-emotion="shame">Shame</button>
+                                        <button class="emotion-btn btn btn-outline-primary" data-emotion="happy">😊 Happy</button>
+                                        <button class="emotion-btn btn btn-outline-primary" data-emotion="sad">😢 Sad</button>
+                                        <button class="emotion-btn btn btn-outline-primary" data-emotion="anxious">😰 Anxious</button>
+                                        <button class="emotion-btn btn btn-outline-primary" data-emotion="angry">😡 Angry</button>
+                                        <button class="emotion-btn btn btn-outline-primary" data-emotion="excited">🤩 Excited</button>
+                                        <button class="emotion-btn btn btn-outline-primary" data-emotion="tired">😴 Tired</button>
                                     </div>
                                 </div>
                                 
-                                <!-- Emotion intensity -->
-                                <div class="mb-3">
-                                    <label class="form-label">Intensity level:</label>
+                                <!-- Simple intensity slider -->
+                                <div class="mb-4">
+                                    <label class="form-label">How intense is this feeling?</label>
                                     <div class="d-flex align-items-center">
-                                        <span class="me-2">Mild</span>
-                                        <input type="range" class="form-range mx-2" min="1" max="5" id="emotion-intensity">
-                                        <span class="ms-2">Intense</span>
+                                        <span class="me-2 small">Low</span>
+                                        <input type="range" class="form-range mx-2" min="1" max="5" id="emotion-intensity" value="3">
+                                        <span class="ms-2 small">High</span>
                                     </div>
                                 </div>
                                 
-                                <!-- Emotion trigger -->
-                                <div class="mb-3">
-                                    <label for="emotion-trigger" class="form-label">What triggered this emotion?</label>
-                                    <textarea id="emotion-trigger" class="form-control" rows="2" placeholder="Describe the situation or thought that led to this feeling"></textarea>
-                                </div>
-                                
-                                <!-- Physical sensations -->
-                                <div class="mb-3">
-                                    <label class="form-label">Physical sensations:</label>
-                                    <div class="d-flex flex-wrap gap-2">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="sensation-racing-heart">
-                                            <label class="form-check-label" for="sensation-racing-heart">Racing heart</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="sensation-tight-chest">
-                                            <label class="form-check-label" for="sensation-tight-chest">Tight chest</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="sensation-stomach">
-                                            <label class="form-check-label" for="sensation-stomach">Stomach discomfort</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="sensation-tension">
-                                            <label class="form-check-label" for="sensation-tension">Muscle tension</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Response strategy -->
-                                <div class="mb-3">
-                                    <label for="response-strategy" class="form-label">How will you respond to this emotion?</label>
-                                    <select class="form-select" id="response-strategy">
-                                        <option value="">Select a strategy...</option>
-                                        <option value="breathe">Deep breathing</option>
-                                        <option value="reframe">Cognitive reframing</option>
-                                        <option value="express">Express the emotion</option>
-                                        <option value="distract">Healthy distraction</option>
-                                        <option value="support">Seek support</option>
-                                    </select>
+                                <!-- Optional note -->
+                                <div class="mb-4">
+                                    <label for="emotion-note" class="form-label">What's on your mind? (optional)</label>
+                                    <textarea id="emotion-note" class="form-control" rows="2" placeholder="Briefly describe what's happening..."></textarea>
                                 </div>
                                 
                                 <!-- Save button -->
                                 <div class="text-center mb-3">
-                                    <button id="save-emotion" class="btn btn-primary">Save & Get Insights</button>
+                                    <button id="save-emotion" class="btn btn-primary btn-lg w-100">Save My Mood</button>
                                 </div>
                                 
-                                <!-- EI insights -->
-                                <div class="mt-4 p-3 bg-light rounded">
-                                    <h6 class="mb-2"><i class="fas fa-brain text-primary me-2"></i>Your Emotional Intelligence Insights:</h6>
-                                    <div id="ei-insights" class="py-2">
-                                        <span class="text-muted">Complete your first entry to receive personalized insights</span>
+                                <!-- Simple insights -->
+                                <div class="mt-3 p-3 bg-light rounded">
+                                    <h6 class="mb-2"><i class="fas fa-lightbulb text-warning me-2"></i>Quick Tip:</h6>
+                                    <div id="ei-insights" class="py-1">
+                                        <span class="text-muted">Track your mood to see patterns over time</span>
                                     </div>
                                 </div>
                             </div>
@@ -431,7 +394,7 @@
             
             <!-- Copyright Section -->
             <div class="border-top border-secondary mt-4 pt-4 text-center">
-                <p class="mb-0">&copy; 2024 Eman platform. All rights reserved.</p>
+                <p class="mb-0">&copy; 2025 Eman platform. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -439,6 +402,8 @@
 <script src="js/tools.js"></script>
 <script src="js/emotional-intelligence.js"></script>
 <script src="js/main.js"></script>
+<script src="js/clock.js"></script>
+
 
 </body>
 </html>

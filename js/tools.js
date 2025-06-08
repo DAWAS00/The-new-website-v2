@@ -1,29 +1,50 @@
 // Breathing Exercise
 // Enhanced Breathing Exercise for Anxiety
+let breathingTimeoutId = null; // Store the timeout ID
+
 function startBreathing() {
     const circle = document.getElementById('breathingCircle');
     const instructions = document.getElementById('breathingInstructions');
     let phase = 'inhale';
+    
+    // Clear any existing timeout
+    if (breathingTimeoutId) {
+        clearTimeout(breathingTimeoutId);
+    }
 
     function updateBreathing() {
         if (phase === 'inhale') {
             circle.classList.add('inhale');
             instructions.textContent = 'Inhale deeply for 4 seconds...';
             phase = 'hold';
-            setTimeout(updateBreathing, 4000);
+            breathingTimeoutId = setTimeout(updateBreathing, 4000);
         } else if (phase === 'hold') {
             instructions.textContent = 'Hold your breath for 7 seconds...';
             phase = 'exhale';
-            setTimeout(updateBreathing, 7000);
+            breathingTimeoutId = setTimeout(updateBreathing, 7000);
         } else {
             circle.classList.remove('inhale');
             instructions.textContent = 'Exhale slowly for 8 seconds...';
             phase = 'inhale';
-            setTimeout(updateBreathing, 8000);
+            breathingTimeoutId = setTimeout(updateBreathing, 8000);
         }
     }
 
     updateBreathing();
+}
+
+function stopBreathing() {
+    if (breathingTimeoutId) {
+        clearTimeout(breathingTimeoutId);
+        breathingTimeoutId = null;
+        
+        // Reset the UI
+        const circle = document.getElementById('breathingCircle');
+        const instructions = document.getElementById('breathingInstructions');
+        
+        circle.classList.remove('inhale');
+        instructions.textContent = 'This 4-7-8 breathing technique is proven to reduce test anxiety';
+    }
 }
 
 // CBT Thought Challenging Tool

@@ -1,28 +1,17 @@
-// Emotional Intelligence Builder - Main functionality
+// Simplified Mood Tracker - Main functionality
 
-// Store selected emotions and their data
-let selectedEmotions = [];
-let emotionData = {
-    lastEntry: null,
+// Store selected emotion and data
+let selectedEmotion = null;
+let moodData = {
     entries: []
 };
 
-// Initialize the component when the DOM is fully loaded
+// Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Load saved emotion data from localStorage
-    loadEmotionData();
-    
-    // Set up emotion buttons
+    loadMoodData();
     setupEmotionButtons();
-    
-    // Set up save button
-    const saveButton = document.getElementById('save-emotion');
-    if (saveButton) {
-        saveButton.addEventListener('click', saveEmotionEntry);
-    }
-    
-    // Set up active buttons for emotion selection
-    setupActiveButtons();
+    setupSaveButton();
+    showRandomTip();
 });
 
 // Set up emotion buttons with click handlers
@@ -31,235 +20,158 @@ function setupEmotionButtons() {
     
     emotionButtons.forEach(button => {
         button.addEventListener('click', function() {
-            const emotion = this.getAttribute('data-emotion');
+            // Remove active state from all buttons
+            emotionButtons.forEach(btn => {
+                btn.classList.remove('active', 'btn-primary');
+                btn.classList.add('btn-outline-primary');
+            });
             
-            // Toggle selection
-            if (this.classList.contains('active')) {
-                this.classList.remove('active');
-                this.classList.remove('btn-primary');
-                this.classList.add('btn-outline-primary');
-                
-                // Remove from selected emotions
-                selectedEmotions = selectedEmotions.filter(e => e !== emotion);
-            } else {
-                this.classList.add('active');
-                this.classList.remove('btn-outline-primary');
-                this.classList.add('btn-primary');
-                
-                // Add to selected emotions
-                selectedEmotions.push(emotion);
-            }
+            // Add active state to clicked button
+            this.classList.add('active', 'btn-primary');
+            this.classList.remove('btn-outline-primary');
+            
+            // Store selected emotion
+            selectedEmotion = this.getAttribute('data-emotion');
         });
     });
 }
 
-// Set up active buttons for other interactive elements
-function setupActiveButtons() {
-    // For physical sensation checkboxes
-    const sensationCheckboxes = document.querySelectorAll('input[id^="sensation-"]');
-    sensationCheckboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', function() {
-            const label = this.nextElementSibling;
-            if (this.checked) {
-                label.classList.add('fw-bold');
-            } else {
-                label.classList.remove('fw-bold');
-            }
-        });
-    });
+// Set up save button
+function setupSaveButton() {
+    const saveButton = document.getElementById('save-emotion');
+    if (saveButton) {
+        saveButton.addEventListener('click', saveMoodEntry);
+    }
 }
 
-// Save the current emotion entry
-function saveEmotionEntry() {
-    // Validate that at least one emotion is selected
-    if (selectedEmotions.length === 0) {
-        showAlert('Please select at least one emotion', 'warning');
+// Save the current mood entry
+function saveMoodEntry() {
+    // Validate that an emotion is selected
+    if (!selectedEmotion) {
+        showAlert('Please select how you\'re feeling first! 😊', 'warning');
         return;
     }
     
     // Get form values
     const intensity = document.getElementById('emotion-intensity').value;
-    const trigger = document.getElementById('emotion-trigger').value;
-    const strategy = document.getElementById('response-strategy').value;
-    
-    // Get selected physical sensations
-    const sensations = [];
-    document.querySelectorAll('input[id^="sensation-"]:checked').forEach(checkbox => {
-        sensations.push(checkbox.nextElementSibling.textContent);
-    });
+    const note = document.getElementById('emotion-note').value.trim();
     
     // Create entry object
     const entry = {
         date: new Date(),
-        emotions: selectedEmotions,
-        intensity: intensity,
-        trigger: trigger,
-        sensations: sensations,
-        strategy: strategy
+        emotion: selectedEmotion,
+        intensity: parseInt(intensity),
+        note: note || 'No additional notes',
+        timestamp: Date.now()
     };
     
     // Add to entries array
-    emotionData.entries.push(entry);
-    emotionData.lastEntry = entry;
+    moodData.entries.push(entry);
+    
+    // Keep only last 50 entries to prevent storage bloat
+    if (moodData.entries.length > 50) {
+        moodData.entries = moodData.entries.slice(-50);
+    }
     
     // Save to localStorage
-    saveEmotionData();
+    saveMoodData();
     
-    // Generate and display insights
-    generateInsights();
+    // Show personalized insight
+    showPersonalizedInsight(entry);
     
     // Reset form
     resetForm();
     
     // Show success message
-    showAlert('Your emotional intelligence entry has been saved!', 'success');
+    showAlert('Mood saved! Keep tracking to see patterns. 📊', 'success');
 }
 
-// Generate insights based on emotion data
-function generateInsights() {
+// Show personalized insight based on the entry
+function showPersonalizedInsight(entry) {
     const insightsContainer = document.getElementById('ei-insights');
     if (!insightsContainer) return;
     
-    // Clear previous insights
-    insightsContainer.innerHTML = '';
+    const insight = getEmotionInsight(entry.emotion);
+    const pattern = getSimplePattern();
     
-    if (emotionData.entries.length === 0) {
-        insightsContainer.innerHTML = '<span class="text-muted">Complete your first entry to receive personalized insights</span>';
-        return;
-    }
-    
-    // Get most recent entry
-    const latestEntry = emotionData.entries[emotionData.entries.length - 1];
-    
-    // Create insights HTML
-    let insightsHtml = '';
-    
-    // Primary emotion insight
-    if (latestEntry.emotions.length > 0) {
-        const primaryEmotion = latestEntry.emotions[0];
-        insightsHtml += `<p class="mb-2"><strong>Primary emotion:</strong> ${primaryEmotion}</p>`;
-        
-        // Add emotion-specific insight
-        insightsHtml += `<p class="mb-3">${getEmotionInsight(primaryEmotion)}</p>`;
-    }
-    
-    // Strategy recommendation
-    insightsHtml += `<p class="mb-2"><strong>Recommended practice:</strong> ${getStrategyRecommendation(latestEntry.strategy)}</p>`;
-    
-    // Pattern recognition (if multiple entries exist)
-    if (emotionData.entries.length > 1) {
-        insightsHtml += `<p class="mb-2"><strong>Pattern observed:</strong> ${getPatternInsight()}</p>`;
-    }
-    
-    // Add a growth tip
-    insightsHtml += `<div class="alert alert-info mt-3 mb-0 py-2 small">
-        <i class="fas fa-lightbulb me-2"></i><strong>Growth tip:</strong> ${getGrowthTip()}
-    </div>`;
-    
-    // Update insights container
-    insightsContainer.innerHTML = insightsHtml;
+    insightsContainer.innerHTML = `
+        <div class="mb-2">
+            <strong>💡 Insight:</strong> ${insight}
+        </div>
+        ${pattern ? `<div class="small text-muted">${pattern}</div>` : ''}
+    `;
 }
 
 // Get insight based on emotion
 function getEmotionInsight(emotion) {
     const insights = {
-        joy: "Joy can enhance learning and creativity. Try to identify what activities bring you joy and incorporate them into your study routine.",
-        sadness: "Sadness often signals a need for reflection or rest. Consider what might need your attention or what loss you may be processing.",
-        fear: "Fear is your brain's way of protecting you. Break down what's causing your fear into smaller, manageable steps.",
-        anger: "Anger often masks other emotions like hurt or fear. Try to identify what boundary might have been crossed.",
-        disgust: "Disgust can be a strong moral or physical reaction. Consider what values this emotion might be protecting.",
-        surprise: "Surprise indicates something unexpected. This can be an opportunity to reassess your expectations and adapt.",
-        anticipation: "Anticipation can be channeled into productive planning. Use this energy to prepare effectively.",
-        trust: "Trust in yourself and others is foundational for wellbeing. Nurture relationships where this emotion is present.",
-        anxiety: "Anxiety is often about future uncertainties. Breaking tasks into smaller steps can help manage this feeling.",
-        overwhelm: "Feeling overwhelmed is a sign to prioritize and possibly eliminate non-essential tasks.",
-        pride: "Pride in your accomplishments builds confidence. Acknowledge your strengths and achievements.",
-        shame: "Shame often involves feeling inadequate. Remember that making mistakes is part of being human and learning."
+        happy: "Great! Happiness boosts creativity and learning. Try to remember what made you feel this way.",
+        sad: "It's okay to feel sad sometimes. Consider talking to someone or doing something that comforts you.",
+        anxious: "Anxiety is common among students. Try deep breathing or breaking big tasks into smaller steps.",
+        angry: "Anger often signals that something important to you has been affected. Take a moment to cool down.",
+        excited: "Excitement is wonderful energy! Channel it into your goals and projects.",
+        tired: "Rest is important for mental health. Make sure you're getting enough sleep and taking breaks."
     };
     
-    return insights[emotion] || "Recognizing and naming your emotions is the first step toward emotional intelligence.";
+    return insights[emotion] || "Every emotion is valid. Acknowledging how you feel is the first step to emotional awareness.";
 }
 
-// Get recommendation based on selected strategy
-function getStrategyRecommendation(strategy) {
-    const recommendations = {
-        breathe: "Practice 4-7-8 breathing: Inhale for 4 seconds, hold for 7, exhale for 8. Repeat 3-5 times when emotions are intense.",
-        reframe: "Challenge negative thoughts by asking: 'What evidence supports this? Is there another way to view this situation?'",
-        express: "Find a healthy outlet for expression such as journaling, talking with a trusted friend, or creative activities.",
-        distract: "Engage in a positive activity that requires focus, like exercise, reading, or a hobby, to give your mind a break.",
-        support: "Reach out to someone you trust or consider professional support if emotions feel overwhelming."
-    };
+// Get simple pattern insight
+function getSimplePattern() {
+    if (moodData.entries.length < 3) return null;
     
-    return recommendations[strategy] || "Select a response strategy to receive personalized recommendations.";
-}
-
-// Generate pattern insight based on emotion history
-function getPatternInsight() {
-    // This would be more sophisticated with more data analysis
-    // For now, we'll provide a simple insight
-    const entries = emotionData.entries;
-    const recentEmotions = entries.slice(-3).flatMap(entry => entry.emotions);
-    
-    // Count emotion frequencies
+    const recent = moodData.entries.slice(-5);
     const emotionCounts = {};
-    recentEmotions.forEach(emotion => {
-        emotionCounts[emotion] = (emotionCounts[emotion] || 0) + 1;
+    
+    recent.forEach(entry => {
+        emotionCounts[entry.emotion] = (emotionCounts[entry.emotion] || 0) + 1;
     });
     
-    // Find most frequent emotion
-    let mostFrequent = '';
-    let highestCount = 0;
+    const mostCommon = Object.keys(emotionCounts).reduce((a, b) => 
+        emotionCounts[a] > emotionCounts[b] ? a : b
+    );
     
-    for (const emotion in emotionCounts) {
-        if (emotionCounts[emotion] > highestCount) {
-            mostFrequent = emotion;
-            highestCount = emotionCounts[emotion];
-        }
+    if (emotionCounts[mostCommon] > 1) {
+        return `📈 Pattern: You've been feeling ${mostCommon} frequently lately.`;
     }
     
-    if (mostFrequent && highestCount > 1) {
-        return `You've experienced ${mostFrequent} frequently in your recent entries. This may be an area to explore further.`;
-    } else {
-        return "Your emotional experiences have been varied. Continue tracking to identify patterns.";
-    }
+    return null;
 }
 
-// Get a random growth tip
-function getGrowthTip() {
+// Show random tip on page load
+function showRandomTip() {
     const tips = [
-        "Regular emotional check-ins can improve your academic performance by helping you manage stress more effectively.",
-        "Research shows that naming emotions reduces their intensity in the brain's amygdala.",
-        "Try the 90-second rule: Allow yourself to feel an emotion fully for 90 seconds before deciding how to respond.",
-        "Emotional intelligence is a stronger predictor of academic success than IQ alone.",
-        "Practice self-compassion when experiencing difficult emotions - treat yourself as you would a good friend.",
-        "The ability to identify and manage emotions improves decision-making and problem-solving skills."
+        "Track your mood daily to identify patterns! 📅",
+        "Remember: all emotions are temporary and valid. 🌈",
+        "Taking breaks can improve your mood and focus. ⏰",
+        "Talking to friends or family can help process emotions. 💬",
+        "Physical activity is a great mood booster! 🏃‍♂️",
+        "Mindful breathing can help manage intense emotions. 🧘‍♀️"
     ];
     
-    return tips[Math.floor(Math.random() * tips.length)];
+    const randomTip = tips[Math.floor(Math.random() * tips.length)];
+    const insightsContainer = document.getElementById('ei-insights');
+    
+    if (insightsContainer && moodData.entries.length === 0) {
+        insightsContainer.innerHTML = `<span class="text-muted">${randomTip}</span>`;
+    }
 }
 
 // Reset the form after submission
 function resetForm() {
-    // Reset selected emotions
-    selectedEmotions = [];
+    // Reset selected emotion
+    selectedEmotion = null;
     
     // Reset emotion buttons
     document.querySelectorAll('.emotion-btn').forEach(button => {
-        button.classList.remove('active');
-        button.classList.remove('btn-primary');
+        button.classList.remove('active', 'btn-primary');
         button.classList.add('btn-outline-primary');
     });
     
     // Reset form fields
-    document.getElementById('emotion-intensity').value = 3; // Middle value
-    document.getElementById('emotion-trigger').value = '';
-    document.getElementById('response-strategy').value = '';
-    
-    // Reset checkboxes
-    document.querySelectorAll('input[id^="sensation-"]').forEach(checkbox => {
-        checkbox.checked = false;
-        checkbox.nextElementSibling.classList.remove('fw-bold');
-    });
+    document.getElementById('emotion-intensity').value = 3;
+    const noteField = document.getElementById('emotion-note');
+    if (noteField) noteField.value = '';
 }
 
 // Show alert message
@@ -272,42 +184,52 @@ function showAlert(message, type = 'info') {
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     `;
     
-    // Find a good place to show the alert
+    // Find container and insert alert
     const container = document.querySelector('.ei-card .card-body');
     if (container) {
         container.insertBefore(alertEl, container.firstChild);
         
-        // Auto-dismiss after 5 seconds
+        // Auto-dismiss after 4 seconds
         setTimeout(() => {
-            alertEl.classList.remove('show');
-            setTimeout(() => alertEl.remove(), 150);
-        }, 5000);
+            if (alertEl.parentNode) {
+                alertEl.classList.remove('show');
+                setTimeout(() => {
+                    if (alertEl.parentNode) alertEl.remove();
+                }, 150);
+            }
+        }, 4000);
     }
 }
 
-// Save emotion data to localStorage
-function saveEmotionData() {
-    localStorage.setItem('emotionData', JSON.stringify(emotionData));
+// Save mood data to localStorage
+function saveMoodData() {
+    try {
+        localStorage.setItem('simpleMoodData', JSON.stringify(moodData));
+    } catch (error) {
+        console.warn('Could not save mood data to localStorage:', error);
+    }
 }
 
-// Load emotion data from localStorage
-function loadEmotionData() {
-    const savedData = localStorage.getItem('emotionData');
-    if (savedData) {
-        emotionData = JSON.parse(savedData);
-        
-        // Convert date strings back to Date objects
-        emotionData.entries.forEach(entry => {
-            entry.date = new Date(entry.date);
-        });
-        
-        if (emotionData.lastEntry) {
-            emotionData.lastEntry.date = new Date(emotionData.lastEntry.date);
+// Load mood data from localStorage
+function loadMoodData() {
+    try {
+        const savedData = localStorage.getItem('simpleMoodData');
+        if (savedData) {
+            moodData = JSON.parse(savedData);
+            
+            // Convert date strings back to Date objects
+            moodData.entries.forEach(entry => {
+                entry.date = new Date(entry.date);
+            });
+            
+            // Show insight if we have data
+            if (moodData.entries.length > 0) {
+                const lastEntry = moodData.entries[moodData.entries.length - 1];
+                showPersonalizedInsight(lastEntry);
+            }
         }
-        
-        // Generate insights if we have data
-        if (emotionData.entries.length > 0) {
-            generateInsights();
-        }
+    } catch (error) {
+        console.warn('Could not load mood data from localStorage:', error);
+        moodData = { entries: [] };
     }
 }
