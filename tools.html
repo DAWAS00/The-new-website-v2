@@ -322,6 +322,45 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Stress Level Calculator -->
+                    <div class="col-12 mt-4">
+                        <div class="card h-100 tool-card stress-calculator-card">
+                            <div class="card-header bg-gradient text-white p-3" style="background: linear-gradient(45deg, #00C9FF, #92FE9D);">
+                                <h2 class="card-title h4 mb-0"><i class="fas fa-heartbeat me-2"></i>Stress Level Calculator</h2>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Assess your stress level and get personalized tips for managing it.</p>
+                                <form id="stressCalculatorForm">
+                                    <div class="mb-3">
+                                        <label for="sleepPattern" class="form-label">How would you rate your sleep patterns? (1-10, 1=Poor, 10=Excellent)</label>
+                                        <input type="range" class="form-range" id="sleepPattern" min="1" max="10" value="5">
+                                        <span id="sleepValue" class="badge bg-secondary">5</span>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="academicWorkload" class="form-label">How would you rate your academic workload? (1-10, 1=Light, 10=Overwhelming)</label>
+                                        <input type="range" class="form-range" id="academicWorkload" min="1" max="10" value="5">
+                                        <span id="workloadValue" class="badge bg-secondary">5</span>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="socialLife" class="form-label">How would you rate your social life? (1-10, 1=Isolated, 10=Very Connected)</label>
+                                        <input type="range" class="form-range" id="socialLife" min="1" max="10" value="5">
+                                        <span id="socialValue" class="badge bg-secondary">5</span>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="emotionalState" class="form-label">How would you rate your emotional state? (1-10, 1=Very Negative, 10=Very Positive)</label>
+                                        <input type="range" class="form-range" id="emotionalState" min="1" max="10" value="5">
+                                        <span id="emotionalValue" class="badge bg-secondary">5</span>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">Calculate Stress Level</button>
+                                </form>
+                                <div id="stressResult" class="mt-4 p-3 rounded" style="display: none;">
+                                    <h5 class="mb-2">Your Stress Level: <span id="stressScore"></span></h5>
+                                    <p id="stressTips"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
