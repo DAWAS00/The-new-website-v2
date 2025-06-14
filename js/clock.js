@@ -2,15 +2,14 @@
 function updateClock() {
     const now = new Date();
     let hours = now.getHours();
-    const minutes = now.getMinutes().toString().padStart(2, '0');
-    const seconds = now.getSeconds().toString().padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
     
     // Convert to 12-hour format
     const ampm = hours >= 12 ? 'PM' : 'AM';
     hours = hours % 12;
     hours = hours ? hours : 12; // the hour '0' should be '12'
-    const hoursStr = hours.toString().padStart(2, '0');
-    
+    const hoursStr = String(hours).padStart(2, '0');
     // Display time in HH:MM:SS AM/PM format
     const clockElements = document.querySelectorAll('.clock-display');
     clockElements.forEach(element => {
